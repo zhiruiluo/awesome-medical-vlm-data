@@ -29,9 +29,9 @@ def scale(record: dict) -> str:
 def links(record: dict) -> str:
     badges = []
     if record.get("repository"):
-        badges.append(f"[GitHub]({record['repository']})")
+        badges.append(f"[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)]({record['repository']})")
     if record.get("download"):
-        badges.append(f"[Download]({record['download']})")
+        badges.append(f"[![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)]({record['download']})")
     return " ".join(badges) or "-"
 
 

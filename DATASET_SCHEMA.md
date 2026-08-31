@@ -19,7 +19,7 @@ Each file under `datasets/` is a JSON-compatible YAML object validated by [schem
 
 ## Generated Link Badges
 
-The README table renders a `GitHub` badge when `repository` is set and a `Download` badge when `download` is set. Keep both fields pointed at the official source whenever they are available; generated badges are omitted only when the relevant field is `null`.
+The README table renders a clickable Shields.io `GitHub` badge when `repository` is set and a `Download` badge when `download` is set. Keep both fields pointed at the official source whenever they are available; generated badges are omitted only when the relevant field is `null`.
 
 ## Example
 
