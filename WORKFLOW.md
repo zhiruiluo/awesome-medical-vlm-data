@@ -37,7 +37,7 @@ python3 scripts/generate_tables.py
 
 This writes the final report to three locations:
 
-- `README.md`: master table, specialty tables, and capability coverage.
+- `README.md`: specialty tables and capability coverage.
 - `reports/landscape.md`: domain and capability counts.
 - `reports/gaps.md`: current coverage and license/access follow-up areas.
 

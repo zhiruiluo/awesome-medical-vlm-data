@@ -36,11 +36,11 @@ def links(record: dict) -> str:
 
 
 def table(items: list[dict]) -> str:
-    lines = ["| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | --- | --- | --- | ---: | --- | --- | --- |"]
+    lines = ["| Dataset | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | --- | --- | ---: | --- | --- | --- |"]
     for item in items:
         source = item["homepage"] or item["paper"] or item["repository"] or item["download"]
         access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "open"
-        lines.append(f"| [{item['name']}]({source}) | {cells(item['domains'])} | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
+        lines.append(f"| [{item['name']}]({source}) | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
     return "\n".join(lines)
 
 
@@ -62,7 +62,7 @@ def render_readme(items: list[dict]) -> str:
     domains = "\n\n".join(f"### {domain.replace('-', ' ').title()}\n\n{table(group)}" for domain, group in sorted(by_domain.items()))
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
-    return replace_marked(replace_marked(replace_marked(readme, "MASTER_TABLE", table(items)), "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
+    return replace_marked(replace_marked(readme, "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
 
 
 def render_reports(items: list[dict]) -> tuple[str, str]:
