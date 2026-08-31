@@ -32,6 +32,8 @@ def links(record: dict) -> str:
         badges.append(f"[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)]({record['repository']})")
     if record.get("download"):
         badges.append(f"[![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)]({record['download']})")
+    if record.get("paper"):
+        badges.append(f"[![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)]({record['paper']})")
     return " ".join(badges) or "-"
 
 
