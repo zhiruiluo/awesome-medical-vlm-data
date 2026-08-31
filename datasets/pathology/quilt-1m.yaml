@@ -1,0 +1,11 @@
+{
+  "id": "quilt-1m", "name": "Quilt-1M", "year": 2023,
+  "homepage": "https://quilt1m.github.io/", "paper": "https://arxiv.org/abs/2306.11207", "repository": "https://github.com/wisdomikezogwo/quilt1m", "download": "https://huggingface.co/datasets/wisdomik/Quilt-1M",
+  "license": "Research use agreement; restricted access", "commercial_use": "no",
+  "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
+  "tasks": ["image-captioning", "image-text-retrieval"], "capabilities": ["description", "recognition"], "usage": "training",
+  "annotation": {"source": "caption-report-pairs", "expert_review": "unknown", "grounding": ["caption"]},
+  "scale": {"images": 1000000, "qa_pairs": null, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "not-applicable", "external_validation": "unknown", "known_issues": ["Web-derived image-text pairs can include noisy or duplicate examples."]},
+  "access": {"registration_required": true, "credentialing_required": false}, "last_verified": "2026-08-31"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "fairvlmed", "name": "FairVLMed", "year": 2024,
+  "homepage": "https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP", "paper": "https://arxiv.org/abs/2403.14774", "repository": "https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP", "download": null,
+  "license": "CC BY-NC-ND 4.0", "commercial_use": "no",
+  "domains": ["ophthalmology"], "modalities": ["fundus"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering", "image-captioning"], "capabilities": ["recognition", "diagnosis", "description"], "usage": "training-evaluation",
+  "annotation": {"source": "clinical-reports", "expert_review": "clinical-care", "grounding": ["report"]},
+  "scale": {"images": 10000, "qa_pairs": null, "patients": 10000},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["Single-disease glaucoma cohort; dataset is not for clinical decisions or patient care."]},
+  "access": {"registration_required": true, "credentialing_required": false}, "last_verified": "2026-08-31"
+}

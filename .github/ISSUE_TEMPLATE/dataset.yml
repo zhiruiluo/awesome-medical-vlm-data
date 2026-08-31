@@ -1,0 +1,21 @@
+name: Dataset suggestion
+description: Propose a medical VLM dataset or benchmark
+title: "[Dataset]: "
+labels: [dataset]
+body:
+  - type: input
+    attributes:
+      label: Official source
+      description: Paper, project page, repository, or download link.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: VLM relevance
+      description: Explain the image-language supervision or evaluation task.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Metadata
+      description: Domain, modality, scale, license, access restrictions, and known limitations.

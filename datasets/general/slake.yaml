@@ -1,0 +1,11 @@
+{
+  "id": "slake", "name": "SLAKE", "year": 2021,
+  "homepage": "https://www.med-vqa.com/slake/", "paper": "https://arxiv.org/abs/2102.09542", "repository": "https://github.com/haifangong/SLAKE", "download": "https://www.med-vqa.com/slake/",
+  "license": "Research use; check source terms", "commercial_use": "unknown",
+  "domains": ["general-biomedical"], "modalities": ["xray", "ct", "mri"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering", "knowledge-based-visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "evaluation",
+  "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image", "knowledge-graph"]},
+  "scale": {"images": 642, "qa_pairs": 14028, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Bilingual English-Chinese benchmark with a small image set."]},
+  "access": {"registration_required": false, "credentialing_required": false}, "last_verified": "2026-08-31"
+}

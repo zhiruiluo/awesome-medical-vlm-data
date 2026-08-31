@@ -1,0 +1,11 @@
+{
+  "id": "mimic-cxr", "name": "MIMIC-CXR", "year": 2019,
+  "homepage": "https://physionet.org/content/mimic-cxr/2.1.0/", "paper": "https://doi.org/10.1038/s41597-019-0322-0", "repository": null, "download": "https://physionet.org/content/mimic-cxr/2.1.0/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0", "commercial_use": "unknown",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["multi-view"],
+  "tasks": ["report-generation", "image-report-retrieval"], "capabilities": ["description", "report-generation", "diagnosis"], "usage": "training-evaluation",
+  "annotation": {"source": "clinical-reports", "expert_review": "clinical-care", "grounding": ["report"]},
+  "scale": {"images": 377110, "studies": 227835, "patients": 65379, "qa_pairs": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["Credentialed access; reports are de-identified clinical text."]},
+  "access": {"registration_required": true, "credentialing_required": true}, "last_verified": "2026-08-31"
+}

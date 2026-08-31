@@ -1,0 +1,11 @@
+{
+  "id": "pmc-vqa", "name": "PMC-VQA", "year": 2023,
+  "homepage": "https://xiaoman-zhang.github.io/PMC-VQA/", "paper": "https://arxiv.org/abs/2305.10415", "repository": "https://github.com/xiaoman-zhang/PMC-VQA", "download": "https://huggingface.co/datasets/xmcmic/PMC-VQA",
+  "license": "Check source terms", "commercial_use": "unknown",
+  "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "reasoning", "description"], "usage": "training-evaluation",
+  "annotation": {"source": "synthetic-from-article-context", "expert_review": "unknown", "grounding": ["figure", "caption", "article-context"]},
+  "scale": {"images": 149075, "qa_pairs": 227000, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "not-applicable", "external_validation": "unknown", "known_issues": ["Questions are automatically generated from biomedical articles."]},
+  "access": {"registration_required": false, "credentialing_required": false}, "last_verified": "2026-08-31"
+}

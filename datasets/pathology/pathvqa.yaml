@@ -1,0 +1,11 @@
+{
+  "id": "pathvqa", "name": "PathVQA", "year": 2020,
+  "homepage": "https://pathvqa.com/", "paper": "https://arxiv.org/abs/2003.10286", "repository": "https://github.com/UCSD-AI4H/PathVQA", "download": "https://pathvqa.com/",
+  "license": "Check source terms", "commercial_use": "unknown",
+  "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "training-evaluation",
+  "annotation": {"source": "human-authored", "expert_review": "partial", "grounding": ["image", "caption"]},
+  "scale": {"images": 4998, "qa_pairs": 32799, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Images are sourced from educational material and PubMed Central figures."]},
+  "access": {"registration_required": false, "credentialing_required": false}, "last_verified": "2026-08-31"
+}
