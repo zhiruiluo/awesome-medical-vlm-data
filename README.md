@@ -83,4 +83,4 @@ Dataset metadata records describe sources, not legal advice. `unknown` and `uncl
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md). Add one JSON-compatible YAML record per dataset, run validation and generation, and include primary-source links.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) and follow the [record workflow](WORKFLOW.md). Add one JSON-compatible YAML record per dataset, run validation, and commit the regenerated final report.
