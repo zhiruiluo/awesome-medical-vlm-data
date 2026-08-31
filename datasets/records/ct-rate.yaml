@@ -4,8 +4,9 @@
   "license": "CC BY-NC-SA 4.0", "commercial_use": "no",
   "domains": ["radiology"], "modalities": ["ct"], "image_structure": ["3d-volume"],
   "tasks": ["report-generation", "multi-label-classification"], "capabilities": ["description", "diagnosis", "report-generation"], "usage": "training-evaluation",
+  "catalog_status": "included", "language_supervision": ["report"], "derived_from": [],
   "annotation": {"source": "clinical-reports", "expert_review": "clinical-care", "grounding": ["report"]},
-  "scale": {"images": 1300000, "studies": 25692, "patients": 21240, "qa_pairs": null},
+  "scale": {"primary_count": 25692, "primary_unit": "studies", "images": 1300000, "studies": 25692, "patients": 21240, "qa_pairs": null},
   "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["CT volumes require substantially more storage and compute than 2D datasets."]},
-  "access": {"registration_required": true, "credentialing_required": false}, "last_verified": "2026-08-31"
+  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
 }

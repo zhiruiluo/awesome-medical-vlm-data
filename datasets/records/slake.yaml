@@ -4,8 +4,9 @@
   "license": "Research use; check source terms", "commercial_use": "unknown",
   "domains": ["general-biomedical"], "modalities": ["xray", "ct", "mri"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering", "knowledge-based-visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "evaluation",
+  "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
   "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image", "knowledge-graph"]},
-  "scale": {"images": 642, "qa_pairs": 14028, "patients": null},
+  "scale": {"primary_count": 14028, "primary_unit": "qa-pairs", "images": 642, "qa_pairs": 14028, "patients": null},
   "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Bilingual English-Chinese benchmark with a small image set."]},
-  "access": {"registration_required": false, "credentialing_required": false}, "last_verified": "2026-08-31"
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
 }

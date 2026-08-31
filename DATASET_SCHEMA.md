@@ -1,6 +1,6 @@
 # Dataset Record Schema
 
-Each file under `datasets/` is a JSON-compatible YAML object validated by [schemas/dataset.schema.json](schemas/dataset.schema.json). JSON is a YAML 1.2 subset, which keeps this minimal repository dependency-free.
+Each file under `datasets/records/` is a JSON-compatible YAML object validated by [schemas/dataset.schema.json](schemas/dataset.schema.json). JSON is a YAML 1.2 subset, which keeps this minimal repository dependency-free. Filesystem placement does not define specialty: use one or more controlled `domains` values from `taxonomies/domains.json`.
 
 ## Required Fields
 
@@ -11,10 +11,11 @@ Each file under `datasets/` is a JSON-compatible YAML object validated by [schem
 | `license`, `commercial_use` | License name/status and `yes`, `no`, or `unknown`. |
 | `domains`, `modalities`, `image_structure` | Taxonomy lists for the data. |
 | `tasks`, `capabilities`, `usage` | VLM tasks, supported capabilities, and `training`, `evaluation`, or `training-evaluation`. |
+| `catalog_status`, `language_supervision`, `derived_from` | Publication eligibility, language signal types, and parent dataset IDs for derived releases. Only `included` records appear in generated public tables. |
 | `annotation` | Annotation source, grounding types, and review status. |
-| `scale` | Counts such as `images`, `qa_pairs`, `studies`, or `patients`; use `null` when not reported. |
+| `scale` | `primary_count` and `primary_unit` drive generated tables; retain counts such as `images`, `qa_pairs`, `studies`, or `patients` as supporting detail. |
 | `quality` | Auditing, split, validation, and known-issue signals. |
-| `access` | Registration and credentialing requirements. |
+| `access` | Registration, credentialing, gating, data-use agreement, and citation requirements. |
 | `last_verified` | ISO date for the latest source review. |
 
 ## Generated Link Badges
@@ -30,9 +31,10 @@ The README table renders a clickable Shields.io `GitHub` badge when `repository`
   "license": "unknown", "commercial_use": "unknown",
   "domains": ["radiology"], "modalities": ["xray"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition"], "usage": "evaluation",
+  "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
   "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image"]},
-  "scale": {"images": 100, "qa_pairs": 1000, "patients": null},
+  "scale": {"primary_count": 1000, "primary_unit": "qa-pairs", "images": 100, "qa_pairs": 1000, "patients": null},
   "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": []},
-  "access": {"registration_required": false, "credentialing_required": false}, "last_verified": "2026-08-31"
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
 }
 ```

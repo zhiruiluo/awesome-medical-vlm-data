@@ -8,10 +8,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+RECORDS = ROOT / "datasets" / "records"
 
 
 def records() -> list[dict]:
-    return sorted((json.loads(path.read_text()) for path in (ROOT / "datasets").rglob("*.yaml")), key=lambda item: item["name"].lower())
+    return sorted((record for path in RECORDS.glob("*.yaml") for record in [json.loads(path.read_text())] if record["catalog_status"] == "included"), key=lambda item: item["name"].lower())
 
 
 def cells(values: list[str]) -> str:
@@ -19,11 +20,8 @@ def cells(values: list[str]) -> str:
 
 
 def scale(record: dict) -> str:
-    for key, label in (("qa_pairs", "QA"), ("studies", "studies"), ("images", "images")):
-        value = record["scale"].get(key)
-        if value is not None:
-            return f"{value / 1_000_000:.1f}M {label}" if value >= 1_000_000 else f"{value / 1_000:.1f}K {label}" if value >= 1_000 else f"{value} {label}"
-    return "Not reported"
+    value, unit = record["scale"]["primary_count"], record["scale"]["primary_unit"]
+    return f"{value / 1_000_000:.1f}M {unit}" if value >= 1_000_000 else f"{value / 1_000:.1f}K {unit}" if value >= 1_000 else f"{value} {unit}"
 
 
 def links(record: dict) -> str:

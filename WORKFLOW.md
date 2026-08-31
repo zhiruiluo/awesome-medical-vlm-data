@@ -4,9 +4,9 @@ Use this workflow for every new dataset or benchmark entry. Dataset records are 
 
 ## 1. Create The Record
 
-1. Choose the most specific directory under `datasets/`: `radiology`, `pathology`, `ophthalmology`, or `general`.
-2. Copy an existing `.yaml` record into that directory and rename it with the dataset's lowercase kebab-case ID, for example `datasets/radiology/example-vqa.yaml`.
-3. Fill the required fields documented in [DATASET_SCHEMA.md](DATASET_SCHEMA.md). Keep unknown information explicit as `unknown` or `null`; do not guess licensing or access rights.
+1. Copy an existing record in `datasets/records/` and rename it with the dataset's lowercase kebab-case ID, for example `datasets/records/example-vqa.yaml`.
+2. Fill the required fields documented in [DATASET_SCHEMA.md](DATASET_SCHEMA.md). Choose one or more values from the controlled taxonomies in `taxonomies/` and keep unknown information explicit as `unknown` or `null`; do not guess licensing or access rights.
+3. Set `catalog_status` to `included` only when the resource has image-language supervision or evaluation. Keep image-only resources as `excluded` records for provenance, not public catalog entries.
 4. Use primary sources for `homepage`, `paper`, `repository`, and `download`. At least one official URL is required.
 
 ## 2. Validate The Record

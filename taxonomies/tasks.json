@@ -1,0 +1,4 @@
+{
+  "type": "string",
+  "enum": ["visual-question-answering", "knowledge-based-visual-question-answering", "report-generation", "report-correction", "image-report-retrieval", "image-captioning", "image-text-retrieval", "grounded-captioning", "multi-label-classification", "nodule-detection", "false-positive-reduction", "hallucination-evaluation", "agent-tool-use"]
+}

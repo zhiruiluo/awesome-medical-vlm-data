@@ -1,0 +1,4 @@
+{
+  "type": "string",
+  "enum": ["radiology", "pathology", "ophthalmology", "endoscopy", "dermatology", "ultrasound", "surgery", "general-biomedical"]
+}
