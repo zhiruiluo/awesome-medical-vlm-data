@@ -26,12 +26,21 @@ def scale(record: dict) -> str:
     return "Not reported"
 
 
+def links(record: dict) -> str:
+    badges = []
+    if record.get("repository"):
+        badges.append(f"[GitHub]({record['repository']})")
+    if record.get("download"):
+        badges.append(f"[Download]({record['download']})")
+    return " ".join(badges) or "-"
+
+
 def table(items: list[dict]) -> str:
-    lines = ["| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |", "| --- | --- | --- | --- | ---: | --- | --- |"]
+    lines = ["| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | --- | --- | --- | ---: | --- | --- | --- |"]
     for item in items:
         source = item["homepage"] or item["paper"] or item["repository"] or item["download"]
         access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "open"
-        lines.append(f"| [{item['name']}]({source}) | {cells(item['domains'])} | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {item['license']} ({access}) |")
+        lines.append(f"| [{item['name']}]({source}) | {cells(item['domains'])} | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
     return "\n".join(lines)
 
 

@@ -21,16 +21,16 @@ python3 scripts/check_links.py --timeout 15
 ## Dataset Directory
 
 <!-- BEGIN GENERATED:MASTER_TABLE -->
-| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |
-| --- | --- | --- | --- | ---: | --- | --- |
-| [CT-RATE](https://stanfordmlgroup.github.io/projects/ct-rate/) | radiology | 3d-volume | description, diagnosis | 25.7K studies | report | CC BY-NC-SA 4.0 (registration) |
-| [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | ophthalmology | 2d-single | recognition, diagnosis | 10.0K images | report | CC BY-NC-ND 4.0 (registration) |
-| [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/) | radiology | multi-view | description, report-generation | 227.8K studies | report | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
-| [PathVQA](https://pathvqa.com/) | pathology | 2d-single | recognition, diagnosis | 32.8K QA | image, caption | Check source terms (open) |
-| [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | general-biomedical | 2d-single | recognition, reasoning | 227.0K QA | figure, caption, article-context | Check source terms (open) |
-| [Quilt-1M](https://quilt1m.github.io/) | pathology | 2d-single | description, recognition | 1.0M images | caption | Research use agreement; restricted access (registration) |
-| [SLAKE](https://www.med-vqa.com/slake/) | general-biomedical | 2d-single | recognition, diagnosis | 14.0K QA | image, knowledge-graph | Research use; check source terms (open) |
-| [VQA-RAD](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | radiology | 2d-single | recognition, diagnosis | 3.5K QA | image | Research use; check source terms (open) |
+| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| [CT-RATE](https://stanfordmlgroup.github.io/projects/ct-rate/) | radiology | 3d-volume | description, diagnosis | 25.7K studies | report | [GitHub](https://github.com/ibrahimethemhamci/CT-RATE) [Download](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE) | CC BY-NC-SA 4.0 (registration) |
+| [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | ophthalmology | 2d-single | recognition, diagnosis | 10.0K images | report | [GitHub](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | CC BY-NC-ND 4.0 (registration) |
+| [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/) | radiology | multi-view | description, report-generation | 227.8K studies | report | [Download](https://physionet.org/content/mimic-cxr/2.1.0/) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [PathVQA](https://pathvqa.com/) | pathology | 2d-single | recognition, diagnosis | 32.8K QA | image, caption | [GitHub](https://github.com/UCSD-AI4H/PathVQA) [Download](https://pathvqa.com/) | Check source terms (open) |
+| [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | general-biomedical | 2d-single | recognition, reasoning | 227.0K QA | figure, caption, article-context | [GitHub](https://github.com/xiaoman-zhang/PMC-VQA) [Download](https://huggingface.co/datasets/xmcmic/PMC-VQA) | Check source terms (open) |
+| [Quilt-1M](https://quilt1m.github.io/) | pathology | 2d-single | description, recognition | 1.0M images | caption | [GitHub](https://github.com/wisdomikezogwo/quilt1m) [Download](https://huggingface.co/datasets/wisdomik/Quilt-1M) | Research use agreement; restricted access (registration) |
+| [SLAKE](https://www.med-vqa.com/slake/) | general-biomedical | 2d-single | recognition, diagnosis | 14.0K QA | image, knowledge-graph | [GitHub](https://github.com/haifangong/SLAKE) [Download](https://www.med-vqa.com/slake/) | Research use; check source terms (open) |
+| [VQA-RAD](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | radiology | 2d-single | recognition, diagnosis | 3.5K QA | image | [GitHub](https://github.com/cuhksz-nlp/VQA-RAD) [Download](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | Research use; check source terms (open) |
 <!-- END GENERATED:MASTER_TABLE -->
 
 ## By Specialty
@@ -38,31 +38,31 @@ python3 scripts/check_links.py --timeout 15
 <!-- BEGIN GENERATED:DOMAIN_TABLES -->
 ### General Biomedical
 
-| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |
-| --- | --- | --- | --- | ---: | --- | --- |
-| [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | general-biomedical | 2d-single | recognition, reasoning | 227.0K QA | figure, caption, article-context | Check source terms (open) |
-| [SLAKE](https://www.med-vqa.com/slake/) | general-biomedical | 2d-single | recognition, diagnosis | 14.0K QA | image, knowledge-graph | Research use; check source terms (open) |
+| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | general-biomedical | 2d-single | recognition, reasoning | 227.0K QA | figure, caption, article-context | [GitHub](https://github.com/xiaoman-zhang/PMC-VQA) [Download](https://huggingface.co/datasets/xmcmic/PMC-VQA) | Check source terms (open) |
+| [SLAKE](https://www.med-vqa.com/slake/) | general-biomedical | 2d-single | recognition, diagnosis | 14.0K QA | image, knowledge-graph | [GitHub](https://github.com/haifangong/SLAKE) [Download](https://www.med-vqa.com/slake/) | Research use; check source terms (open) |
 
 ### Ophthalmology
 
-| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |
-| --- | --- | --- | --- | ---: | --- | --- |
-| [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | ophthalmology | 2d-single | recognition, diagnosis | 10.0K images | report | CC BY-NC-ND 4.0 (registration) |
+| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | ophthalmology | 2d-single | recognition, diagnosis | 10.0K images | report | [GitHub](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | CC BY-NC-ND 4.0 (registration) |
 
 ### Pathology
 
-| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |
-| --- | --- | --- | --- | ---: | --- | --- |
-| [PathVQA](https://pathvqa.com/) | pathology | 2d-single | recognition, diagnosis | 32.8K QA | image, caption | Check source terms (open) |
-| [Quilt-1M](https://quilt1m.github.io/) | pathology | 2d-single | description, recognition | 1.0M images | caption | Research use agreement; restricted access (registration) |
+| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| [PathVQA](https://pathvqa.com/) | pathology | 2d-single | recognition, diagnosis | 32.8K QA | image, caption | [GitHub](https://github.com/UCSD-AI4H/PathVQA) [Download](https://pathvqa.com/) | Check source terms (open) |
+| [Quilt-1M](https://quilt1m.github.io/) | pathology | 2d-single | description, recognition | 1.0M images | caption | [GitHub](https://github.com/wisdomikezogwo/quilt1m) [Download](https://huggingface.co/datasets/wisdomik/Quilt-1M) | Research use agreement; restricted access (registration) |
 
 ### Radiology
 
-| Dataset | Domain | Structure | Capability | Scale | Grounding | License / access |
-| --- | --- | --- | --- | ---: | --- | --- |
-| [CT-RATE](https://stanfordmlgroup.github.io/projects/ct-rate/) | radiology | 3d-volume | description, diagnosis | 25.7K studies | report | CC BY-NC-SA 4.0 (registration) |
-| [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/) | radiology | multi-view | description, report-generation | 227.8K studies | report | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
-| [VQA-RAD](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | radiology | 2d-single | recognition, diagnosis | 3.5K QA | image | Research use; check source terms (open) |
+| Dataset | Domain | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | --- | --- | --- | ---: | --- | --- | --- |
+| [CT-RATE](https://stanfordmlgroup.github.io/projects/ct-rate/) | radiology | 3d-volume | description, diagnosis | 25.7K studies | report | [GitHub](https://github.com/ibrahimethemhamci/CT-RATE) [Download](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE) | CC BY-NC-SA 4.0 (registration) |
+| [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/) | radiology | multi-view | description, report-generation | 227.8K studies | report | [Download](https://physionet.org/content/mimic-cxr/2.1.0/) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [VQA-RAD](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | radiology | 2d-single | recognition, diagnosis | 3.5K QA | image | [GitHub](https://github.com/cuhksz-nlp/VQA-RAD) [Download](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | Research use; check source terms (open) |
 <!-- END GENERATED:DOMAIN_TABLES -->
 
 ## Capability Coverage
