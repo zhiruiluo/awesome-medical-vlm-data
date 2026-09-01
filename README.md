@@ -24,7 +24,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-28 included resources: 0 text-only, 13 image-only, and 15 text-image pairs. 48 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
+29 included resources: 0 text-only, 13 image-only, and 16 text-image pairs. 48 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## By Resource Type
@@ -94,6 +94,7 @@ No included records yet.
 | Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
 | [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | 2024 | 2d-single | recognition, diagnosis | 10.0K images | report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2403.14774) | CC BY-NC-ND 4.0 (registration) |
+| [LMOD+](https://kfzyqin.github.io/lmod_plus/) | 2026 | 2d-single, video | recognition, diagnosis | 32.6K instances | anatomical-structure, image-label, region | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1145/3801746) | Unknown (open) |
 
 #### Endoscopy
 
@@ -123,10 +124,10 @@ No included records yet.
 | Capability | Datasets |
 | --- | ---: |
 | description | 10 |
-| diagnosis | 18 |
-| localization | 7 |
-| reasoning | 6 |
-| recognition | 17 |
+| diagnosis | 19 |
+| localization | 8 |
+| reasoning | 7 |
+| recognition | 18 |
 | report-generation | 3 |
 | segmentation | 7 |
 | spatial-reasoning | 1 |
