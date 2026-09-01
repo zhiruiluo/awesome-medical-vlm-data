@@ -1,5 +1,6 @@
 {
   "id": "heal-medvqa", "name": "HEAL-MedVQA", "year": 2025,
+  "resource_type": "text-image-pairs",
   "homepage": "https://loba-ijcai25.github.io/", "paper": "https://www.ijcai.org/proceedings/2025/853", "repository": "https://github.com/tuandung2812alt3/Localize-before-Answering", "download": "https://huggingface.co/datasets/tuandung2812/Heal-MedVQA",
   "license": "Unknown", "commercial_use": "unknown",
   "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],

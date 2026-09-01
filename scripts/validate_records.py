@@ -12,10 +12,11 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
 TAXONOMIES = ROOT / "taxonomies"
-REQUIRED = {"id", "name", "year", "license", "commercial_use", "domains", "modalities", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"}
+REQUIRED = {"id", "name", "year", "license", "commercial_use", "resource_type", "domains", "modalities", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"}
 LIST_FIELDS = {"domains", "modalities", "image_structure", "tasks", "capabilities", "language_supervision", "derived_from"}
 URL_FIELDS = ("homepage", "paper", "repository", "download")
 STATUS = {"included", "candidate", "excluded"}
+RESOURCE_TYPES = {"text-only", "image-only", "text-image-pairs"}
 ACCESS_VALUES = {"yes", "no", "unknown"}
 IMAGE_STRUCTURES = {"2d-single", "multi-view", "3d-volume", "whole-slide-image", "video", "longitudinal-sequence"}
 LANGUAGE_SUPERVISION = {"caption", "report", "question-answer", "grounded-text", "instruction-dialogue", "reasoning-trace", "preference-pair", "none"}
@@ -60,9 +61,19 @@ def validate(path: Path, record: dict) -> list[str]:
             unknown = sorted(set(record[field]) - allowed)
             if unknown:
                 errors.append(f"{label}: unknown {field}: {', '.join(unknown)}")
-    for field in ("domains", "modalities", "image_structure", "tasks", "capabilities"):
+    for field in ("domains", "tasks", "capabilities"):
         if not record.get(field):
             errors.append(f"{label}: {field} must not be empty")
+    if record.get("resource_type") not in RESOURCE_TYPES:
+        errors.append(f"{label}: resource_type must be text-only, image-only, or text-image-pairs")
+    elif record["resource_type"] == "text-only":
+        for field in ("modalities", "image_structure"):
+            if record.get(field):
+                errors.append(f"{label}: text-only records must have an empty {field} list")
+    else:
+        for field in ("modalities", "image_structure"):
+            if not record.get(field):
+                errors.append(f"{label}: image-bearing records require {field}")
     if isinstance(record.get("language_supervision"), list):
         unknown = sorted(set(record["language_supervision"]) - LANGUAGE_SUPERVISION)
         if unknown:
@@ -79,8 +90,10 @@ def validate(path: Path, record: dict) -> list[str]:
         errors.append(f"{label}: catalog_status must be included, candidate, or excluded")
     if record.get("catalog_status") == "included" and not record.get("language_supervision"):
         errors.append(f"{label}: included records require language_supervision")
-    if record.get("catalog_status") == "included" and "none" in record.get("language_supervision", []):
-        errors.append(f"{label}: included records cannot use language_supervision none")
+    if record.get("catalog_status") == "included" and "none" in record.get("language_supervision", []) and record.get("resource_type") != "image-only":
+        errors.append(f"{label}: only included image-only records can use language_supervision none")
+    if record.get("resource_type") == "image-only" and record.get("language_supervision") != ["none"]:
+        errors.append(f"{label}: image-only records must use language_supervision [\"none\"]")
     if not any(record.get(field) for field in URL_FIELDS):
         errors.append(f"{label}: at least one official source URL is required")
     for field in URL_FIELDS:

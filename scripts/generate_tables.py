@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
 DOMAINS = json.loads((ROOT / "taxonomies" / "domains.json").read_text())["enum"]
+RESOURCE_TYPES = ("text-only", "image-only", "text-image-pairs")
 
 
 def load_records() -> list[dict]:
@@ -23,7 +24,7 @@ def load_records() -> list[dict]:
             records.append(json.loads(path.read_text()))
         except json.JSONDecodeError as error:
             raise ValueError(f"{path.relative_to(ROOT)}: invalid JSON-compatible YAML: {error.msg}") from error
-    return sorted(records, key=lambda item: item["name"].lower())
+    return sorted(records, key=lambda item: (item["year"], item["name"].lower()))
 
 
 def published_records(items: list[dict]) -> list[dict]:
@@ -31,11 +32,15 @@ def published_records(items: list[dict]) -> list[dict]:
 
 
 def cells(values: list[str]) -> str:
-    return ", ".join(values)
+    return ", ".join(values) or "-"
 
 
 def domain_title(domain: str) -> str:
     return domain.replace("-", " ").title()
+
+
+def resource_type_title(resource_type: str) -> str:
+    return {"text-only": "Text Only", "image-only": "Image Only", "text-image-pairs": "Text-Image Pairs"}[resource_type]
 
 
 def group_by_domain(items: list[dict]) -> dict[str, list[dict]]:
@@ -46,6 +51,13 @@ def group_by_domain(items: list[dict]) -> dict[str, list[dict]]:
     return {domain: grouped[domain] for domain in DOMAINS if grouped[domain]}
 
 
+def group_by_resource_type(items: list[dict]) -> dict[str, list[dict]]:
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for item in items:
+        grouped[item["resource_type"]].append(item)
+    return {resource_type: grouped[resource_type] for resource_type in RESOURCE_TYPES}
+
+
 def scale(record: dict) -> str:
     value, unit = record["scale"]["primary_count"], record["scale"]["primary_unit"]
     return f"{value / 1_000_000:.1f}M {unit}" if value >= 1_000_000 else f"{value / 1_000:.1f}K {unit}" if value >= 1_000 else f"{value} {unit}"
@@ -54,7 +66,12 @@ def scale(record: dict) -> str:
 def links(record: dict) -> str:
     badges = []
     if record.get("repository"):
-        badges.append(f"[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)]({record['repository']})")
+        if record["repository"].startswith("https://github.com"):
+            badges.append(f"[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)]({record['repository']})")
+        elif record["repository"].startswith("https://huggingface.co"):
+            badges.append(f"[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF6C37?style=flat-square&logo=huggingface&logoColor=white)]({record['repository']})")
+        else:
+            badges.append(f"[![Repository](https://img.shields.io/badge/Repository-000000?style=flat-square&logo=repository&logoColor=white)]({record['repository']})")
     if record.get("download"):
         badges.append(f"[![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)]({record['download']})")
     if record.get("paper"):
@@ -82,20 +99,27 @@ def replace_marked(text: str, name: str, content: str) -> str:
 
 def render_readme(items: list[dict], audited: list[dict]) -> str:
     readme = (ROOT / "README.md").read_text()
-    by_domain = group_by_domain(items)
-    navigation = " | ".join(f"[{domain_title(domain)}](#{domain})" for domain in by_domain)
-    domains = "\n\n".join(f"### {domain_title(domain)}\n\n{table(group)}" for domain, group in by_domain.items())
+    by_resource_type = group_by_resource_type(items)
+    navigation = " | ".join(f"[{resource_type_title(resource_type)}](#{resource_type})" for resource_type in RESOURCE_TYPES)
+    sections = []
+    for resource_type, records in by_resource_type.items():
+        domains = group_by_domain(records)
+        body = "\n\n".join(f"#### {domain_title(domain)}\n\n{table(group)}" for domain, group in domains.items()) or "No included records yet."
+        sections.append(f"### {resource_type_title(resource_type)}\n\n{body}")
+    resources = "\n\n".join(sections)
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
     status_counts = Counter(item["catalog_status"] for item in audited)
-    summary = f"{len(items)} included medical VLM datasets across {len(by_domain)} specialties. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded records are retained for auditability but omitted from the tables below."
-    return replace_marked(replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "DOMAIN_NAV", navigation), "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
+    type_counts = Counter(item["resource_type"] for item in items)
+    summary = f"{len(items)} included resources: {type_counts['text-only']} text-only, {type_counts['image-only']} image-only, and {type_counts['text-image-pairs']} text-image pairs. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded records are retained for auditability but omitted from the tables below."
+    return replace_marked(replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "RESOURCE_TYPE_NAV", navigation), "RESOURCE_TYPE_TABLES", resources), "CAPABILITY_TABLE", capabilities)
 
 
 def render_reports(items: list[dict]) -> tuple[str, str]:
     domains = Counter(domain for item in items for domain in item["domains"])
+    resource_types = Counter(item["resource_type"] for item in items)
     capabilities = Counter(capability for item in items for capability in item["capabilities"])
-    landscape = "# Landscape\n\nGenerated from `datasets/` by `scripts/generate_tables.py`.\n\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n"
+    landscape = "# Landscape\n\nGenerated from `datasets/` by `scripts/generate_tables.py`.\n\n## Resource Types\n\n" + "\n".join(f"- {name}: {resource_types[name]}" for name in RESOURCE_TYPES) + "\n\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n"
     uncertain = [item["name"] for item in items if item["commercial_use"] == "unknown" or "check" in item["license"].lower()]
     gaps = "# Coverage Gaps\n\nGenerated from `datasets/` by `scripts/generate_tables.py`.\n\n- The catalog is currently concentrated in 2D imaging; 3D, video, whole-slide, and longitudinal resources need more coverage.\n- Localization, segmentation, measurement, hallucination detection, and tool-use capabilities have no entries in this MVP.\n- Ophthalmology has one provisional entry and needs independently verified report-linked datasets.\n- Licensing or commercial-use status needs follow-up for: " + ", ".join(uncertain) + ".\n"
     return landscape, gaps

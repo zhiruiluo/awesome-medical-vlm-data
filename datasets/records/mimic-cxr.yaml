@@ -1,7 +1,8 @@
 {
   "id": "mimic-cxr", "name": "MIMIC-CXR", "year": 2019,
-  "homepage": "https://physionet.org/content/mimic-cxr/2.1.0/", "paper": "https://doi.org/10.1038/s41597-019-0322-0", "repository": null, "download": "https://physionet.org/content/mimic-cxr/2.1.0/",
-  "license": "PhysioNet Credentialed Health Data License 1.5.0", "commercial_use": "unknown",
+  "resource_type": "text-image-pairs",
+  "homepage": "https://physionet.org/content/mimic-cxr/2.1.0/", "paper": "https://doi.org/10.1038/s41597-019-0322-0", "repository": null, "download": "https://www.kaggle.com/datasets/simhadrisadaram/mimic-cxr-dataset",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0", "commercial_use": "no",
   "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["multi-view"],
   "tasks": ["report-generation", "image-report-retrieval"], "capabilities": ["description", "report-generation", "diagnosis"], "usage": "training-evaluation",
   "catalog_status": "included", "language_supervision": ["report"], "derived_from": [],

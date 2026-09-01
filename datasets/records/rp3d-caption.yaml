@@ -1,5 +1,6 @@
 {
   "id": "rp3d-caption", "name": "RP3D-Caption", "year": 2023,
+  "resource_type": "text-image-pairs",
   "homepage": "https://chaoyi-wu.github.io/RadFM/", "paper": "https://arxiv.org/abs/2308.02463", "repository": "https://github.com/chaoyi-wu/RadFM", "download": "https://huggingface.co/datasets/chaoyi-wu/RadFM_data_csv",
   "license": "Radiopaedia non-commercial use with approval", "commercial_use": "no",
   "domains": ["radiology"], "modalities": ["ct", "mri", "ultrasound", "xray"], "image_structure": ["3d-volume"],

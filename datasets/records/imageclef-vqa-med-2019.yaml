@@ -1,5 +1,6 @@
 {
   "id": "imageclef-vqa-med-2019", "name": "ImageCLEF VQA-Med 2019", "year": 2019,
+  "resource_type": "text-image-pairs",
   "homepage": "https://github.com/abachaa/VQA-Med-2019", "paper": "https://ceur-ws.org/Vol-2380/paper_275.pdf", "repository": "https://github.com/abachaa/VQA-Med-2019", "download": "https://github.com/abachaa/VQA-Med-2019",
   "license": "ImageCLEF terms; image copyrights vary", "commercial_use": "unknown",
   "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],

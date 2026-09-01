@@ -1,7 +1,8 @@
 {
   "id": "pathvqa", "name": "PathVQA", "year": 2020,
-  "homepage": "https://pathvqa.com/", "paper": "https://arxiv.org/abs/2003.10286", "repository": "https://github.com/UCSD-AI4H/PathVQA", "download": "https://pathvqa.com/",
-  "license": "Check source terms", "commercial_use": "unknown",
+  "resource_type": "text-image-pairs",
+  "homepage": "https://huggingface.co/datasets/flaviagiammarino/path-vqa", "paper": "https://arxiv.org/abs/2003.10286", "repository": "https://github.com/UCSD-AI4H/PathVQA", "download": "https://huggingface.co/datasets/flaviagiammarino/path-vqa",
+  "license": "MIT", "commercial_use": "yes",
   "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "training-evaluation",
   "catalog_status": "included", "language_supervision": ["question-answer", "caption"], "derived_from": [],

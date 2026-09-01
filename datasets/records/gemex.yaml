@@ -1,6 +1,7 @@
 {
   "id": "gemex", "name": "GEMeX", "year": 2024,
-  "homepage": "https://arxiv.org/abs/2411.16778", "paper": "https://arxiv.org/abs/2411.16778", "repository": null, "download": null,
+  "resource_type": "text-image-pairs",
+  "homepage": "https://arxiv.org/abs/2411.16778", "paper": "https://arxiv.org/abs/2411.16778", "repository": "https://physionet.org/content/chest-imagenome/1.0.0/", "download": "https://huggingface.co/datasets/BoKelvin/GEMeX-VQA",
   "license": "Unknown", "commercial_use": "unknown",
   "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "localization", "reasoning"], "usage": "evaluation",

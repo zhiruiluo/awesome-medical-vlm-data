@@ -2,19 +2,28 @@
 
 Generated from `datasets/` by `scripts/generate_tables.py`.
 
+## Resource Types
+
+- text-only: 0
+- image-only: 8
+- text-image-pairs: 15
+
 ## Domains
 
+- dermatology: 1
+- endoscopy: 1
 - general-biomedical: 4
 - ophthalmology: 1
 - pathology: 2
-- radiology: 6
+- radiology: 14
 
 ## Capabilities
 
-- description: 9
-- diagnosis: 9
-- localization: 1
-- reasoning: 5
-- recognition: 8
+- description: 10
+- diagnosis: 18
+- localization: 7
+- reasoning: 6
+- recognition: 17
 - report-generation: 3
+- segmentation: 2
 - spatial-reasoning: 1

@@ -1,5 +1,6 @@
 {
   "id": "medicat", "name": "MedICaT", "year": 2020,
+  "resource_type": "text-image-pairs",
   "homepage": "https://github.com/allenai/medicat", "paper": "https://arxiv.org/abs/2010.06000", "repository": "https://github.com/allenai/medicat", "download": "https://ai2-s2-medicat.s3.us-west-2.amazonaws.com/2020-10-05/medicat_release.tar.gz",
   "license": "Per-document open-access license; research use only", "commercial_use": "no",
   "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],

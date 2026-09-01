@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Medical VLM dataset record",
   "type": "object",
-  "required": ["id", "name", "year", "license", "commercial_use", "domains", "modalities", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"],
+  "required": ["id", "name", "year", "license", "commercial_use", "resource_type", "domains", "modalities", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"],
   "properties": {
     "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
     "name": {"type": "string", "minLength": 1},
@@ -13,9 +13,10 @@
     "download": {"type": ["string", "null"], "format": "uri"},
     "license": {"type": "string"},
     "commercial_use": {"enum": ["yes", "no", "unknown"]},
+    "resource_type": {"enum": ["text-only", "image-only", "text-image-pairs"]},
     "domains": {"type": "array", "minItems": 1, "items": {"$ref": "../taxonomies/domains.json"}},
-    "modalities": {"type": "array", "minItems": 1, "items": {"$ref": "../taxonomies/modalities.json"}},
-    "image_structure": {"type": "array", "minItems": 1, "items": {"enum": ["2d-single", "multi-view", "3d-volume", "whole-slide-image", "video", "longitudinal-sequence"]}},
+    "modalities": {"type": "array", "items": {"$ref": "../taxonomies/modalities.json"}},
+    "image_structure": {"type": "array", "items": {"enum": ["2d-single", "multi-view", "3d-volume", "whole-slide-image", "video", "longitudinal-sequence"]}},
     "tasks": {"type": "array", "minItems": 1, "items": {"$ref": "../taxonomies/tasks.json"}},
     "capabilities": {"type": "array", "minItems": 1, "items": {"$ref": "../taxonomies/capabilities.json"}},
     "usage": {"enum": ["training", "evaluation", "training-evaluation"]},
@@ -27,5 +28,10 @@
     "quality": {"type": "object", "required": ["contamination_audited", "patient_level_split", "external_validation", "known_issues"]},
     "access": {"type": "object", "required": ["registration_required", "credentialing_required", "gated", "data_use_agreement_required", "citation_required"]},
     "last_verified": {"type": "string", "format": "date"}
-  }
+  },
+  "allOf": [{
+    "if": {"properties": {"resource_type": {"const": "text-only"}}},
+    "then": {"properties": {"modalities": {"maxItems": 0}, "image_structure": {"maxItems": 0}}},
+    "else": {"properties": {"modalities": {"minItems": 1}, "image_structure": {"minItems": 1}}}
+  }]
 }

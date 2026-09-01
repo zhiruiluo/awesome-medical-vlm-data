@@ -1,10 +1,11 @@
 {
   "id": "derm1m", "name": "Derm1M", "year": 2025,
+  "resource_type": "text-image-pairs",
   "homepage": "https://github.com/SiyuanYan1/Derm1M", "paper": "https://arxiv.org/abs/2503.14911", "repository": "https://github.com/SiyuanYan1/Derm1M", "download": "https://huggingface.co/datasets/redlessone/Derm1M",
-  "license": "Unknown", "commercial_use": "unknown",
+  "license": "CC BY-NC-4.0", "commercial_use": "no",
   "domains": ["dermatology"], "modalities": ["dermoscopy", "pathology-image"], "image_structure": ["2d-single"],
   "tasks": ["image-captioning", "image-text-retrieval"], "capabilities": ["recognition", "description", "diagnosis"], "usage": "training-evaluation",
-  "catalog_status": "candidate", "language_supervision": ["caption"], "derived_from": [],
+  "catalog_status": "included", "language_supervision": ["caption"], "derived_from": [],
   "annotation": {"source": "paper-reported", "expert_review": "unknown", "grounding": ["image-caption"]},
   "scale": {"primary_count": 1029761, "primary_unit": "image-text-pairs", "images": 403563, "qa_pairs": null, "patients": null},
   "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Candidate pending confirmation of license and terms for each contributing source."]},

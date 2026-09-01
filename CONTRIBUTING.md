@@ -4,7 +4,7 @@ This repository is a data-intelligence catalog, not an unverified link list. Add
 
 ## Add A Dataset
 
-Follow the complete [record workflow](WORKFLOW.md). In brief: create a JSON-compatible YAML record in `datasets/records/`, assign one or more controlled `domains`, validate it, then generate and commit the final report files.
+Follow the complete [record workflow](WORKFLOW.md). In brief: create a JSON-compatible YAML record in `datasets/records/`, assign a `resource_type` and one or more controlled `domains`, validate it, then generate and commit the final report files.
 
 ```bash
 python3 scripts/validate_records.py

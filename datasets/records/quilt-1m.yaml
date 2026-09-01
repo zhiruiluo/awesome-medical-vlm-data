@@ -1,6 +1,7 @@
 {
   "id": "quilt-1m", "name": "Quilt-1M", "year": 2023,
-  "homepage": "https://quilt1m.github.io/", "paper": "https://arxiv.org/abs/2306.11207", "repository": "https://github.com/wisdomikezogwo/quilt1m", "download": "https://huggingface.co/datasets/wisdomik/Quilt-1M",
+  "resource_type": "text-image-pairs",
+  "homepage": "https://quilt1m.github.io/", "paper": "https://arxiv.org/abs/2306.11207", "repository": "https://github.com/wisdomikezogwo/quilt1m", "download": "https://zenodo.org/records/8239942",
   "license": "Research use agreement; restricted access", "commercial_use": "no",
   "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
   "tasks": ["image-captioning", "image-text-retrieval"], "capabilities": ["description", "recognition"], "usage": "training",

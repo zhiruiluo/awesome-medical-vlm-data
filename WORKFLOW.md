@@ -5,8 +5,8 @@ Use this workflow for every new dataset or benchmark entry. Dataset records are 
 ## 1. Create The Record
 
 1. Copy an existing record in `datasets/records/` and rename it with the dataset's lowercase kebab-case ID, for example `datasets/records/example-vqa.yaml`.
-2. Fill the required fields documented in [DATASET_SCHEMA.md](DATASET_SCHEMA.md). Choose one or more values from the controlled taxonomies in `taxonomies/` and keep unknown information explicit as `unknown` or `null`; do not guess licensing or access rights.
-3. Set `catalog_status` to `included` only when the resource has image-language supervision or evaluation. Keep image-only resources as `excluded` records for provenance, not public catalog entries.
+2. Fill the required fields documented in [DATASET_SCHEMA.md](DATASET_SCHEMA.md). Classify the released payload as `text-only`, `image-only`, or `text-image-pairs`; choose one or more controlled taxonomy values and keep unknown information explicit as `unknown` or `null`; do not guess licensing or access rights.
+3. Set `catalog_status` to `included` when the resource has a verified official source and enough metadata to classify it. Image-only records use `language_supervision: ["none"]`; keep resources that do not meet the catalog's scope or verification standard as `excluded` records for provenance.
 4. Use primary sources for `homepage`, `paper`, `repository`, and `download`. At least one official URL is required.
 
 ## 2. Validate The Record

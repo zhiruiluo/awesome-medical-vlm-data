@@ -1,10 +1,11 @@
 {
   "id": "endobench", "name": "EndoBench", "year": 2025,
+  "resource_type": "text-image-pairs",
   "homepage": "https://github.com/CUHK-AIM-Group/EndoBench", "paper": null, "repository": "https://github.com/CUHK-AIM-Group/EndoBench", "download": null,
-  "license": "Unknown", "commercial_use": "unknown",
+  "license": "Apache-2.0", "commercial_use": "yes",
   "domains": ["endoscopy"], "modalities": ["endoscopy-image"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "evaluation",
-  "catalog_status": "candidate", "language_supervision": ["question-answer"], "derived_from": [],
+  "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
   "annotation": {"source": "clinically-validated-question-answer", "expert_review": "yes", "grounding": ["question-answer"]},
   "scale": {"primary_count": 6832, "primary_unit": "question-answer-pairs", "images": null, "qa_pairs": 6832, "patients": null},
   "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Candidate pending confirmation of benchmark download location and access terms."]},

@@ -1,6 +1,7 @@
 {
   "id": "vqa-rad", "name": "VQA-RAD", "year": 2018,
-  "homepage": "https://www.nlm.nih.gov/research/visible/vqarad/index.html", "paper": "https://doi.org/10.1038/sdata.2018.251", "repository": "https://github.com/cuhksz-nlp/VQA-RAD", "download": "https://www.nlm.nih.gov/research/visible/vqarad/index.html",
+  "resource_type": "text-image-pairs",
+  "homepage": "https://www.nlm.nih.gov/research/visible/vqarad/index.html", "paper": "https://doi.org/10.1038/sdata.2018.251", "repository": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad", "download": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad",
   "license": "Research use; check source terms", "commercial_use": "unknown",
   "domains": ["radiology"], "modalities": ["xray", "ct", "mri"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "evaluation",

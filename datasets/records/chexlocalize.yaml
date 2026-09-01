@@ -1,0 +1,12 @@
+{
+  "id": "chexlocalize", "name": "CheXlocalize", "year": 2022,
+  "homepage": "https://github.com/rajpurkarlab/cheXlocalize", "paper": "https://doi.org/10.1038/s42256-022-00536-x", "repository": "https://github.com/rajpurkarlab/cheXlocalize", "download": "https://aimi.stanford.edu/datasets/chexlocalize",
+  "license": "MIT license", "commercial_use": "yes", "resource_type": "image-only",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
+  "tasks": ["image-segmentation", "object-detection"], "capabilities": ["recognition", "localization", "segmentation"], "usage": "evaluation",
+  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
+  "annotation": {"source": "radiologist-annotation", "expert_review": "yes", "grounding": ["segmentation-mask", "point"]},
+  "scale": {"primary_count": 902, "primary_unit": "images", "images": 902, "qa_pairs": null, "patients": 700},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["The image component is drawn from CheXpert validation and test sets and inherits their access conditions."]},
+  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+}

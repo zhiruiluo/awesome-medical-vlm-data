@@ -1,0 +1,12 @@
+{
+  "id": "chestx-det10", "name": "ChestX-Det10", "year": 2020,
+  "homepage": "https://github.com/Deepwise-AILab/ChestX-Det10-Dataset", "paper": "https://arxiv.org/abs/2006.10550", "repository": "https://github.com/Deepwise-AILab/ChestX-Det10-Dataset", "download": null,
+  "license": "Unknown", "commercial_use": "unknown", "resource_type": "image-only",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
+  "tasks": ["object-detection"], "capabilities": ["recognition", "diagnosis", "localization"], "usage": "training-evaluation",
+  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
+  "annotation": {"source": "instance-level-annotation", "expert_review": "yes", "grounding": ["bounding-box"]},
+  "scale": {"primary_count": 3543, "primary_unit": "images", "images": 3543, "qa_pairs": null, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["The official repository exposes annotations; verify image-download availability and terms before use."]},
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "unknown", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+}

@@ -9,7 +9,8 @@ Each file under `datasets/records/` is a JSON-compatible YAML object validated b
 | `id`, `name`, `year` | Stable identifier, display name, and release year. |
 | `homepage`, `paper`, `repository`, `download` | Source URLs. At least one must be present. Use `null` when unavailable. |
 | `license`, `commercial_use` | License name/status and `yes`, `no`, or `unknown`. |
-| `domains`, `modalities`, `image_structure` | Taxonomy lists for the data. |
+| `resource_type` | Released resource composition: `text-only`, `image-only`, or `text-image-pairs`. It controls the primary README section and is distinct from annotation supervision. |
+| `domains`, `modalities`, `image_structure` | Taxonomy lists for the data. Text-only records use empty `modalities` and `image_structure`; image-bearing records must provide both. |
 | `tasks`, `capabilities`, `usage` | VLM tasks, supported capabilities, and `training`, `evaluation`, or `training-evaluation`. |
 | `catalog_status`, `language_supervision`, `derived_from` | Publication eligibility, language signal types, and parent dataset IDs for derived releases. Only `included` records appear in generated public tables. |
 | `annotation` | Annotation source, grounding types, and review status. |
@@ -28,7 +29,7 @@ The README table renders a clickable Shields.io `GitHub` badge when `repository`
 {
   "id": "example-vqa", "name": "Example VQA", "year": 2025,
   "homepage": "https://example.org", "paper": null, "repository": null, "download": null,
-  "license": "unknown", "commercial_use": "unknown",
+  "license": "unknown", "commercial_use": "unknown", "resource_type": "text-image-pairs",
   "domains": ["radiology"], "modalities": ["xray"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition"], "usage": "evaluation",
   "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],

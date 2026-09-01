@@ -1,5 +1,6 @@
 {
   "id": "slake", "name": "SLAKE", "year": 2021,
+  "resource_type": "text-image-pairs",
   "homepage": "https://www.med-vqa.com/slake/", "paper": "https://arxiv.org/abs/2102.09542", "repository": "https://github.com/haifangong/SLAKE", "download": "https://www.med-vqa.com/slake/",
   "license": "Research use; check source terms", "commercial_use": "unknown",
   "domains": ["general-biomedical"], "modalities": ["xray", "ct", "mri"], "image_structure": ["2d-single"],

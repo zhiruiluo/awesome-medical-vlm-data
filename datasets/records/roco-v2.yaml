@@ -1,7 +1,8 @@
 {
   "id": "roco-v2", "name": "ROCOv2", "year": 2023,
-  "homepage": "https://zenodo.org/records/10821435", "paper": "https://arxiv.org/abs/2405.10004", "repository": null, "download": "https://zenodo.org/records/10821435",
-  "license": "Per-image license information included; check source", "commercial_use": "unknown",
+  "resource_type": "text-image-pairs",
+  "homepage": "https://zenodo.org/records/10821435", "paper": "https://arxiv.org/abs/2405.10004", "repository": "https://huggingface.co/datasets/eltorio/ROCOv2-radiology", "download": "https://zenodo.org/records/10821435",
+  "license": "CC BY-NC 4.0", "commercial_use": "no",
   "domains": ["radiology"], "modalities": ["angiography", "ct", "mri", "pet", "ultrasound", "xray"], "image_structure": ["2d-single"],
   "tasks": ["image-captioning", "image-text-retrieval", "multi-label-classification"], "capabilities": ["description", "recognition"], "usage": "training-evaluation",
   "catalog_status": "included", "language_supervision": ["caption"], "derived_from": ["roco"],

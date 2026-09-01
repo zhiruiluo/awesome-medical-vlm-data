@@ -1,5 +1,6 @@
 {
   "id": "ct-rate", "name": "CT-RATE", "year": 2024,
+  "resource_type": "text-image-pairs",
   "homepage": "https://stanfordmlgroup.github.io/projects/ct-rate/", "paper": "https://arxiv.org/abs/2403.17834", "repository": "https://github.com/ibrahimethemhamci/CT-RATE", "download": "https://huggingface.co/datasets/ibrahimhamamci/CT-RATE",
   "license": "CC BY-NC-SA 4.0", "commercial_use": "no",
   "domains": ["radiology"], "modalities": ["ct"], "image_structure": ["3d-volume"],

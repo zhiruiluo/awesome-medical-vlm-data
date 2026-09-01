@@ -1,5 +1,6 @@
 {
   "id": "pmc-vqa", "name": "PMC-VQA", "year": 2023,
+  "resource_type": "text-image-pairs",
   "homepage": "https://xiaoman-zhang.github.io/PMC-VQA/", "paper": "https://arxiv.org/abs/2305.10415", "repository": "https://github.com/xiaoman-zhang/PMC-VQA", "download": "https://huggingface.co/datasets/xmcmic/PMC-VQA",
   "license": "Check source terms", "commercial_use": "unknown",
   "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],
