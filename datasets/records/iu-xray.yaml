@@ -1,6 +1,6 @@
 {
   "id": "iu-xray", "name": "IU X-Ray", "year": 2016,
-  "homepage": "https://openi.nlm.nih.gov/", "paper": "https://pubmed.ncbi.nlm.nih.gov/27701286/", "repository": null, "download": "https://openi.nlm.nih.gov/faq",
+  "homepage": "https://openi.nlm.nih.gov/", "paper": "https://pubmed.ncbi.nlm.nih.gov/27701286/", "repository": null, "download": "https://www.kaggle.com/datasets/raddar/chest-xrays-indiana-university",
   "license": "Per-image Open-i terms; check source", "commercial_use": "unknown",
   "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["multi-view"],
   "tasks": ["report-generation", "image-report-retrieval"], "capabilities": ["description", "report-generation", "diagnosis"], "usage": "training-evaluation",

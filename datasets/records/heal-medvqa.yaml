@@ -1,0 +1,12 @@
+{
+  "id": "heal-medvqa", "name": "HEAL-MedVQA", "year": 2025,
+  "homepage": "https://loba-ijcai25.github.io/", "paper": "https://www.ijcai.org/proceedings/2025/853", "repository": "https://github.com/tuandung2812alt3/Localize-before-Answering", "download": "https://huggingface.co/datasets/tuandung2812/Heal-MedVQA",
+  "license": "Unknown", "commercial_use": "unknown",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering", "hallucination-evaluation"], "capabilities": ["localization", "reasoning", "hallucination-detection"], "usage": "evaluation",
+  "catalog_status": "candidate", "language_supervision": ["question-answer", "grounded-text"], "derived_from": [],
+  "annotation": {"source": "doctor-annotated-question-answer", "expert_review": "yes", "grounding": ["question-answer", "segmentation-mask"]},
+  "scale": {"primary_count": 67000, "primary_unit": "question-answer-pairs", "images": null, "qa_pairs": 67000, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Candidate pending review of the released dataset license and underlying image access conditions."]},
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "unknown", "data_use_agreement_required": "unknown", "citation_required": "unknown"}, "last_verified": "2026-08-31"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "xbench", "name": "XBench", "year": 2025,
+  "homepage": "https://github.com/Roypic/Benchmarkingattention", "paper": "https://arxiv.org/abs/2510.19599", "repository": "https://github.com/Roypic/Benchmarkingattention", "download": null,
+  "license": "Unknown", "commercial_use": "unknown",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
+  "tasks": ["grounded-captioning"], "capabilities": ["description", "localization", "reasoning"], "usage": "evaluation",
+  "catalog_status": "candidate", "language_supervision": ["grounded-text"], "derived_from": [],
+  "annotation": {"source": "paper-reported", "expert_review": "unknown", "grounding": ["explanation", "region"]},
+  "scale": {"primary_count": 12601, "primary_unit": "cases", "images": null, "qa_pairs": null, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Scale originates from the discovery catalog and requires confirmation from the official release before inclusion."]},
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "unknown", "data_use_agreement_required": "unknown", "citation_required": "unknown"}, "last_verified": "2026-08-31"
+}

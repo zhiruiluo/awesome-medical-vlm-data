@@ -1,0 +1,12 @@
+{
+  "id": "gemex", "name": "GEMeX", "year": 2024,
+  "homepage": "https://arxiv.org/abs/2411.16778", "paper": "https://arxiv.org/abs/2411.16778", "repository": null, "download": null,
+  "license": "Unknown", "commercial_use": "unknown",
+  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
+  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "localization", "reasoning"], "usage": "evaluation",
+  "catalog_status": "candidate", "language_supervision": ["question-answer", "grounded-text"], "derived_from": [],
+  "annotation": {"source": "paper-reported", "expert_review": "unknown", "grounding": ["question-answer", "region"]},
+  "scale": {"primary_count": 1605575, "primary_unit": "question-answer-pairs", "images": 151025, "qa_pairs": 1605575, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Candidate pending confirmation of an official release endpoint, license, and data-access terms."]},
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "unknown", "data_use_agreement_required": "unknown", "citation_required": "unknown"}, "last_verified": "2026-08-31"
+}

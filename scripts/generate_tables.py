@@ -63,11 +63,11 @@ def links(record: dict) -> str:
 
 
 def table(items: list[dict]) -> str:
-    lines = ["| Dataset | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | --- | --- | ---: | --- | --- | --- |"]
+    lines = ["| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | ---: | --- | --- | ---: | --- | --- | --- |"]
     for item in items:
         source = item["homepage"] or item["paper"] or item["repository"] or item["download"]
         access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "open"
-        lines.append(f"| [{item['name']}]({source}) | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
+        lines.append(f"| [{item['name']}]({source}) | {item['year']} | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
     return "\n".join(lines)
 
 
