@@ -1,13 +1,67 @@
 {
-  "id": "pathvqa", "name": "PathVQA", "year": 2020,
+  "id": "pathvqa",
+  "name": "PathVQA",
+  "year": 2020,
   "resource_type": "text-image-pairs",
-  "homepage": "https://huggingface.co/datasets/flaviagiammarino/path-vqa", "paper": "https://arxiv.org/abs/2003.10286", "repository": "https://github.com/UCSD-AI4H/PathVQA", "download": "https://huggingface.co/datasets/flaviagiammarino/path-vqa",
-  "license": "MIT", "commercial_use": "yes",
-  "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
-  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["question-answer", "caption"], "derived_from": [],
-  "annotation": {"source": "human-authored", "expert_review": "partial", "grounding": ["image", "caption"]},
-  "scale": {"primary_count": 32799, "primary_unit": "qa-pairs", "images": 4998, "qa_pairs": 32799, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Images are sourced from educational material and PubMed Central figures."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://huggingface.co/datasets/flaviagiammarino/path-vqa",
+  "paper": "https://arxiv.org/abs/2003.10286",
+  "repository": "https://github.com/UCSD-AI4H/PathVQA",
+  "download": "https://huggingface.co/datasets/flaviagiammarino/path-vqa",
+  "license": "MIT",
+  "commercial_use": "yes",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "pathology-image"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "reasoning"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "question-answer",
+    "caption"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "human-authored",
+    "expert_review": "partial",
+    "grounding": [
+      "image",
+      "caption"
+    ]
+  },
+  "scale": {
+    "primary_count": 32799,
+    "primary_unit": "qa-pairs",
+    "images": 4998,
+    "qa_pairs": 32799,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Images are sourced from educational material and PubMed Central figures."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

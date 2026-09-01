@@ -1,0 +1,64 @@
+{
+  "id": "eyepacs",
+  "name": "EyePACS",
+  "year": 2016,
+  "homepage": "https://www.eyepacs.com/",
+  "paper": null,
+  "repository": null,
+  "download": "https://www.eyepacs.com/",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "diabetic-retinopathy-grades",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 35126,
+    "primary_unit": "images",
+    "images": 35126,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Release route and terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

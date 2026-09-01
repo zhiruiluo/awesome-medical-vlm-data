@@ -1,13 +1,68 @@
 {
-  "id": "pmc-vqa", "name": "PMC-VQA", "year": 2023,
+  "id": "pmc-vqa",
+  "name": "PMC-VQA",
+  "year": 2023,
   "resource_type": "text-image-pairs",
-  "homepage": "https://xiaoman-zhang.github.io/PMC-VQA/", "paper": "https://arxiv.org/abs/2305.10415", "repository": "https://github.com/xiaoman-zhang/PMC-VQA", "download": "https://huggingface.co/datasets/xmcmic/PMC-VQA",
-  "license": "Check source terms", "commercial_use": "unknown",
-  "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],
-  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "reasoning", "description"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["question-answer", "grounded-text"], "derived_from": [],
-  "annotation": {"source": "synthetic-from-article-context", "expert_review": "unknown", "grounding": ["figure", "caption", "article-context"]},
-  "scale": {"primary_count": 227000, "primary_unit": "qa-pairs", "images": 149075, "qa_pairs": 227000, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "not-applicable", "external_validation": "unknown", "known_issues": ["Questions are automatically generated from biomedical articles."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://xiaoman-zhang.github.io/PMC-VQA/",
+  "paper": "https://arxiv.org/abs/2305.10415",
+  "repository": "https://github.com/xiaoman-zhang/PMC-VQA",
+  "download": "https://huggingface.co/datasets/xmcmic/PMC-VQA",
+  "license": "Check source terms",
+  "commercial_use": "unknown",
+  "domains": [
+    "general-biomedical"
+  ],
+  "modalities": [
+    "mixed-medical-figures"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "recognition",
+    "reasoning",
+    "description"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "question-answer",
+    "grounded-text"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "synthetic-from-article-context",
+    "expert_review": "unknown",
+    "grounding": [
+      "figure",
+      "caption",
+      "article-context"
+    ]
+  },
+  "scale": {
+    "primary_count": 227000,
+    "primary_unit": "qa-pairs",
+    "images": 149075,
+    "qa_pairs": 227000,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "not-applicable",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Questions are automatically generated from biomedical articles."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

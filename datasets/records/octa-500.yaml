@@ -1,0 +1,63 @@
+{
+  "id": "octa-500",
+  "name": "OCTA-500",
+  "year": 2020,
+  "homepage": "https://ieee-dataport.org/open-access/octa-500",
+  "paper": null,
+  "repository": null,
+  "download": "https://ieee-dataport.org/open-access/octa-500",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "oct"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "vessel-annotation",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 500,
+    "primary_unit": "images",
+    "images": 500,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "DataPort access terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

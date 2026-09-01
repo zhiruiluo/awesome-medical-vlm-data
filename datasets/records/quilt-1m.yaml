@@ -1,13 +1,65 @@
 {
-  "id": "quilt-1m", "name": "Quilt-1M", "year": 2023,
+  "id": "quilt-1m",
+  "name": "Quilt-1M",
+  "year": 2023,
   "resource_type": "text-image-pairs",
-  "homepage": "https://quilt1m.github.io/", "paper": "https://arxiv.org/abs/2306.11207", "repository": "https://github.com/wisdomikezogwo/quilt1m", "download": "https://zenodo.org/records/8239942",
-  "license": "Research use agreement; restricted access", "commercial_use": "no",
-  "domains": ["pathology"], "modalities": ["pathology-image"], "image_structure": ["2d-single"],
-  "tasks": ["image-captioning", "image-text-retrieval"], "capabilities": ["description", "recognition"], "usage": "training",
-  "catalog_status": "included", "language_supervision": ["caption"], "derived_from": [],
-  "annotation": {"source": "caption-report-pairs", "expert_review": "unknown", "grounding": ["caption"]},
-  "scale": {"primary_count": 1000000, "primary_unit": "image-text-pairs", "images": 1000000, "qa_pairs": null, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "not-applicable", "external_validation": "unknown", "known_issues": ["Web-derived image-text pairs can include noisy or duplicate examples."]},
-  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "yes", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://quilt1m.github.io/",
+  "paper": "https://arxiv.org/abs/2306.11207",
+  "repository": "https://github.com/wisdomikezogwo/quilt1m",
+  "download": "https://zenodo.org/records/8239942",
+  "license": "Research use agreement; restricted access",
+  "commercial_use": "no",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "pathology-image"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-captioning",
+    "image-text-retrieval"
+  ],
+  "capabilities": [
+    "description",
+    "recognition"
+  ],
+  "usage": "training",
+  "catalog_status": "included",
+  "language_supervision": [
+    "caption"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "caption-report-pairs",
+    "expert_review": "unknown",
+    "grounding": [
+      "caption"
+    ]
+  },
+  "scale": {
+    "primary_count": 1000000,
+    "primary_unit": "image-text-pairs",
+    "images": 1000000,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "not-applicable",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Web-derived image-text pairs can include noisy or duplicate examples."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

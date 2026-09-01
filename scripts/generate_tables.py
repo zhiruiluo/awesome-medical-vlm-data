@@ -148,7 +148,9 @@ def main() -> int:
         return 0
     for path, content in expected.items():
         path.write_text(content)
-    print(f"Generated {'README' if args.readme_only else 'catalog views'} for {len(items)} datasets.")
+    status_counts = Counter(item["catalog_status"] for item in audited)
+    print(f"Generated {'README' if args.readme_only else 'catalog views'} for {len(items)} included datasets.")
+    print(f"Catalog records: {status_counts['included']} included, {status_counts['candidate']} candidate, {status_counts['excluded']} excluded.")
     return 0
 
 

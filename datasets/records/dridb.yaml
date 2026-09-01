@@ -1,0 +1,64 @@
+{
+  "id": "dridb",
+  "name": "DRiDB",
+  "year": 2013,
+  "homepage": "https://ipg.fer.hr/ipg/resources/image_database",
+  "paper": null,
+  "repository": null,
+  "download": "https://ipg.fer.hr/ipg/resources/image_database",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "upstream-catalog-summary",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 648,
+    "primary_unit": "images",
+    "images": 648,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

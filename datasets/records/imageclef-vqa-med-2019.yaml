@@ -1,13 +1,65 @@
 {
-  "id": "imageclef-vqa-med-2019", "name": "ImageCLEF VQA-Med 2019", "year": 2019,
+  "id": "imageclef-vqa-med-2019",
+  "name": "ImageCLEF VQA-Med 2019",
+  "year": 2019,
   "resource_type": "text-image-pairs",
-  "homepage": "https://github.com/abachaa/VQA-Med-2019", "paper": "https://ceur-ws.org/Vol-2380/paper_275.pdf", "repository": "https://github.com/abachaa/VQA-Med-2019", "download": "https://github.com/abachaa/VQA-Med-2019",
-  "license": "ImageCLEF terms; image copyrights vary", "commercial_use": "unknown",
-  "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],
-  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
-  "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image"]},
-  "scale": {"primary_count": 15292, "primary_unit": "questions", "images": 4200, "qa_pairs": 14792, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["The test set contains questions without public answers; question-answer counts differ from total question count."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://github.com/abachaa/VQA-Med-2019",
+  "paper": "https://ceur-ws.org/Vol-2380/paper_275.pdf",
+  "repository": "https://github.com/abachaa/VQA-Med-2019",
+  "download": "https://github.com/abachaa/VQA-Med-2019",
+  "license": "ImageCLEF terms; image copyrights vary",
+  "commercial_use": "unknown",
+  "domains": [
+    "general-biomedical"
+  ],
+  "modalities": [
+    "mixed-medical-figures"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "reasoning"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "question-answer"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "human-authored",
+    "expert_review": "yes",
+    "grounding": [
+      "image"
+    ]
+  },
+  "scale": {
+    "primary_count": 15292,
+    "primary_unit": "questions",
+    "images": 4200,
+    "qa_pairs": 14792,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The test set contains questions without public answers; question-answer counts differ from total question count."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

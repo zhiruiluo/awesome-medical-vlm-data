@@ -1,0 +1,63 @@
+{
+  "id": "acps",
+  "name": "ACPS",
+  "year": 2013,
+  "homepage": "https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm",
+  "paper": "https://doi.org/10.1364/BOE.4.000924",
+  "repository": null,
+  "download": "https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "oct"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual-annotation",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 840,
+    "primary_unit": "images",
+    "images": 840,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "License and access terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

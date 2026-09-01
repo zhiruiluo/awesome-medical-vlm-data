@@ -1,0 +1,63 @@
+{
+  "id": "amd-sd",
+  "name": "AMD-SD",
+  "year": 2024,
+  "homepage": "https://www.nature.com/articles/s41597-024-03844-6?_gl=1*b3wq4u*_up*MQ..&gclid=Cj0KCQjw3bm3BhDJARIsAKnHoVXSgcCZ1IVP-iFrZ3UUAyGYcDxTqRoRzajibS9q1F6dA5GEF2xAyw4aAmrcEALw_wcB",
+  "paper": null,
+  "repository": null,
+  "download": "https://www.nature.com/articles/s41597-024-03844-6?_gl=1*b3wq4u*_up*MQ..&gclid=Cj0KCQjw3bm3BhDJARIsAKnHoVXSgcCZ1IVP-iFrZ3UUAyGYcDxTqRoRzajibS9q1F6dA5GEF2xAyw4aAmrcEALw_wcB",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "oct"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "upstream-catalog-summary",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 3049,
+    "primary_unit": "images",
+    "images": 3049,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

@@ -1,13 +1,67 @@
 {
-  "id": "ct-rate", "name": "CT-RATE", "year": 2024,
+  "id": "ct-rate",
+  "name": "CT-RATE",
+  "year": 2024,
   "resource_type": "text-image-pairs",
-  "homepage": "https://stanfordmlgroup.github.io/projects/ct-rate/", "paper": "https://arxiv.org/abs/2403.17834", "repository": "https://github.com/ibrahimethemhamci/CT-RATE", "download": "https://huggingface.co/datasets/ibrahimhamamci/CT-RATE",
-  "license": "CC BY-NC-SA 4.0", "commercial_use": "no",
-  "domains": ["radiology"], "modalities": ["ct"], "image_structure": ["3d-volume"],
-  "tasks": ["report-generation", "multi-label-classification"], "capabilities": ["description", "diagnosis", "report-generation"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["report"], "derived_from": [],
-  "annotation": {"source": "clinical-reports", "expert_review": "clinical-care", "grounding": ["report"]},
-  "scale": {"primary_count": 25692, "primary_unit": "studies", "images": 1300000, "studies": 25692, "patients": 21240, "qa_pairs": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["CT volumes require substantially more storage and compute than 2D datasets."]},
-  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://stanfordmlgroup.github.io/projects/ct-rate/",
+  "paper": "https://arxiv.org/abs/2403.17834",
+  "repository": "https://github.com/ibrahimethemhamci/CT-RATE",
+  "download": "https://huggingface.co/datasets/ibrahimhamamci/CT-RATE",
+  "license": "CC BY-NC-SA 4.0",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "report-generation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "description",
+    "diagnosis",
+    "report-generation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "report"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "clinical-reports",
+    "expert_review": "clinical-care",
+    "grounding": [
+      "report"
+    ]
+  },
+  "scale": {
+    "primary_count": 25692,
+    "primary_unit": "studies",
+    "images": 1300000,
+    "studies": 25692,
+    "patients": 21240,
+    "qa_pairs": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "CT volumes require substantially more storage and compute than 2D datasets."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

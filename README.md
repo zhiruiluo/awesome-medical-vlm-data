@@ -16,6 +16,7 @@ Each dataset is a version-controlled record in `datasets/records/`, not just a l
 
 ```bash
 python3 scripts/validate_records.py
+python3 scripts/format_records.py --check
 python3 scripts/generate_tables.py
 python3 scripts/check_links.py --timeout 15
 ```
@@ -23,7 +24,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-23 included resources: 0 text-only, 8 image-only, and 15 text-image pairs. 2 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
+24 included resources: 0 text-only, 9 image-only, and 15 text-image pairs. 52 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## By Resource Type
@@ -51,6 +52,12 @@ No included records yet.
 | [COVID-19-AR](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70226443) | 2020 | 2d-single, 3d-volume | recognition, diagnosis | 105 patients | image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/covid-19-ar/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/tcia.2020.py71-5978) | TCIA collection terms; check source (open) |
 | [VinDr-CXR](https://github.com/vinbigdata-medical/vindr-cxr) | 2021 | 2d-single | recognition, diagnosis | 18.0K images | image-label, bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vinbigdata-medical/vindr-cxr) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/vindr-cxr/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2012.15029) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 | [CheXlocalize](https://github.com/rajpurkarlab/cheXlocalize) | 2022 | 2d-single | recognition, localization | 902 images | segmentation-mask, point | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rajpurkarlab/cheXlocalize) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://aimi.stanford.edu/datasets/chexlocalize) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s42256-022-00536-x) | MIT license (registration) |
+
+#### Ophthalmology
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [ACPS](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) | 2013 | 2d-single | segmentation | 840 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1364/BOE.4.000924) | Unknown (open) |
 
 ### Text-Image Pairs
 
@@ -111,7 +118,7 @@ No included records yet.
 | reasoning | 6 |
 | recognition | 17 |
 | report-generation | 3 |
-| segmentation | 2 |
+| segmentation | 3 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

@@ -1,12 +1,67 @@
 {
-  "id": "vindr-cxr", "name": "VinDr-CXR", "year": 2021,
-  "homepage": "https://github.com/vinbigdata-medical/vindr-cxr", "paper": "https://arxiv.org/abs/2012.15029", "repository": "https://github.com/vinbigdata-medical/vindr-cxr", "download": "https://physionet.org/content/vindr-cxr/1.0.0/",
-  "license": "PhysioNet Credentialed Health Data License 1.5.0", "commercial_use": "no", "resource_type": "image-only",
-  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
-  "tasks": ["multi-label-classification", "object-detection"], "capabilities": ["recognition", "diagnosis", "localization"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
-  "annotation": {"source": "radiologist-annotation", "expert_review": "yes", "grounding": ["image-label", "bounding-box"]},
-  "scale": {"primary_count": 18000, "primary_unit": "images", "images": 18000, "qa_pairs": null, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "yes", "external_validation": "unknown", "known_issues": ["Download requires registration and acceptance of the dataset data-use agreement."]},
-  "access": {"registration_required": true, "credentialing_required": true, "gated": "yes", "data_use_agreement_required": "yes", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "id": "vindr-cxr",
+  "name": "VinDr-CXR",
+  "year": 2021,
+  "homepage": "https://github.com/vinbigdata-medical/vindr-cxr",
+  "paper": "https://arxiv.org/abs/2012.15029",
+  "repository": "https://github.com/vinbigdata-medical/vindr-cxr",
+  "download": "https://physionet.org/content/vindr-cxr/1.0.0/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "resource_type": "image-only",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "object-detection"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "radiologist-annotation",
+    "expert_review": "yes",
+    "grounding": [
+      "image-label",
+      "bounding-box"
+    ]
+  },
+  "scale": {
+    "primary_count": 18000,
+    "primary_unit": "images",
+    "images": 18000,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Download requires registration and acceptance of the dataset data-use agreement."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

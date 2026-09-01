@@ -1,12 +1,69 @@
 {
-  "id": "rsna-pneumonia", "name": "RSNA Pneumonia Detection Challenge", "year": 2018,
-  "homepage": "https://www.rsna.org/education/ai-resources-and-training/%20%5C%20ai-image-challenge/RSNA-Pneumonia-Detection-Challenge-2018", "paper": "https://doi.org/10.1148/ryai.2019180041", "repository": null, "download": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge",
-  "license": "RSNA attribution terms", "commercial_use": "yes", "resource_type": "image-only",
-  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
-  "tasks": ["object-detection", "multi-label-classification"], "capabilities": ["recognition", "diagnosis", "localization"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["none"], "derived_from": ["chestxray14"],
-  "annotation": {"source": "radiologist-annotation", "expert_review": "yes", "grounding": ["bounding-box", "image-label"]},
-  "scale": {"primary_count": 30000, "primary_unit": "examinations", "images": 30000, "qa_pairs": null, "patients": 12274},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "no", "external_validation": "unknown", "known_issues": ["The challenge data are derived from NIH ChestX-ray14; use the published mapping to avoid unintended overlap."]},
-  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "yes", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "id": "rsna-pneumonia",
+  "name": "RSNA Pneumonia Detection Challenge",
+  "year": 2018,
+  "homepage": "https://www.rsna.org/education/ai-resources-and-training/%20%5C%20ai-image-challenge/RSNA-Pneumonia-Detection-Challenge-2018",
+  "paper": "https://doi.org/10.1148/ryai.2019180041",
+  "repository": null,
+  "download": "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge",
+  "license": "RSNA attribution terms",
+  "commercial_use": "yes",
+  "resource_type": "image-only",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "object-detection",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [
+    "chestxray14"
+  ],
+  "annotation": {
+    "source": "radiologist-annotation",
+    "expert_review": "yes",
+    "grounding": [
+      "bounding-box",
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 30000,
+    "primary_unit": "examinations",
+    "images": 30000,
+    "qa_pairs": null,
+    "patients": 12274
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "no",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The challenge data are derived from NIH ChestX-ray14; use the published mapping to avoid unintended overlap."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

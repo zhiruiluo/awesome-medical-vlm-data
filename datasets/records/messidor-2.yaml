@@ -1,0 +1,64 @@
+{
+  "id": "messidor-2",
+  "name": "Messidor-2",
+  "year": 2013,
+  "homepage": "https://www.adcis.net/en/third-party/messidor2/",
+  "paper": null,
+  "repository": null,
+  "download": "https://www.adcis.net/en/third-party/messidor2/",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "dataset-labels",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 1748,
+    "primary_unit": "images",
+    "images": 1748,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "License and access terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

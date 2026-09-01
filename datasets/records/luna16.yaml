@@ -1,13 +1,69 @@
 {
-  "id": "luna16", "name": "LUNA16", "year": 2016,
+  "id": "luna16",
+  "name": "LUNA16",
+  "year": 2016,
   "resource_type": "image-only",
-  "homepage": "https://luna16.grand-challenge.org/", "paper": "https://doi.org/10.1016/j.media.2017.06.015", "repository": null, "download": "https://luna16.grand-challenge.org/Download/",
-  "license": "CC BY 4.0", "commercial_use": "yes",
-  "domains": ["radiology"], "modalities": ["ct"], "image_structure": ["3d-volume"],
-  "tasks": ["nodule-detection", "false-positive-reduction"], "capabilities": ["localization", "diagnosis"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
-  "annotation": {"source": "radiologist-annotations", "expert_review": "yes", "grounding": ["coordinates", "diameter"]},
-  "scale": {"primary_count": 888, "primary_unit": "studies", "images": null, "studies": 888, "patients": null, "nodules": 1186, "qa_pairs": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "no", "external_validation": "unknown", "known_issues": ["No language supervision: this resource does not meet the repository's medical VLM inclusion criterion.", "Use the official 10-fold cross-validation subsets; LUNA16 does not provide a fixed patient-level train/test split."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "no", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://luna16.grand-challenge.org/",
+  "paper": "https://doi.org/10.1016/j.media.2017.06.015",
+  "repository": null,
+  "download": "https://luna16.grand-challenge.org/Download/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "nodule-detection",
+    "false-positive-reduction"
+  ],
+  "capabilities": [
+    "localization",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "radiologist-annotations",
+    "expert_review": "yes",
+    "grounding": [
+      "coordinates",
+      "diameter"
+    ]
+  },
+  "scale": {
+    "primary_count": 888,
+    "primary_unit": "studies",
+    "images": null,
+    "studies": 888,
+    "patients": null,
+    "nodules": 1186,
+    "qa_pairs": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "no",
+    "external_validation": "unknown",
+    "known_issues": [
+      "No language supervision: this resource does not meet the repository's medical VLM inclusion criterion.",
+      "Use the official 10-fold cross-validation subsets; LUNA16 does not provide a fixed patient-level train/test split."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

@@ -1,0 +1,66 @@
+{
+  "id": "chase-db1",
+  "name": "CHASE_DB1",
+  "aliases": [
+    "CHASE"
+  ],
+  "year": 2011,
+  "homepage": "https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/",
+  "paper": null,
+  "repository": null,
+  "download": "https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual-vessel-annotation",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 28,
+    "primary_unit": "images",
+    "images": 28,
+    "qa_pairs": null,
+    "patients": 14
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The original Kingston download page is unavailable; verify current download terms through the research-data record."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "retina",
+  "name": "Retina",
+  "year": 2016,
+  "homepage": "https://github.com/yiweichen04/retina_dataset",
+  "paper": null,
+  "repository": "https://github.com/yiweichen04/retina_dataset",
+  "download": "https://www.kaggle.com/datasets/jr2ngb/cataractdataset",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "dataset-labels",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 601,
+    "primary_unit": "images",
+    "images": 601,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The source list had no official endpoint; repository and Kaggle distribution require independent terms verification."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

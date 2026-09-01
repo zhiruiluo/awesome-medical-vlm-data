@@ -1,12 +1,65 @@
 {
-  "id": "chestxray14", "name": "ChestX-ray14", "year": 2017,
-  "homepage": "https://nihcc.app.box.com/v/ChestXray-NIHCC", "paper": "https://arxiv.org/abs/1705.02315", "repository": null, "download": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
-  "license": "NIH source terms; check source", "commercial_use": "unknown", "resource_type": "image-only",
-  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
-  "tasks": ["multi-label-classification"], "capabilities": ["recognition", "diagnosis", "localization"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
-  "annotation": {"source": "text-mined-radiology-reports", "expert_review": "unknown", "grounding": ["image-label"]},
-  "scale": {"primary_count": 112120, "primary_unit": "images", "images": 112120, "qa_pairs": null, "patients": 30805},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Disease labels were mined from reports and are not pixel-level ground truth."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "id": "chestxray14",
+  "name": "ChestX-ray14",
+  "year": 2017,
+  "homepage": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
+  "paper": "https://arxiv.org/abs/1705.02315",
+  "repository": null,
+  "download": "https://nihcc.app.box.com/v/ChestXray-NIHCC",
+  "license": "NIH source terms; check source",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "text-mined-radiology-reports",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 112120,
+    "primary_unit": "images",
+    "images": 112120,
+    "qa_pairs": null,
+    "patients": 30805
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Disease labels were mined from reports and are not pixel-level ground truth."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

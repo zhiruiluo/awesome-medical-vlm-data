@@ -1,0 +1,63 @@
+{
+  "id": "maples-dr",
+  "name": "MAPLES-DR",
+  "year": 2024,
+  "homepage": "https://www.nature.com/articles/s41597-024-03739-6?_gl=1",
+  "paper": null,
+  "repository": null,
+  "download": "https://www.nature.com/articles/s41597-024-03739-6?_gl=1",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "upstream-catalog-summary",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 198,
+    "primary_unit": "images",
+    "images": 198,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "idrid",
+  "name": "IDRiD",
+  "year": 2018,
+  "homepage": "https://idrid.grand-challenge.org/Home/",
+  "paper": null,
+  "repository": null,
+  "download": "https://idrid.grand-challenge.org/Home/",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "challenge-annotation",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask",
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 81,
+    "primary_unit": "images",
+    "images": 81,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Challenge download terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

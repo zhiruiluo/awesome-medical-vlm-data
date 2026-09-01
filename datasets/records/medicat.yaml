@@ -1,13 +1,70 @@
 {
-  "id": "medicat", "name": "MedICaT", "year": 2020,
+  "id": "medicat",
+  "name": "MedICaT",
+  "year": 2020,
   "resource_type": "text-image-pairs",
-  "homepage": "https://github.com/allenai/medicat", "paper": "https://arxiv.org/abs/2010.06000", "repository": "https://github.com/allenai/medicat", "download": "https://ai2-s2-medicat.s3.us-west-2.amazonaws.com/2020-10-05/medicat_release.tar.gz",
-  "license": "Per-document open-access license; research use only", "commercial_use": "no",
-  "domains": ["general-biomedical"], "modalities": ["mixed-medical-figures"], "image_structure": ["2d-single"],
-  "tasks": ["image-captioning", "image-text-retrieval", "grounded-captioning"], "capabilities": ["description", "localization", "spatial-reasoning"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["caption", "grounded-text"], "derived_from": [],
-  "annotation": {"source": "article-captions-and-context", "expert_review": "partial", "grounding": ["caption", "subfigure", "article-context"]},
-  "scale": {"primary_count": 217060, "primary_unit": "figures", "images": 217060, "papers": 131410, "qa_pairs": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "not-applicable", "external_validation": "unknown", "known_issues": ["Licenses vary by source document; figures are drawn from open-access biomedical papers."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://github.com/allenai/medicat",
+  "paper": "https://arxiv.org/abs/2010.06000",
+  "repository": "https://github.com/allenai/medicat",
+  "download": "https://ai2-s2-medicat.s3.us-west-2.amazonaws.com/2020-10-05/medicat_release.tar.gz",
+  "license": "Per-document open-access license; research use only",
+  "commercial_use": "no",
+  "domains": [
+    "general-biomedical"
+  ],
+  "modalities": [
+    "mixed-medical-figures"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-captioning",
+    "image-text-retrieval",
+    "grounded-captioning"
+  ],
+  "capabilities": [
+    "description",
+    "localization",
+    "spatial-reasoning"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "caption",
+    "grounded-text"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "article-captions-and-context",
+    "expert_review": "partial",
+    "grounding": [
+      "caption",
+      "subfigure",
+      "article-context"
+    ]
+  },
+  "scale": {
+    "primary_count": 217060,
+    "primary_unit": "figures",
+    "images": 217060,
+    "papers": 131410,
+    "qa_pairs": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "not-applicable",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Licenses vary by source document; figures are drawn from open-access biomedical papers."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

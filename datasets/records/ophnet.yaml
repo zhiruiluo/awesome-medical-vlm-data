@@ -1,0 +1,68 @@
+{
+  "id": "ophnet",
+  "name": "OphNet",
+  "year": 2024,
+  "homepage": "https://github.com/minghu0830/OphNet-benchmark",
+  "paper": "https://arxiv.org/abs/2406.07471",
+  "repository": "https://github.com/minghu0830/OphNet-benchmark",
+  "download": "https://huggingface.co/datasets/xioamiyh/OphNet2024",
+  "license": "MIT code license; dataset terms require verification",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology",
+    "surgery"
+  ],
+  "modalities": [
+    "surgical-video"
+  ],
+  "image_structure": [
+    "video"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "object-detection"
+  ],
+  "capabilities": [
+    "recognition",
+    "localization",
+    "reasoning"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "expert-annotated-surgical-workflow",
+    "expert_review": "yes",
+    "grounding": [
+      "temporal-boundary",
+      "surgery-phase-operation-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 2278,
+    "primary_unit": "videos",
+    "images": null,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The ECCV 2024 benchmark reports 2,278 videos; the current OphNet2024 challenge release has 1,969 videos and different splits."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-01"
+}

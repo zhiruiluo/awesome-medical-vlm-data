@@ -1,0 +1,63 @@
+{
+  "id": "retouch",
+  "name": "RETOUCH",
+  "year": 2017,
+  "homepage": "https://retouch.grand-challenge.org/Home/",
+  "paper": null,
+  "repository": null,
+  "download": "https://retouch.grand-challenge.org/Home/",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "oct"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "challenge-annotation",
+    "expert_review": "unknown",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 112,
+    "primary_unit": "volumes",
+    "images": null,
+    "qa_pairs": null,
+    "patients": 112
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Challenge download terms require verification."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "retinal-image-quality-assessment-dataset",
+  "name": "Retinal image quality assessment dataset",
+  "year": 2014,
+  "homepage": "http://academictorrents.com/details/99811ba62918f8e73791d21be29dcc372d660305",
+  "paper": null,
+  "repository": null,
+  "download": "http://academictorrents.com/details/99811ba62918f8e73791d21be29dcc372d660305",
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "resource_type": "image-only",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "upstream-catalog-summary",
+    "expert_review": "unknown",
+    "grounding": [
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 216,
+    "primary_unit": "images",
+    "images": 216,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "unknown"
+  },
+  "last_verified": "2026-09-01"
+}

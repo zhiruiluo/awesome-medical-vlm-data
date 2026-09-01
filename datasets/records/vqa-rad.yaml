@@ -1,13 +1,67 @@
 {
-  "id": "vqa-rad", "name": "VQA-RAD", "year": 2018,
+  "id": "vqa-rad",
+  "name": "VQA-RAD",
+  "year": 2018,
   "resource_type": "text-image-pairs",
-  "homepage": "https://www.nlm.nih.gov/research/visible/vqarad/index.html", "paper": "https://doi.org/10.1038/sdata.2018.251", "repository": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad", "download": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad",
-  "license": "Research use; check source terms", "commercial_use": "unknown",
-  "domains": ["radiology"], "modalities": ["xray", "ct", "mri"], "image_structure": ["2d-single"],
-  "tasks": ["visual-question-answering"], "capabilities": ["recognition", "diagnosis", "reasoning"], "usage": "evaluation",
-  "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
-  "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image"]},
-  "scale": {"primary_count": 3515, "primary_unit": "qa-pairs", "images": 315, "qa_pairs": 3515, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Small benchmark; answers include open-ended and closed-ended questions."]},
-  "access": {"registration_required": false, "credentialing_required": false, "gated": "no", "data_use_agreement_required": "unknown", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "homepage": "https://www.nlm.nih.gov/research/visible/vqarad/index.html",
+  "paper": "https://doi.org/10.1038/sdata.2018.251",
+  "repository": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad",
+  "download": "https://huggingface.co/datasets/flaviagiammarino/vqa-rad",
+  "license": "Research use; check source terms",
+  "commercial_use": "unknown",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "xray",
+    "ct",
+    "mri"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "reasoning"
+  ],
+  "usage": "evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "question-answer"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "human-authored",
+    "expert_review": "yes",
+    "grounding": [
+      "image"
+    ]
+  },
+  "scale": {
+    "primary_count": 3515,
+    "primary_unit": "qa-pairs",
+    "images": 315,
+    "qa_pairs": 3515,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Small benchmark; answers include open-ended and closed-ended questions."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }

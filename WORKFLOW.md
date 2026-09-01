@@ -15,6 +15,7 @@ Run the validator before generating any documentation:
 
 ```bash
 python3 scripts/validate_records.py
+python3 scripts/format_records.py --check
 ```
 
 Resolve every reported error. Validation checks required fields, IDs, URLs, access metadata, ISO dates, and duplicate dataset IDs.

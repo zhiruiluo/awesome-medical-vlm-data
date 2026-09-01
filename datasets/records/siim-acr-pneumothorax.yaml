@@ -1,12 +1,67 @@
 {
-  "id": "siim-acr-pneumothorax", "name": "SIIM-ACR Pneumothorax Segmentation", "year": 2019,
-  "homepage": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation", "paper": null, "repository": null, "download": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
-  "license": "Kaggle competition terms", "commercial_use": "yes", "resource_type": "image-only",
-  "domains": ["radiology"], "modalities": ["chest-xray"], "image_structure": ["2d-single"],
-  "tasks": ["image-segmentation", "multi-label-classification"], "capabilities": ["recognition", "diagnosis", "segmentation"], "usage": "training-evaluation",
-  "catalog_status": "included", "language_supervision": ["none"], "derived_from": [],
-  "annotation": {"source": "challenge-annotation", "expert_review": "yes", "grounding": ["segmentation-mask", "image-label"]},
-  "scale": {"primary_count": 12047, "primary_unit": "images", "images": 12047, "qa_pairs": null, "patients": null},
-  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["The original Cloud Healthcare API distribution was retired; the Kaggle competition page is retained as the official reference."]},
-  "access": {"registration_required": true, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "yes", "citation_required": "yes"}, "last_verified": "2026-08-31"
+  "id": "siim-acr-pneumothorax",
+  "name": "SIIM-ACR Pneumothorax Segmentation",
+  "year": 2019,
+  "homepage": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
+  "paper": null,
+  "repository": null,
+  "download": "https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation",
+  "license": "Kaggle competition terms",
+  "commercial_use": "yes",
+  "resource_type": "image-only",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "2d-single"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "challenge-annotation",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 12047,
+    "primary_unit": "images",
+    "images": 12047,
+    "qa_pairs": null,
+    "patients": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The original Cloud Healthcare API distribution was retired; the Kaggle competition page is retained as the official reference."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-08-31"
 }
