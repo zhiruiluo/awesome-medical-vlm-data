@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Format JSON-compatible YAML dataset records consistently."""
+"""Format JSON-compatible YAML catalog records consistently."""
 from __future__ import annotations
 
 import argparse
@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RECORDS = ROOT / "datasets" / "records"
+RECORD_DIRS = (ROOT / "datasets" / "records", ROOT / "benchmarks" / "records")
 
 
 def formatted(path: Path) -> str:
@@ -24,7 +24,8 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="fail when records are not canonically formatted")
     args = parser.parse_args()
     stale = []
-    for path in sorted(RECORDS.glob("*.yaml")):
+    paths = sorted(path for directory in RECORD_DIRS for path in directory.glob("*.yaml"))
+    for path in paths:
         try:
             content = formatted(path)
         except ValueError as error:
@@ -37,7 +38,7 @@ def main() -> int:
     if args.check and stale:
         print("Records need formatting: " + ", ".join(str(path.relative_to(ROOT)) for path in stale))
         return 1
-    print(f"{'Checked' if args.check else 'Formatted'} {len(list(RECORDS.glob('*.yaml')))} dataset records.")
+    print(f"{'Checked' if args.check else 'Formatted'} {len(paths)} catalog records.")
     return 0
 
 

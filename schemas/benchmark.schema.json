@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Medical VLM benchmark record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "name", "year", "homepage", "paper", "repository", "download", "leaderboard",
+    "catalog_status", "domains", "modalities", "tasks", "capabilities", "companion_dataset_id",
+    "source_datasets", "external_sources", "evaluation", "scale", "reproducibility", "license",
+    "commercial_use", "source_license_policy", "access", "known_issues", "last_verified"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "name": {"type": "string", "minLength": 1},
+    "year": {"type": "integer", "minimum": 2000},
+    "homepage": {"type": ["string", "null"], "format": "uri"},
+    "paper": {"type": ["string", "null"], "format": "uri"},
+    "repository": {"type": ["string", "null"], "format": "uri"},
+    "download": {"type": ["string", "null"], "format": "uri"},
+    "leaderboard": {"type": ["string", "null"], "format": "uri"},
+    "catalog_status": {"enum": ["included", "candidate", "excluded"]},
+    "domains": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "../taxonomies/domains.json"}},
+    "modalities": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "../taxonomies/modalities.json"}},
+    "tasks": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "../taxonomies/tasks.json"}},
+    "capabilities": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "../taxonomies/capabilities.json"}},
+    "companion_dataset_id": {"type": ["string", "null"], "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "source_datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dataset_id", "role", "subset"],
+        "properties": {
+          "dataset_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "role": {"enum": ["training", "validation", "evaluation", "development", "unknown"]},
+          "subset": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "external_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "homepage", "role", "subset"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "homepage": {"type": ["string", "null"], "format": "uri"},
+          "role": {"enum": ["training", "validation", "evaluation", "development", "unknown"]},
+          "subset": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocols", "metrics", "outputs", "models_evaluated"],
+      "properties": {
+        "protocols": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "metrics": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "outputs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["free-text", "class-label", "bounding-box", "segmentation-mask", "scalar"]}},
+        "models_evaluated": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "scale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_count", "primary_unit"],
+      "properties": {
+        "primary_count": {"type": "integer", "minimum": 1},
+        "primary_unit": {"type": "string", "minLength": 1}
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompts_available", "evaluation_code_available", "fixed_splits", "contamination_audited"],
+      "properties": {
+        "prompts_available": {"enum": ["yes", "no", "unknown"]},
+        "evaluation_code_available": {"enum": ["yes", "no", "unknown"]},
+        "fixed_splits": {"enum": ["yes", "no", "unknown"]},
+        "contamination_audited": {"enum": ["yes", "no", "unknown"]}
+      }
+    },
+    "license": {"type": "string", "minLength": 1},
+    "commercial_use": {"enum": ["yes", "no", "unknown"]},
+    "source_license_policy": {"enum": ["uniform", "mixed", "inherited", "unknown"]},
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["registration_required", "credentialing_required", "gated", "data_use_agreement_required", "citation_required"],
+      "properties": {
+        "registration_required": {"type": "boolean"},
+        "credentialing_required": {"type": "boolean"},
+        "gated": {"enum": ["yes", "no", "unknown"]},
+        "data_use_agreement_required": {"enum": ["yes", "no", "unknown"]},
+        "citation_required": {"enum": ["yes", "no", "unknown"]}
+      }
+    },
+    "known_issues": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "last_verified": {"type": "string", "format": "date"}
+  },
+  "anyOf": [
+    {"required": ["homepage"], "properties": {"homepage": {"type": "string"}}},
+    {"required": ["paper"], "properties": {"paper": {"type": "string"}}},
+    {"required": ["repository"], "properties": {"repository": {"type": "string"}}},
+    {"required": ["download"], "properties": {"download": {"type": "string"}}},
+    {"required": ["leaderboard"], "properties": {"leaderboard": {"type": "string"}}}
+  ]
+}

@@ -2,6 +2,8 @@
 
 Each file under `datasets/records/` is a JSON-compatible YAML object validated by [schemas/dataset.schema.json](schemas/dataset.schema.json). JSON is a YAML 1.2 subset, which keeps this minimal repository dependency-free. Filesystem placement does not define specialty: use one or more controlled `domains` values from `taxonomies/domains.json`.
 
+Evaluation suites that define protocols, metrics, or leaderboards belong in `benchmarks/records/` and follow [BENCHMARK_SCHEMA.md](BENCHMARK_SCHEMA.md). A resource that releases data and defines an evaluation suite may have linked records in both catalogs.
+
 ## Required Fields
 
 | Field | Meaning |

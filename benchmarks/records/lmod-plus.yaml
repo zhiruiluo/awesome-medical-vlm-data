@@ -1,0 +1,136 @@
+{
+  "id": "lmod-plus",
+  "name": "LMOD+",
+  "year": 2026,
+  "homepage": "https://kfzyqin.github.io/lmod_plus/",
+  "paper": "https://doi.org/10.1145/3801746",
+  "repository": null,
+  "download": "https://kfzyqin.github.io/lmod_plus/",
+  "leaderboard": "https://kfzyqin.github.io/lmod_plus/",
+  "catalog_status": "included",
+  "domains": [
+    "ophthalmology"
+  ],
+  "modalities": [
+    "fundus",
+    "oct",
+    "slo",
+    "lens-photography",
+    "surgical-video"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "multi-label-classification",
+    "object-detection",
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "localization",
+    "segmentation",
+    "reasoning"
+  ],
+  "companion_dataset_id": null,
+  "source_datasets": [
+    {
+      "dataset_id": "cataract-1k",
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "dataset_id": "idrid",
+      "role": "evaluation",
+      "subset": null
+    }
+  ],
+  "external_sources": [
+    {
+      "name": "OIMHS",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "REFUGE2",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "Harvard FairSeg",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "CAU001",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "Cataract Detection 2",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "ORIGA",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "G1020",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    },
+    {
+      "name": "BRSET",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": null
+    }
+  ],
+  "evaluation": {
+    "protocols": [
+      "zero-shot"
+    ],
+    "metrics": [
+      "accuracy"
+    ],
+    "outputs": [
+      "free-text",
+      "class-label",
+      "bounding-box",
+      "segmentation-mask"
+    ],
+    "models_evaluated": 24
+  },
+  "scale": {
+    "primary_count": 32633,
+    "primary_unit": "instances"
+  },
+  "reproducibility": {
+    "prompts_available": "unknown",
+    "evaluation_code_available": "unknown",
+    "fixed_splits": "unknown",
+    "contamination_audited": "unknown"
+  },
+  "license": "Unknown",
+  "commercial_use": "unknown",
+  "source_license_policy": "mixed",
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "known_issues": [
+    "LMOD+ combines multiple public datasets whose original licenses and access terms remain applicable."
+  ],
+  "last_verified": "2026-09-01"
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate catalog views from JSON-compatible YAML dataset records."""
+"""Generate catalog views from JSON-compatible YAML records."""
 from __future__ import annotations
 
 import argparse
@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
+BENCHMARK_RECORDS = ROOT / "benchmarks" / "records"
 DOMAINS = json.loads((ROOT / "taxonomies" / "domains.json").read_text())["enum"]
 RESOURCE_TYPES = ("text-only", "image-only", "text-image-pairs")
 
@@ -20,6 +21,16 @@ def load_records() -> list[dict]:
         raise ValueError(f"No records found in {RECORDS.relative_to(ROOT)}")
     records = []
     for path in paths:
+        try:
+            records.append(json.loads(path.read_text()))
+        except json.JSONDecodeError as error:
+            raise ValueError(f"{path.relative_to(ROOT)}: invalid JSON-compatible YAML: {error.msg}") from error
+    return sorted(records, key=lambda item: (item["year"], item["name"].lower()))
+
+
+def load_benchmarks() -> list[dict]:
+    records = []
+    for path in sorted(BENCHMARK_RECORDS.glob("*.yaml")):
         try:
             records.append(json.loads(path.read_text()))
         except json.JSONDecodeError as error:
@@ -76,6 +87,8 @@ def links(record: dict) -> str:
         badges.append(f"[![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)]({record['download']})")
     if record.get("paper"):
         badges.append(f"[![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)]({record['paper']})")
+    if record.get("leaderboard"):
+        badges.append(f"[![Leaderboard](https://img.shields.io/badge/Leaderboard-2E7D32?style=flat-square&logo=bar-chart&logoColor=white)]({record['leaderboard']})")
     return " ".join(badges) or "-"
 
 
@@ -88,6 +101,28 @@ def table(items: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def benchmark_sources(record: dict, datasets: dict[str, dict]) -> str:
+    names = [datasets[source["dataset_id"]]["name"] for source in record["source_datasets"]]
+    names.extend(source["name"] for source in record["external_sources"])
+    return ", ".join(names) or "-"
+
+
+def benchmark_table(items: list[dict], datasets: dict[str, dict]) -> str:
+    lines = [
+        "| Benchmark | Year | Domain | Capability | Scale | Source datasets | Protocol | Links | License / access |",
+        "| --- | ---: | --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for item in items:
+        source = item["homepage"] or item["paper"] or item["repository"] or item["download"] or item["leaderboard"]
+        access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "restricted" if item["access"]["gated"] == "yes" else "open" if item["access"]["gated"] == "no" else "access unknown"
+        lines.append(
+            f"| [{item['name']}]({source}) | {item['year']} | {cells(item['domains'])} | "
+            f"{cells(item['capabilities'][:3])} | {scale(item)} | {benchmark_sources(item, datasets)} | "
+            f"{cells(item['evaluation']['protocols'])} | {links(item)} | {item['license']} ({access}; {item['source_license_policy']} sources) |"
+        )
+    return "\n".join(lines)
+
+
 def replace_marked(text: str, name: str, content: str) -> str:
     begin, end = f"<!-- BEGIN GENERATED:{name} -->", f"<!-- END GENERATED:{name} -->"
     if begin not in text or end not in text:
@@ -97,10 +132,11 @@ def replace_marked(text: str, name: str, content: str) -> str:
     return f"{before}{begin}\n{content}\n{end}{after}"
 
 
-def render_readme(items: list[dict], audited: list[dict]) -> str:
+def render_readme(items: list[dict], audited: list[dict], benchmarks: list[dict], audited_benchmarks: list[dict]) -> str:
     readme = (ROOT / "README.md").read_text()
+    last_updated = max(item["last_verified"] for item in [*audited, *audited_benchmarks])
     by_resource_type = group_by_resource_type(items)
-    navigation = " | ".join(f"[{resource_type_title(resource_type)}](#{resource_type})" for resource_type in RESOURCE_TYPES)
+    navigation = " | ".join([*(f"[{resource_type_title(resource_type)}](#{resource_type})" for resource_type in RESOURCE_TYPES), "[Benchmarks](#benchmarks)"])
     sections = []
     for resource_type, records in by_resource_type.items():
         domains = group_by_domain(records)
@@ -110,18 +146,31 @@ def render_readme(items: list[dict], audited: list[dict]) -> str:
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
     status_counts = Counter(item["catalog_status"] for item in audited)
+    benchmark_status_counts = Counter(item["catalog_status"] for item in audited_benchmarks)
     type_counts = Counter(item["resource_type"] for item in items)
-    summary = f"{len(items)} included resources: {type_counts['text-only']} text-only, {type_counts['image-only']} image-only, and {type_counts['text-image-pairs']} text-image pairs. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded records are retained for auditability but omitted from the tables below."
-    return replace_marked(replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "RESOURCE_TYPE_NAV", navigation), "RESOURCE_TYPE_TABLES", resources), "CAPABILITY_TABLE", capabilities)
+    benchmark_label = "benchmark" if len(benchmarks) == 1 else "benchmarks"
+    summary = f"{len(items)} included datasets: {type_counts['text-only']} text-only, {type_counts['image-only']} image-only, and {type_counts['text-image-pairs']} text-image pairs. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded dataset records are retained for auditability. {len(benchmarks)} included {benchmark_label}; {benchmark_status_counts['candidate']} candidate and {benchmark_status_counts['excluded']} excluded benchmark records are omitted from public tables."
+    benchmark_pronoun = "its" if len(benchmarks) == 1 else "their"
+    benchmark_summary = f"{len(benchmarks)} included benchmark{'s' if len(benchmarks) != 1 else ''}, maintained separately from {benchmark_pronoun} companion and source datasets."
+    benchmark_content = benchmark_table(benchmarks, {item["id"]: item for item in audited}) if benchmarks else "No included benchmarks yet."
+    rendered = replace_marked(readme, "LAST_UPDATED", f"**Last updated:** {last_updated}")
+    rendered = replace_marked(rendered, "CATALOG_SUMMARY", summary)
+    rendered = replace_marked(rendered, "RESOURCE_TYPE_NAV", navigation)
+    rendered = replace_marked(rendered, "RESOURCE_TYPE_TABLES", resources)
+    rendered = replace_marked(rendered, "BENCHMARK_SUMMARY", benchmark_summary)
+    rendered = replace_marked(rendered, "BENCHMARK_TABLE", benchmark_content)
+    return replace_marked(rendered, "CAPABILITY_TABLE", capabilities)
 
 
-def render_reports(items: list[dict]) -> tuple[str, str]:
+def render_reports(items: list[dict], benchmarks: list[dict]) -> tuple[str, str]:
     domains = Counter(domain for item in items for domain in item["domains"])
     resource_types = Counter(item["resource_type"] for item in items)
     capabilities = Counter(capability for item in items for capability in item["capabilities"])
-    landscape = "# Landscape\n\nGenerated from `datasets/` by `scripts/generate_tables.py`.\n\n## Resource Types\n\n" + "\n".join(f"- {name}: {resource_types[name]}" for name in RESOURCE_TYPES) + "\n\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n"
+    benchmark_domains = Counter(domain for item in benchmarks for domain in item["domains"])
+    landscape = "# Landscape\n\nGenerated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.\n\n## Resource Types\n\n" + "\n".join(f"- {name}: {resource_types[name]}" for name in RESOURCE_TYPES) + "\n\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n\n## Benchmarks\n\n" + ("\n".join(f"- {name}: {count}" for name, count in sorted(benchmark_domains.items())) or "- None") + "\n"
     uncertain = [item["name"] for item in items if item["commercial_use"] == "unknown" or "check" in item["license"].lower()]
-    gaps = "# Coverage Gaps\n\nGenerated from `datasets/` by `scripts/generate_tables.py`.\n\n- The catalog is currently concentrated in 2D imaging; 3D, video, whole-slide, and longitudinal resources need more coverage.\n- Localization, segmentation, measurement, hallucination detection, and tool-use capabilities have no entries in this MVP.\n- Ophthalmology has one provisional entry and needs independently verified report-linked datasets.\n- Licensing or commercial-use status needs follow-up for: " + ", ".join(uncertain) + ".\n"
+    uncertain_benchmarks = [item["name"] for item in benchmarks if item["commercial_use"] == "unknown" or item["license"].lower() == "unknown"]
+    gaps = "# Coverage Gaps\n\nGenerated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.\n\n- The catalog is currently concentrated in 2D imaging; 3D, video, whole-slide, and longitudinal resources need more coverage.\n- Localization, segmentation, measurement, hallucination detection, and tool-use capabilities have no entries in this MVP.\n- Ophthalmology has one provisional entry and needs independently verified report-linked datasets.\n- Dataset licensing or commercial-use status needs follow-up for: " + ", ".join(uncertain) + ".\n- Benchmark licensing or commercial-use status needs follow-up for: " + (", ".join(uncertain_benchmarks) or "none") + ".\n"
     return landscape, gaps
 
 
@@ -132,13 +181,15 @@ def main() -> int:
     args = parser.parse_args()
     try:
         audited = load_records()
+        audited_benchmarks = load_benchmarks()
     except ValueError as error:
         print(error, file=sys.stderr)
         return 1
     items = published_records(audited)
-    expected = {ROOT / "README.md": render_readme(items, audited)}
+    benchmarks = published_records(audited_benchmarks)
+    expected = {ROOT / "README.md": render_readme(items, audited, benchmarks, audited_benchmarks)}
     if not args.readme_only:
-        expected[ROOT / "reports/landscape.md"], expected[ROOT / "reports/gaps.md"] = render_reports(items)
+        expected[ROOT / "reports/landscape.md"], expected[ROOT / "reports/gaps.md"] = render_reports(items, benchmarks)
     stale = [path for path, content in expected.items() if not path.exists() or path.read_text() != content]
     if args.check:
         if stale:
@@ -149,8 +200,11 @@ def main() -> int:
     for path, content in expected.items():
         path.write_text(content)
     status_counts = Counter(item["catalog_status"] for item in audited)
-    print(f"Generated {'README' if args.readme_only else 'catalog views'} for {len(items)} included datasets.")
+    benchmark_status_counts = Counter(item["catalog_status"] for item in audited_benchmarks)
+    benchmark_label = "benchmark" if len(benchmarks) == 1 else "benchmarks"
+    print(f"Generated {'README' if args.readme_only else 'catalog views'} for {len(items)} included datasets and {len(benchmarks)} included {benchmark_label}.")
     print(f"Catalog records: {status_counts['included']} included, {status_counts['candidate']} candidate, {status_counts['excluded']} excluded.")
+    print(f"Benchmark records: {benchmark_status_counts['included']} included, {benchmark_status_counts['candidate']} candidate, {benchmark_status_counts['excluded']} excluded.")
     return 0
 
 

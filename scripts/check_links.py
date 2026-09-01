@@ -10,7 +10,8 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-URL_FIELDS = ("homepage", "paper", "repository", "download")
+URL_FIELDS = ("homepage", "paper", "repository", "download", "leaderboard")
+RECORD_DIRS = (ROOT / "datasets" / "records", ROOT / "benchmarks" / "records")
 
 
 def check(url: str, timeout: int) -> tuple[str, int | None, str]:
@@ -29,7 +30,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=10)
     parser.add_argument("--strict", action="store_true", help="treat protected URLs as errors")
     args = parser.parse_args()
-    urls = sorted({record[field] for path in (ROOT / "datasets").rglob("*.yaml") for record in [json.loads(path.read_text())] for field in URL_FIELDS if record.get(field)})
+    urls = sorted({record[field] for directory in RECORD_DIRS for path in directory.glob("*.yaml") for record in [json.loads(path.read_text())] for field in URL_FIELDS if record.get(field)})
     failed = 0
     with ThreadPoolExecutor(max_workers=8) as pool:
         for url, status, result in pool.map(lambda item: check(item, args.timeout), urls):

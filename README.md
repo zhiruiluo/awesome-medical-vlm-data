@@ -1,6 +1,27 @@
-# Awesome Medical VLM Data
+<div align="center">
 
-A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation.
+# Awesome Medical VLM Dataset & Benchmark
+
+### A data intelligence layer for medical multimodal datasets and benchmarks.
+
+</div>
+
+<p align="center">
+ <a href="https://awesome.re" alt="Awesome">
+    <img src="https://awesome.re/badge.svg" />
+ </a>
+ <a href="https://www.linkedin.com/in/luobill2017/" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue">
+ </a>
+</p>
+
+---
+
+<!-- BEGIN GENERATED:LAST_UPDATED -->
+**Last updated:** 2026-09-01
+<!-- END GENERATED:LAST_UPDATED -->
+
+A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
 
 Resources are organized by the data they release:
 
@@ -12,7 +33,7 @@ Each dataset is a version-controlled record in `datasets/records/`, not just a l
 
 
 ## Quick Start
-> Generated from the records in `datasets/`. Do not edit generated tables by hand; run `python3 scripts/generate_tables.py`.
+> Generated from the records in `datasets/` and `benchmarks/`. Do not edit generated content by hand; run `python3 scripts/generate_tables.py`.
 
 ```bash
 python3 scripts/validate_records.py
@@ -24,14 +45,16 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-29 included resources: 0 text-only, 13 image-only, and 16 text-image pairs. 48 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
+28 included datasets: 0 text-only, 13 image-only, and 15 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 1 included benchmark; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
-## By Resource Type
+## Catalog Navigation
 
 <!-- BEGIN GENERATED:RESOURCE_TYPE_NAV -->
-[Text Only](#text-only) | [Image Only](#image-only) | [Text-Image Pairs](#text-image-pairs)
+[Text Only](#text-only) | [Image Only](#image-only) | [Text-Image Pairs](#text-image-pairs) | [Benchmarks](#benchmarks)
 <!-- END GENERATED:RESOURCE_TYPE_NAV -->
+
+## Datasets By Resource Type
 
 <!-- BEGIN GENERATED:RESOURCE_TYPE_TABLES -->
 ### Text Only
@@ -94,7 +117,6 @@ No included records yet.
 | Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
 | [FairVLMed](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) | 2024 | 2d-single | recognition, diagnosis | 10.0K images | report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/FairCLIP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2403.14774) | CC BY-NC-ND 4.0 (registration) |
-| [LMOD+](https://kfzyqin.github.io/lmod_plus/) | 2026 | 2d-single, video | recognition, diagnosis | 32.6K instances | anatomical-structure, image-label, region | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1145/3801746) | Unknown (open) |
 
 #### Endoscopy
 
@@ -118,16 +140,30 @@ No included records yet.
 | [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | 2023 | 2d-single | recognition, reasoning | 227.0K qa-pairs | figure, caption, article-context | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/xiaoman-zhang/PMC-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/xmcmic/PMC-VQA) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2305.10415) | Check source terms (open) |
 <!-- END GENERATED:RESOURCE_TYPE_TABLES -->
 
+## Benchmarks
+
+Benchmarks are rendered separately because one benchmark may combine multiple public datasets. A benchmark record links to its companion dataset payload and constituent dataset records without duplicating their provenance or license metadata.
+
+<!-- BEGIN GENERATED:BENCHMARK_SUMMARY -->
+1 included benchmark, maintained separately from its companion and source datasets.
+<!-- END GENERATED:BENCHMARK_SUMMARY -->
+
+<!-- BEGIN GENERATED:BENCHMARK_TABLE -->
+| Benchmark | Year | Domain | Capability | Scale | Source datasets | Protocol | Links | License / access |
+| --- | ---: | --- | --- | --- | --- | --- | --- | --- |
+| [LMOD+](https://kfzyqin.github.io/lmod_plus/) | 2026 | ophthalmology | recognition, diagnosis, localization | 32.6K instances | Cataract-1K, IDRiD, OIMHS, REFUGE2, Harvard FairSeg, CAU001, Cataract Detection 2, ORIGA, G1020, BRSET | zero-shot | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1145/3801746) [![Leaderboard](https://img.shields.io/badge/Leaderboard-2E7D32?style=flat-square&logo=bar-chart&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) | Unknown (access unknown; mixed sources) |
+<!-- END GENERATED:BENCHMARK_TABLE -->
+
 ## Capability Coverage
 
 <!-- BEGIN GENERATED:CAPABILITY_TABLE -->
 | Capability | Datasets |
 | --- | ---: |
 | description | 10 |
-| diagnosis | 19 |
-| localization | 8 |
-| reasoning | 7 |
-| recognition | 18 |
+| diagnosis | 18 |
+| localization | 7 |
+| reasoning | 6 |
+| recognition | 17 |
 | report-generation | 3 |
 | segmentation | 7 |
 | spatial-reasoning | 1 |
@@ -139,4 +175,4 @@ Dataset metadata records describe sources, not legal advice. `unknown` and `uncl
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) and follow the [record workflow](WORKFLOW.md). Add one JSON-compatible YAML record per dataset, run validation, and commit the regenerated final report.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) and follow the [record workflow](WORKFLOW.md). Add one JSON-compatible YAML record per dataset or benchmark, run validation, and commit the regenerated final report.
