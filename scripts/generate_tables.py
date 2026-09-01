@@ -4,15 +4,26 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
+DOMAINS = json.loads((ROOT / "taxonomies" / "domains.json").read_text())["enum"]
 
 
-def all_records() -> list[dict]:
-    return sorted((json.loads(path.read_text()) for path in RECORDS.glob("*.yaml")), key=lambda item: item["name"].lower())
+def load_records() -> list[dict]:
+    paths = sorted(RECORDS.glob("*.yaml"))
+    if not paths:
+        raise ValueError(f"No records found in {RECORDS.relative_to(ROOT)}")
+    records = []
+    for path in paths:
+        try:
+            records.append(json.loads(path.read_text()))
+        except json.JSONDecodeError as error:
+            raise ValueError(f"{path.relative_to(ROOT)}: invalid JSON-compatible YAML: {error.msg}") from error
+    return sorted(records, key=lambda item: item["name"].lower())
 
 
 def published_records(items: list[dict]) -> list[dict]:
@@ -21,6 +32,18 @@ def published_records(items: list[dict]) -> list[dict]:
 
 def cells(values: list[str]) -> str:
     return ", ".join(values)
+
+
+def domain_title(domain: str) -> str:
+    return domain.replace("-", " ").title()
+
+
+def group_by_domain(items: list[dict]) -> dict[str, list[dict]]:
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for item in items:
+        for domain in item["domains"]:
+            grouped[domain].append(item)
+    return {domain: grouped[domain] for domain in DOMAINS if grouped[domain]}
 
 
 def scale(record: dict) -> str:
@@ -59,16 +82,14 @@ def replace_marked(text: str, name: str, content: str) -> str:
 
 def render_readme(items: list[dict], audited: list[dict]) -> str:
     readme = (ROOT / "README.md").read_text()
-    by_domain: dict[str, list[dict]] = defaultdict(list)
-    for item in items:
-        for domain in item["domains"]:
-            by_domain[domain].append(item)
-    domains = "\n\n".join(f"### {domain.replace('-', ' ').title()}\n\n{table(group)}" for domain, group in sorted(by_domain.items()))
+    by_domain = group_by_domain(items)
+    navigation = " | ".join(f"[{domain_title(domain)}](#{domain})" for domain in by_domain)
+    domains = "\n\n".join(f"### {domain_title(domain)}\n\n{table(group)}" for domain, group in by_domain.items())
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
     status_counts = Counter(item["catalog_status"] for item in audited)
     summary = f"{len(items)} included medical VLM datasets across {len(by_domain)} specialties. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded records are retained for auditability but omitted from the tables below."
-    return replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
+    return replace_marked(replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "DOMAIN_NAV", navigation), "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
 
 
 def render_reports(items: list[dict]) -> tuple[str, str]:
@@ -83,11 +104,17 @@ def render_reports(items: list[dict]) -> tuple[str, str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="fail if generated files are stale")
+    parser.add_argument("--readme-only", action="store_true", help="emit only README.md")
     args = parser.parse_args()
-    audited = all_records()
+    try:
+        audited = load_records()
+    except ValueError as error:
+        print(error, file=sys.stderr)
+        return 1
     items = published_records(audited)
     expected = {ROOT / "README.md": render_readme(items, audited)}
-    expected[ROOT / "reports/landscape.md"], expected[ROOT / "reports/gaps.md"] = render_reports(items)
+    if not args.readme_only:
+        expected[ROOT / "reports/landscape.md"], expected[ROOT / "reports/gaps.md"] = render_reports(items)
     stale = [path for path, content in expected.items() if not path.exists() or path.read_text() != content]
     if args.check:
         if stale:
@@ -97,7 +124,7 @@ def main() -> int:
         return 0
     for path, content in expected.items():
         path.write_text(content)
-    print(f"Generated catalog views for {len(items)} datasets.")
+    print(f"Generated {'README' if args.readme_only else 'catalog views'} for {len(items)} datasets.")
     return 0
 
 

@@ -35,6 +35,12 @@ Generate the catalog views from all records:
 python3 scripts/generate_tables.py
 ```
 
+To emit only the README after editing `datasets/records/`, run:
+
+```bash
+python3 scripts/generate_tables.py --readme-only
+```
+
 This writes the final report to three locations:
 
 - `README.md`: catalog-status summary, specialty tables, and capability coverage.
