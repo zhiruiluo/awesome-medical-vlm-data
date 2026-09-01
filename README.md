@@ -7,11 +7,9 @@
 </div>
 
 <p align="center">
- <a href="https://awesome.re" alt="Awesome">
-    <img src="https://awesome.re/badge.svg" />
+ <a href="https://awesome.re" alt="Awesome"><img src="https://awesome.re/badge.svg"/>
  </a>
- <a href="https://www.linkedin.com/in/luobill2017/" alt="LinkedIn">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue">
+ <a href="https://www.linkedin.com/in/luobill2017/" alt="LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue">
  </a>
 </p>
 
