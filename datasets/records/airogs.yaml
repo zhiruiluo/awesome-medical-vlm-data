@@ -3,7 +3,7 @@
   "name": "AIROGS",
   "year": 2023,
   "homepage": "https://airogs.grand-challenge.org/data-and-challenge/",
-  "paper": null,
+  "paper": "https://arxiv.org/abs/2302.01738",
   "repository": null,
   "download": "https://airogs.grand-challenge.org/data-and-challenge/",
   "license": "Unknown",

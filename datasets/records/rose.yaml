@@ -3,11 +3,11 @@
   "name": "ROSE",
   "year": 2020,
   "homepage": "https://imed.nimte.ac.cn/dataofrose.html",
-  "paper": null,
-  "repository": null,
+  "paper": "https://doi.org/10.1109/TMI.2020.3042802",
+  "repository": "https://github.com/iMED-Lab/ROSE",
   "download": "https://imed.nimte.ac.cn/dataofrose.html",
-  "license": "Unknown",
-  "commercial_use": "unknown",
+  "license": "Academic research use only",
+  "commercial_use": "no",
   "resource_type": "image-only",
   "domains": [
     "ophthalmology"
@@ -25,7 +25,7 @@
     "segmentation"
   ],
   "usage": "training-evaluation",
-  "catalog_status": "candidate",
+  "catalog_status": "included",
   "language_supervision": [
     "none"
   ],
@@ -49,7 +49,7 @@
     "patient_level_split": "unknown",
     "external_validation": "unknown",
     "known_issues": [
-      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+      "The official release limits use to academic research."
     ]
   },
   "access": {

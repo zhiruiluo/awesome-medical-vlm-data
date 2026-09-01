@@ -3,7 +3,7 @@
   "name": "OLIVES",
   "year": 2022,
   "homepage": "https://github.com/olivesgatech/OLIVES_Dataset",
-  "paper": null,
+  "paper": "https://arxiv.org/abs/2209.11195",
   "repository": "https://github.com/olivesgatech/OLIVES_Dataset",
   "download": "https://github.com/olivesgatech/OLIVES_Dataset",
   "license": "Unknown",

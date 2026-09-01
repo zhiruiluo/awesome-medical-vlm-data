@@ -2,10 +2,10 @@
   "id": "maples-dr",
   "name": "MAPLES-DR",
   "year": 2024,
-  "homepage": "https://www.nature.com/articles/s41597-024-03739-6?_gl=1",
-  "paper": null,
-  "repository": null,
-  "download": "https://www.nature.com/articles/s41597-024-03739-6?_gl=1",
+  "homepage": "https://www.nature.com/articles/s41597-024-03739-6",
+  "paper": "https://doi.org/10.1038/s41597-024-03739-6",
+  "repository": "https://github.com/LIV4D/MAPLES-DR",
+  "download": "https://www.nature.com/articles/s41597-024-03739-6",
   "license": "Unknown",
   "commercial_use": "unknown",
   "resource_type": "image-only",
@@ -49,7 +49,7 @@
     "patient_level_split": "unknown",
     "external_validation": "unknown",
     "known_issues": [
-      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+      "MAPLES-DR releases labels for MESSIDOR images; access to the source images follows MESSIDOR terms."
     ]
   },
   "access": {

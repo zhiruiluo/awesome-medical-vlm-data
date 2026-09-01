@@ -24,7 +24,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-24 included resources: 0 text-only, 9 image-only, and 15 text-image pairs. 52 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
+28 included resources: 0 text-only, 13 image-only, and 15 text-image pairs. 48 candidate and 1 excluded records are retained for auditability but omitted from the tables below.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## By Resource Type
@@ -57,7 +57,17 @@ No included records yet.
 
 | Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [CHASE_DB1](https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/) | 2011 | 2d-single | segmentation | 28 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TBME.2012.2205687) | CC BY 4.0 (open) |
 | [ACPS](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) | 2013 | 2d-single | segmentation | 840 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1364/BOE.4.000924) | Unknown (open) |
+| [ROSE](https://imed.nimte.ac.cn/dataofrose.html) | 2020 | 2d-single | segmentation | 229 images | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/iMED-Lab/ROSE) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://imed.nimte.ac.cn/dataofrose.html) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TMI.2020.3042802) | Academic research use only (open) |
+| [FIVES](https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1) | 2022 | 2d-single | segmentation | 800 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01564-3) | CC BY 4.0 (open) |
+| [Cataract-1K](https://github.com/Negin-Ghamsarian/Cataract-1K) | 2024 | video | segmentation | 1.0K videos | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2312.06295) | CC BY 4.0 (open) |
+
+#### Surgery
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [Cataract-1K](https://github.com/Negin-Ghamsarian/Cataract-1K) | 2024 | video | segmentation | 1.0K videos | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2312.06295) | CC BY 4.0 (open) |
 
 ### Text-Image Pairs
 
@@ -118,7 +128,7 @@ No included records yet.
 | reasoning | 6 |
 | recognition | 17 |
 | report-generation | 3 |
-| segmentation | 3 |
+| segmentation | 7 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

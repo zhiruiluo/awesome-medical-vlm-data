@@ -3,7 +3,7 @@
   "name": "STARE",
   "year": 2000,
   "homepage": "https://cecas.clemson.edu/~ahoover/stare/",
-  "paper": null,
+  "paper": "https://doi.org/10.1109/42.845178",
   "repository": null,
   "download": "https://cecas.clemson.edu/~ahoover/stare/",
   "license": "Unknown",

@@ -3,11 +3,11 @@
   "name": "FIVES",
   "year": 2022,
   "homepage": "https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1",
-  "paper": null,
+  "paper": "https://doi.org/10.1038/s41597-022-01564-3",
   "repository": null,
   "download": "https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1",
-  "license": "Unknown",
-  "commercial_use": "unknown",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
   "resource_type": "image-only",
   "domains": [
     "ophthalmology"
@@ -25,7 +25,7 @@
     "segmentation"
   ],
   "usage": "training-evaluation",
-  "catalog_status": "candidate",
+  "catalog_status": "included",
   "language_supervision": [
     "none"
   ],

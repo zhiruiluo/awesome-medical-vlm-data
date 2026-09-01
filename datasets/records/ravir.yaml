@@ -3,7 +3,7 @@
   "name": "RAVIR",
   "year": 2022,
   "homepage": "https://ravir.grand-challenge.org/RAVIR/",
-  "paper": null,
+  "paper": "https://arxiv.org/abs/2203.14928",
   "repository": null,
   "download": "https://ravir.grand-challenge.org/RAVIR/",
   "license": "Unknown",

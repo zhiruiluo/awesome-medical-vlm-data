@@ -5,7 +5,7 @@
   "resource_type": "text-image-pairs",
   "homepage": "https://arxiv.org/abs/2411.16778",
   "paper": "https://arxiv.org/abs/2411.16778",
-  "repository": "https://physionet.org/content/chest-imagenome/1.0.0/",
+  "repository": null,
   "download": "https://huggingface.co/datasets/BoKelvin/GEMeX-VQA",
   "license": "Unknown",
   "commercial_use": "unknown",
@@ -64,5 +64,5 @@
     "data_use_agreement_required": "unknown",
     "citation_required": "unknown"
   },
-  "last_verified": "2026-08-31"
+  "last_verified": "2026-09-01"
 }

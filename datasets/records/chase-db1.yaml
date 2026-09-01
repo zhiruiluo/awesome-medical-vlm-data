@@ -6,11 +6,11 @@
   ],
   "year": 2011,
   "homepage": "https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/",
-  "paper": null,
+  "paper": "https://doi.org/10.1109/TBME.2012.2205687",
   "repository": null,
   "download": "https://researchinnovation.kingston.ac.uk/en/datasets/chasedb1-retinal-vessel-reference-dataset-4/",
-  "license": "Unknown",
-  "commercial_use": "unknown",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
   "resource_type": "image-only",
   "domains": [
     "ophthalmology"
@@ -28,7 +28,7 @@
     "segmentation"
   ],
   "usage": "evaluation",
-  "catalog_status": "candidate",
+  "catalog_status": "included",
   "language_supervision": [
     "none"
   ],
