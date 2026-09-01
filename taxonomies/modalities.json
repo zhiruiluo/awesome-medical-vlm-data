@@ -1,4 +1,4 @@
 {
   "type": "string",
-  "enum": ["chest-xray", "xray", "ct", "mri", "pet", "ultrasound", "fundus", "oct", "pathology-image", "whole-slide-image", "dermoscopy", "endoscopy-image", "surgical-video", "mixed-medical-figures"]
+  "enum": ["chest-xray", "xray", "ct", "mri", "pet", "ultrasound", "angiography", "fundus", "oct", "pathology-image", "whole-slide-image", "dermoscopy", "endoscopy-image", "surgical-video", "mixed-medical-figures"]
 }

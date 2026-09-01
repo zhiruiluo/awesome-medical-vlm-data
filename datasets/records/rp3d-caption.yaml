@@ -1,0 +1,12 @@
+{
+  "id": "rp3d-caption", "name": "RP3D-Caption", "year": 2023,
+  "homepage": "https://chaoyi-wu.github.io/RadFM/", "paper": "https://arxiv.org/abs/2308.02463", "repository": "https://github.com/chaoyi-wu/RadFM", "download": "https://huggingface.co/datasets/chaoyi-wu/RadFM_data_csv",
+  "license": "Radiopaedia non-commercial use with approval", "commercial_use": "no",
+  "domains": ["radiology"], "modalities": ["ct", "mri", "ultrasound", "xray"], "image_structure": ["3d-volume"],
+  "tasks": ["image-captioning", "image-text-retrieval"], "capabilities": ["description", "diagnosis"], "usage": "training-evaluation",
+  "catalog_status": "included", "language_supervision": ["caption"], "derived_from": ["rp3d"],
+  "annotation": {"source": "radiopaedia-captions", "expert_review": "yes", "grounding": ["caption", "case-context"]},
+  "scale": {"primary_count": 69523, "primary_unit": "image-text-pairs", "images": null, "qa_pairs": null, "patients": null},
+  "quality": {"contamination_audited": "unknown", "patient_level_split": "unknown", "external_validation": "unknown", "known_issues": ["Raw image access requires Radiopaedia non-commercial licensing approval before the authors provide the detailed download link."]},
+  "access": {"registration_required": false, "credentialing_required": false, "gated": "yes", "data_use_agreement_required": "yes", "citation_required": "yes"}, "last_verified": "2026-08-31"
+}

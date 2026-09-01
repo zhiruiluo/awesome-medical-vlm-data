@@ -4,15 +4,17 @@ Generated from `datasets/` by `scripts/generate_tables.py`.
 
 ## Domains
 
-- general-biomedical: 2
+- general-biomedical: 4
 - ophthalmology: 1
 - pathology: 2
-- radiology: 3
+- radiology: 6
 
 ## Capabilities
 
-- description: 5
-- diagnosis: 6
-- reasoning: 4
-- recognition: 6
-- report-generation: 2
+- description: 9
+- diagnosis: 9
+- localization: 1
+- reasoning: 5
+- recognition: 8
+- report-generation: 3
+- spatial-reasoning: 1

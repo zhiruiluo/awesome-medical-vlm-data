@@ -11,8 +11,12 @@ ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
 
 
-def records() -> list[dict]:
-    return sorted((record for path in RECORDS.glob("*.yaml") for record in [json.loads(path.read_text())] if record["catalog_status"] == "included"), key=lambda item: item["name"].lower())
+def all_records() -> list[dict]:
+    return sorted((json.loads(path.read_text()) for path in RECORDS.glob("*.yaml")), key=lambda item: item["name"].lower())
+
+
+def published_records(items: list[dict]) -> list[dict]:
+    return [item for item in items if item["catalog_status"] == "included"]
 
 
 def cells(values: list[str]) -> str:
@@ -53,7 +57,7 @@ def replace_marked(text: str, name: str, content: str) -> str:
     return f"{before}{begin}\n{content}\n{end}{after}"
 
 
-def render_readme(items: list[dict]) -> str:
+def render_readme(items: list[dict], audited: list[dict]) -> str:
     readme = (ROOT / "README.md").read_text()
     by_domain: dict[str, list[dict]] = defaultdict(list)
     for item in items:
@@ -62,7 +66,9 @@ def render_readme(items: list[dict]) -> str:
     domains = "\n\n".join(f"### {domain.replace('-', ' ').title()}\n\n{table(group)}" for domain, group in sorted(by_domain.items()))
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
-    return replace_marked(replace_marked(readme, "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
+    status_counts = Counter(item["catalog_status"] for item in audited)
+    summary = f"{len(items)} included medical VLM datasets across {len(by_domain)} specialties. {status_counts['candidate']} candidate and {status_counts['excluded']} excluded records are retained for auditability but omitted from the tables below."
+    return replace_marked(replace_marked(replace_marked(readme, "CATALOG_SUMMARY", summary), "DOMAIN_TABLES", domains), "CAPABILITY_TABLE", capabilities)
 
 
 def render_reports(items: list[dict]) -> tuple[str, str]:
@@ -78,8 +84,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="fail if generated files are stale")
     args = parser.parse_args()
-    items = records()
-    expected = {ROOT / "README.md": render_readme(items)}
+    audited = all_records()
+    items = published_records(audited)
+    expected = {ROOT / "README.md": render_readme(items, audited)}
     expected[ROOT / "reports/landscape.md"], expected[ROOT / "reports/gaps.md"] = render_reports(items)
     stale = [path for path, content in expected.items() if not path.exists() or path.read_text() != content]
     if args.check:
