@@ -2,18 +2,18 @@
   "id": "harvard-glaucoma-detection-and-progression",
   "name": "Harvard Glaucoma Detection and Progression",
   "year": 2023,
-  "homepage": "https://ophai.hms.harvard.edu/datasets/harvard-gdp1000",
-  "paper": null,
-  "repository": null,
-  "download": "https://ophai.hms.harvard.edu/datasets/harvard-gdp1000",
-  "license": "Unknown",
-  "commercial_use": "unknown",
+  "homepage": "https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP",
+  "paper": "https://arxiv.org/abs/2308.13411",
+  "repository": "https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP",
+  "download": "https://huggingface.co/datasets/harvardairobotics/Harvard-GDP",
+  "license": "CC BY-NC-ND 4.0",
+  "commercial_use": "no",
   "resource_type": "image-only",
   "domains": [
     "ophthalmology"
   ],
   "modalities": [
-    "fundus"
+    "oct"
   ],
   "image_structure": [
     "2d-single"
@@ -23,42 +23,46 @@
   ],
   "capabilities": [
     "recognition",
-    "diagnosis"
+    "diagnosis",
+    "longitudinal-comparison"
   ],
   "usage": "training-evaluation",
-  "catalog_status": "candidate",
+  "catalog_status": "included",
   "language_supervision": [
     "none"
   ],
   "derived_from": [],
   "annotation": {
-    "source": "upstream-catalog-summary",
-    "expert_review": "unknown",
+    "source": "OCT retinal nerve fiber layer maps with visual-field measurements and progression labels",
+    "expert_review": "clinical-care labels",
     "grounding": [
-      "image-label"
+      "image-label",
+      "clinical-label"
     ]
   },
   "scale": {
-    "primary_count": 1544,
-    "primary_unit": "images",
-    "images": 1544,
+    "primary_count": 1000,
+    "primary_unit": "patients",
+    "images": 1000,
     "qa_pairs": null,
-    "patients": null
+    "patients": 1000,
+    "progression_labeled_patients": 500
   },
   "quality": {
     "contamination_audited": "unknown",
-    "patient_level_split": "unknown",
+    "patient_level_split": "yes",
     "external_validation": "unknown",
     "known_issues": [
-      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+      "Only the first 500 patient records include six progression-label definitions.",
+      "Progression is derived from longitudinal clinical visual-field measurements; the release provides one OCT RNFLT map per patient rather than serial OCT image sequences."
     ]
   },
   "access": {
     "registration_required": false,
     "credentialing_required": false,
-    "gated": "unknown",
-    "data_use_agreement_required": "unknown",
-    "citation_required": "unknown"
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
   },
   "last_verified": "2026-09-01"
 }

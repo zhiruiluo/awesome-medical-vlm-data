@@ -1,0 +1,79 @@
+{
+  "id": "temmed-bench",
+  "name": "TemMed-Bench",
+  "year": 2025,
+  "homepage": "https://temmedbench.github.io/",
+  "paper": "https://arxiv.org/abs/2509.25143",
+  "repository": "https://github.com/Levi-ZJY/TemMed-Bench",
+  "download": "https://huggingface.co/datasets/uclanlp/TemMed-Bench",
+  "leaderboard": null,
+  "catalog_status": "included",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "tasks": [
+    "visual-question-answering",
+    "report-generation"
+  ],
+  "capabilities": [
+    "description",
+    "reasoning",
+    "longitudinal-comparison"
+  ],
+  "companion_dataset_id": null,
+  "source_datasets": [],
+  "external_sources": [
+    {
+      "name": "CheXpert Plus",
+      "homepage": "https://aimi.stanford.edu/datasets/chexpert-plus",
+      "role": "evaluation",
+      "subset": "18,144 temporal image-report pairs curated from condition-change reports"
+    }
+  ],
+  "evaluation": {
+    "protocols": [
+      "closed-book",
+      "retrieval-augmented generation"
+    ],
+    "metrics": [
+      "accuracy",
+      "F1",
+      "BLEU",
+      "ROUGE-L",
+      "METEOR"
+    ],
+    "outputs": [
+      "free-text",
+      "class-label"
+    ],
+    "models_evaluated": 12
+  },
+  "scale": {
+    "primary_count": 21006,
+    "primary_unit": "instances"
+  },
+  "reproducibility": {
+    "prompts_available": "yes",
+    "evaluation_code_available": "yes",
+    "fixed_splits": "yes",
+    "contamination_audited": "unknown"
+  },
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "source_license_policy": "mixed",
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "known_issues": [
+    "The benchmark is limited to two-timepoint chest X-ray comparisons derived from CheXpert Plus.",
+    "Image-pair selection is represented through benchmark protocols and metrics because the repo task taxonomy has no dedicated multiple-choice image-pair task."
+  ],
+  "last_verified": "2026-09-01"
+}

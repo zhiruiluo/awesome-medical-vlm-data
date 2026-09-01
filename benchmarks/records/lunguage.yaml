@@ -1,0 +1,72 @@
+{
+  "id": "lunguage",
+  "name": "LUNGUAGE",
+  "year": 2026,
+  "homepage": "https://physionet.org/content/lunguage/1.0.0/",
+  "paper": "https://arxiv.org/abs/2505.21190",
+  "repository": "https://github.com/SuperSupermoon/Lunguage",
+  "download": "https://physionet.org/content/lunguage/1.0.0/",
+  "leaderboard": null,
+  "catalog_status": "included",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "tasks": [
+    "report-generation"
+  ],
+  "capabilities": [
+    "description",
+    "report-generation",
+    "longitudinal-comparison"
+  ],
+  "companion_dataset_id": null,
+  "source_datasets": [
+    {
+      "dataset_id": "mimic-cxr",
+      "role": "evaluation",
+      "subset": "MIMIC-CXR test reports; 80 sequential reports from 10 patients have temporal annotations"
+    }
+  ],
+  "external_sources": [],
+  "evaluation": {
+    "protocols": [
+      "structured-report evaluation",
+      "patient-level temporal evaluation"
+    ],
+    "metrics": [
+      "LUNGUAGE Score"
+    ],
+    "outputs": [
+      "free-text"
+    ],
+    "models_evaluated": null
+  },
+  "scale": {
+    "primary_count": 1473,
+    "primary_unit": "expert-annotated reports"
+  },
+  "reproducibility": {
+    "prompts_available": "yes",
+    "evaluation_code_available": "yes",
+    "fixed_splits": "yes",
+    "contamination_audited": "unknown"
+  },
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "source_license_policy": "inherited",
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "known_issues": [
+    "Only 80 reports from 10 patients carry the sequential longitudinal annotations, limiting temporal coverage.",
+    "The released benchmark evaluates report structure and timelines; it is not a direct image-pair classification benchmark."
+  ],
+  "last_verified": "2026-09-01"
+}

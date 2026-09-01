@@ -1,0 +1,73 @@
+{
+  "id": "ms-cxr-t",
+  "name": "MS-CXR-T",
+  "year": 2023,
+  "homepage": "https://physionet.org/content/ms-cxr-t/1.0.0/",
+  "paper": "https://arxiv.org/abs/2301.04558",
+  "repository": "https://github.com/microsoft/hi-ml-multimodal",
+  "download": "https://physionet.org/content/ms-cxr-t/1.0.0/",
+  "leaderboard": null,
+  "catalog_status": "included",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "reasoning",
+    "longitudinal-comparison"
+  ],
+  "companion_dataset_id": null,
+  "source_datasets": [
+    {
+      "dataset_id": "mimic-cxr",
+      "role": "evaluation",
+      "subset": "Temporal image classification and temporal sentence similarity subsets"
+    }
+  ],
+  "external_sources": [],
+  "evaluation": {
+    "protocols": [
+      "zero-shot",
+      "linear-probe"
+    ],
+    "metrics": [
+      "accuracy",
+      "AUROC",
+      "AUPRC"
+    ],
+    "outputs": [
+      "class-label"
+    ],
+    "models_evaluated": null
+  },
+  "scale": {
+    "primary_count": 1687,
+    "primary_unit": "annotations"
+  },
+  "reproducibility": {
+    "prompts_available": "no",
+    "evaluation_code_available": "yes",
+    "fixed_splits": "yes",
+    "contamination_audited": "unknown"
+  },
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "source_license_policy": "inherited",
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "known_issues": [
+    "Access is restricted because the benchmark is derived from MIMIC-CXR and released through PhysioNet credentialed access.",
+    "The task taxonomy compresses the benchmark's two tasks into a single catalog task label because temporal sentence similarity does not have a dedicated repo taxonomy entry."
+  ],
+  "last_verified": "2026-09-01"
+}

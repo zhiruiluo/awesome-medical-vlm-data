@@ -13,6 +13,8 @@ RECORDS = ROOT / "datasets" / "records"
 BENCHMARK_RECORDS = ROOT / "benchmarks" / "records"
 DOMAINS = json.loads((ROOT / "taxonomies" / "domains.json").read_text())["enum"]
 RESOURCE_TYPES = ("text-only", "image-only", "text-image-pairs")
+LONGITUDINAL_IMAGE_STRUCTURE = "longitudinal-sequence"
+LONGITUDINAL_CAPABILITY = "longitudinal-comparison"
 
 
 def load_records() -> list[dict]:
@@ -67,6 +69,15 @@ def group_by_resource_type(items: list[dict]) -> dict[str, list[dict]]:
     for item in items:
         grouped[item["resource_type"]].append(item)
     return {resource_type: grouped[resource_type] for resource_type in RESOURCE_TYPES}
+
+
+def longitudinal_records(items: list[dict]) -> list[dict]:
+    """Return datasets with explicit sequence data or longitudinal task support."""
+    return [
+        item for item in items
+        if LONGITUDINAL_IMAGE_STRUCTURE in item["image_structure"]
+        or LONGITUDINAL_CAPABILITY in item["capabilities"]
+    ]
 
 
 def scale(record: dict) -> str:
@@ -136,13 +147,27 @@ def render_readme(items: list[dict], audited: list[dict], benchmarks: list[dict]
     readme = (ROOT / "README.md").read_text()
     last_updated = max(item["last_verified"] for item in [*audited, *audited_benchmarks])
     by_resource_type = group_by_resource_type(items)
-    navigation = " | ".join([*(f"[{resource_type_title(resource_type)}](#{resource_type})" for resource_type in RESOURCE_TYPES), "[Benchmarks](#benchmarks)"])
+    longitudinal = longitudinal_records(items)
+    navigation = " | ".join([
+        *(f"[{resource_type_title(resource_type)}](#{resource_type})" for resource_type in RESOURCE_TYPES),
+        "[Longitudinal Resources](#longitudinal-resources)",
+        "[Benchmarks](#benchmarks)",
+    ])
     sections = []
     for resource_type, records in by_resource_type.items():
         domains = group_by_domain(records)
         body = "\n\n".join(f"#### {domain_title(domain)}\n\n{table(group)}" for domain, group in domains.items()) or "No included records yet."
         sections.append(f"### {resource_type_title(resource_type)}\n\n{body}")
     resources = "\n\n".join(sections)
+    longitudinal_domains = group_by_domain(longitudinal)
+    longitudinal_content = "\n\n".join(
+        f"#### {domain_title(domain)}\n\n{table(group)}"
+        for domain, group in longitudinal_domains.items()
+    ) or "No included longitudinal resources yet."
+    longitudinal_summary = (
+        f"{len(longitudinal)} included datasets with explicit longitudinal sequences "
+        f"or longitudinal-comparison support. These records also remain listed under their primary resource type."
+    )
     counts = Counter(capability for item in items for capability in item["capabilities"])
     capabilities = "| Capability | Datasets |\n| --- | ---: |\n" + "\n".join(f"| {capability} | {count} |" for capability, count in sorted(counts.items()))
     status_counts = Counter(item["catalog_status"] for item in audited)
@@ -157,6 +182,8 @@ def render_readme(items: list[dict], audited: list[dict], benchmarks: list[dict]
     rendered = replace_marked(rendered, "CATALOG_SUMMARY", summary)
     rendered = replace_marked(rendered, "RESOURCE_TYPE_NAV", navigation)
     rendered = replace_marked(rendered, "RESOURCE_TYPE_TABLES", resources)
+    rendered = replace_marked(rendered, "LONGITUDINAL_SUMMARY", longitudinal_summary)
+    rendered = replace_marked(rendered, "LONGITUDINAL_TABLE", longitudinal_content)
     rendered = replace_marked(rendered, "BENCHMARK_SUMMARY", benchmark_summary)
     rendered = replace_marked(rendered, "BENCHMARK_TABLE", benchmark_content)
     return replace_marked(rendered, "CAPABILITY_TABLE", capabilities)
@@ -167,7 +194,9 @@ def render_reports(items: list[dict], benchmarks: list[dict]) -> tuple[str, str]
     resource_types = Counter(item["resource_type"] for item in items)
     capabilities = Counter(capability for item in items for capability in item["capabilities"])
     benchmark_domains = Counter(domain for item in benchmarks for domain in item["domains"])
-    landscape = "# Landscape\n\nGenerated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.\n\n## Resource Types\n\n" + "\n".join(f"- {name}: {resource_types[name]}" for name in RESOURCE_TYPES) + "\n\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n\n## Benchmarks\n\n" + ("\n".join(f"- {name}: {count}" for name, count in sorted(benchmark_domains.items())) or "- None") + "\n"
+    longitudinal = longitudinal_records(items)
+    longitudinal_benchmarks = [item for item in benchmarks if LONGITUDINAL_CAPABILITY in item["capabilities"]]
+    landscape = "# Landscape\n\nGenerated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.\n\n## Resource Types\n\n" + "\n".join(f"- {name}: {resource_types[name]}" for name in RESOURCE_TYPES) + "\n\n## Longitudinal Resources\n\n" + f"- datasets: {len(longitudinal)}\n- benchmarks: {len(longitudinal_benchmarks)}\n" + "\n## Domains\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(domains.items())) + "\n\n## Capabilities\n\n" + "\n".join(f"- {name}: {count}" for name, count in sorted(capabilities.items())) + "\n\n## Benchmarks\n\n" + ("\n".join(f"- {name}: {count}" for name, count in sorted(benchmark_domains.items())) or "- None") + "\n"
     uncertain = [item["name"] for item in items if item["commercial_use"] == "unknown" or "check" in item["license"].lower()]
     uncertain_benchmarks = [item["name"] for item in benchmarks if item["commercial_use"] == "unknown" or item["license"].lower() == "unknown"]
     gaps = "# Coverage Gaps\n\nGenerated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.\n\n- The catalog is currently concentrated in 2D imaging; 3D, video, whole-slide, and longitudinal resources need more coverage.\n- Localization, segmentation, measurement, hallucination detection, and tool-use capabilities have no entries in this MVP.\n- Ophthalmology has one provisional entry and needs independently verified report-linked datasets.\n- Dataset licensing or commercial-use status needs follow-up for: " + ", ".join(uncertain) + ".\n- Benchmark licensing or commercial-use status needs follow-up for: " + (", ".join(uncertain_benchmarks) or "none") + ".\n"

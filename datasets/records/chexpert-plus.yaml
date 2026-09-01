@@ -1,0 +1,73 @@
+{
+  "id": "chexpert-plus",
+  "name": "CheXpert Plus",
+  "year": 2024,
+  "resource_type": "text-image-pairs",
+  "homepage": "https://aimi.stanford.edu/datasets/chexpert-plus",
+  "paper": "https://arxiv.org/abs/2405.19538",
+  "repository": "https://github.com/Stanford-AIMI/chexpert-plus",
+  "download": "https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x?v=next",
+  "license": "Stanford CheXpert Plus Data Use Agreement",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "multi-view",
+    "longitudinal-sequence"
+  ],
+  "tasks": [
+    "report-generation",
+    "image-report-retrieval",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "description",
+    "diagnosis",
+    "report-generation",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "report"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "de-identified clinical reports with model-derived pathology and RadGraph annotations",
+    "expert_review": "human review of de-identification; clinical-care reports",
+    "grounding": [
+      "report",
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 187711,
+    "primary_unit": "studies",
+    "images": 223462,
+    "studies": 187711,
+    "patients": 64725,
+    "qa_pairs": null,
+    "reports": 187711
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The release has repeat studies per patient and a report comparison section, but does not supply a dedicated longitudinal-pair benchmark split.",
+      "Pathology and RadGraph annotations are model-derived rather than independently re-read reference labels."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-01"
+}

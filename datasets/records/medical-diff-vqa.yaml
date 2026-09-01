@@ -1,0 +1,71 @@
+{
+  "id": "medical-diff-vqa",
+  "name": "Medical-Diff-VQA",
+  "year": 2023,
+  "resource_type": "text-image-pairs",
+  "homepage": "https://physionet.org/content/medical-diff-vqa/1.0.1/",
+  "paper": "https://arxiv.org/abs/2406.06347",
+  "repository": "https://github.com/Holipori/MIMIC-Diff-VQA",
+  "download": "https://physionet.org/content/medical-diff-vqa/1.0.1/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "chest-xray"
+  ],
+  "image_structure": [
+    "longitudinal-sequence"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "reasoning",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "question-answer"
+  ],
+  "derived_from": [
+    "mimic-cxr"
+  ],
+  "annotation": {
+    "source": "derived-from-clinical-reports",
+    "expert_review": "clinician-guided keyword curation",
+    "grounding": [
+      "question-answer",
+      "report"
+    ]
+  },
+  "scale": {
+    "primary_count": 700703,
+    "primary_unit": "question-answer-pairs",
+    "images": 328648,
+    "studies": null,
+    "patients": null,
+    "qa_pairs": 700703,
+    "study_pairs": 164324
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Restricted PhysioNet access requires credentialing, CITI training, and a signed data use agreement.",
+      "The authors note extraction errors can remain for uncommon report expressions and negations."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-01"
+}

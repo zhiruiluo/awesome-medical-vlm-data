@@ -5,60 +5,69 @@
   "homepage": "https://github.com/olivesgatech/OLIVES_Dataset",
   "paper": "https://arxiv.org/abs/2209.11195",
   "repository": "https://github.com/olivesgatech/OLIVES_Dataset",
-  "download": "https://github.com/olivesgatech/OLIVES_Dataset",
-  "license": "Unknown",
-  "commercial_use": "unknown",
+  "download": "https://doi.org/10.5281/zenodo.7105232",
+  "license": "MIT",
+  "commercial_use": "yes",
   "resource_type": "image-only",
   "domains": [
     "ophthalmology"
   ],
   "modalities": [
-    "fundus"
+    "fundus",
+    "oct"
   ],
   "image_structure": [
-    "2d-single"
+    "2d-single",
+    "3d-volume",
+    "longitudinal-sequence"
   ],
   "tasks": [
     "multi-label-classification"
   ],
   "capabilities": [
     "recognition",
-    "diagnosis"
+    "diagnosis",
+    "measurement",
+    "longitudinal-comparison"
   ],
   "usage": "training-evaluation",
-  "catalog_status": "candidate",
+  "catalog_status": "included",
   "language_supervision": [
     "none"
   ],
   "derived_from": [],
   "annotation": {
-    "source": "upstream-catalog-summary",
-    "expert_review": "unknown",
+    "source": "clinical-trial-derived multimodal imaging and treatment metadata",
+    "expert_review": "clinical-trial labels",
     "grounding": [
-      "image-label"
+      "image-label",
+      "clinical-label"
     ]
   },
   "scale": {
-    "primary_count": 412,
-    "primary_unit": "images",
-    "images": 412,
+    "primary_count": 1268,
+    "primary_unit": "fundus-image visits",
+    "images": 1268,
     "qa_pairs": null,
-    "patients": null
+    "patients": null,
+    "eyes": 96,
+    "oct_bscans": 62132
   },
   "quality": {
     "contamination_audited": "unknown",
     "patient_level_split": "unknown",
     "external_validation": "unknown",
     "known_issues": [
-      "Candidate imported from an upstream summary; license, access terms, and detailed annotations require verification."
+      "The treatment timeline covers 96 eyes and may not generalize to broader disease populations.",
+      "The downloadable Hugging Face release is organized as disease-classification and biomarker-detection splits, so longitudinal reconstruction requires patient and eye identifiers."
     ]
   },
   "access": {
     "registration_required": false,
     "credentialing_required": false,
-    "gated": "unknown",
+    "gated": "no",
     "data_use_agreement_required": "unknown",
-    "citation_required": "unknown"
+    "citation_required": "yes"
   },
   "last_verified": "2026-09-01"
 }

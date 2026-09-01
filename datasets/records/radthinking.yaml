@@ -1,0 +1,73 @@
+{
+  "id": "radthinking",
+  "name": "RadThinking",
+  "year": 2026,
+  "resource_type": "text-image-pairs",
+  "homepage": "https://huggingface.co/datasets/wenxuanchelsea/RadThinking",
+  "paper": "https://arxiv.org/abs/2605.10761",
+  "repository": null,
+  "download": "https://huggingface.co/datasets/wenxuanchelsea/RadThinking",
+  "license": "CC BY-NC-SA 4.0 (demo release; full dataset pending acceptance/early-access approval)",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct"
+  ],
+  "image_structure": [
+    "longitudinal-sequence"
+  ],
+  "tasks": [
+    "visual-question-answering"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "reasoning",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "question-answer",
+    "reasoning-trace",
+    "report"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "expert-authored with reasoning traces",
+    "expert_review": "radiology review reported in paper",
+    "grounding": [
+      "question-answer",
+      "reasoning-trace",
+      "report"
+    ]
+  },
+  "scale": {
+    "primary_count": 20362,
+    "primary_unit": "ct-scans",
+    "images": 20362,
+    "studies": 20362,
+    "patients": 9131,
+    "qa_pairs": null,
+    "healthy_controls": 2077
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The public Hugging Face page appears to expose only a demo/public preview rather than the full dataset.",
+      "Dataset access notes state the full release is pending paper acceptance and early access currently requires contacting the authors."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-01"
+}

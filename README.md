@@ -43,13 +43,13 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-28 included datasets: 0 text-only, 13 image-only, and 15 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 1 included benchmark; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+32 included datasets: 0 text-only, 15 image-only, and 17 text-image pairs. 47 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
 
 <!-- BEGIN GENERATED:RESOURCE_TYPE_NAV -->
-[Text Only](#text-only) | [Image Only](#image-only) | [Text-Image Pairs](#text-image-pairs) | [Benchmarks](#benchmarks)
+[Text Only](#text-only) | [Image Only](#image-only) | [Text-Image Pairs](#text-image-pairs) | [Longitudinal Resources](#longitudinal-resources) | [Benchmarks](#benchmarks)
 <!-- END GENERATED:RESOURCE_TYPE_NAV -->
 
 ## Datasets By Resource Type
@@ -82,6 +82,8 @@ No included records yet.
 | [ACPS](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) | 2013 | 2d-single | segmentation | 840 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://people.duke.edu/~sf59/Chiu_BOE_2013_dataset.htm) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1364/BOE.4.000924) | Unknown (open) |
 | [ROSE](https://imed.nimte.ac.cn/dataofrose.html) | 2020 | 2d-single | segmentation | 229 images | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/iMED-Lab/ROSE) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://imed.nimte.ac.cn/dataofrose.html) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TMI.2020.3042802) | Academic research use only (open) |
 | [FIVES](https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1) | 2022 | 2d-single | segmentation | 800 images | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://figshare.com/articles/figure/FIVES_A_Fundus_Image_Dataset_for_AI-based_Vessel_Segmentation/19688169/1) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01564-3) | CC BY 4.0 (open) |
+| [OLIVES](https://github.com/olivesgatech/OLIVES_Dataset) | 2022 | 2d-single, 3d-volume, longitudinal-sequence | recognition, diagnosis | 1.3K fundus-image visits | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/olivesgatech/OLIVES_Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://doi.org/10.5281/zenodo.7105232) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2209.11195) | MIT (open) |
+| [Harvard Glaucoma Detection and Progression](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) | 2023 | 2d-single | recognition, diagnosis | 1.0K patients | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/harvardairobotics/Harvard-GDP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2308.13411) | CC BY-NC-ND 4.0 (open) |
 | [Cataract-1K](https://github.com/Negin-Ghamsarian/Cataract-1K) | 2024 | video | segmentation | 1.0K videos | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2312.06295) | CC BY 4.0 (open) |
 
 #### Surgery
@@ -99,8 +101,10 @@ No included records yet.
 | [IU X-Ray](https://openi.nlm.nih.gov/) | 2016 | multi-view | description, report-generation | 4.0K reports | report | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/datasets/raddar/chest-xrays-indiana-university) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://pubmed.ncbi.nlm.nih.gov/27701286/) | CC BY-NC-ND 4.0 (open) |
 | [VQA-RAD](https://www.nlm.nih.gov/research/visible/vqarad/index.html) | 2018 | 2d-single | recognition, diagnosis | 3.5K qa-pairs | image | [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF6C37?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/datasets/flaviagiammarino/vqa-rad) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/flaviagiammarino/vqa-rad) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/sdata.2018.251) | Research use; check source terms (open) |
 | [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.1.0/) | 2019 | multi-view | description, report-generation | 227.8K studies | report | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/datasets/simhadrisadaram/mimic-cxr-dataset) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-019-0322-0) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [Medical-Diff-VQA](https://physionet.org/content/medical-diff-vqa/1.0.1/) | 2023 | longitudinal-sequence | diagnosis, reasoning | 700.7K question-answer-pairs | question-answer, report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Holipori/MIMIC-Diff-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/medical-diff-vqa/1.0.1/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2406.06347) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 | [ROCOv2](https://zenodo.org/records/10821435) | 2023 | 2d-single | description, recognition | 79.8K image-caption-pairs | caption, medical-concepts | [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FF6C37?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/datasets/eltorio/ROCOv2-radiology) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/records/10821435) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2405.10004) | CC BY-NC 4.0 (registration) |
 | [RP3D-Caption](https://chaoyi-wu.github.io/RadFM/) | 2023 | 3d-volume | description, diagnosis | 69.5K image-text-pairs | caption, case-context | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/chaoyi-wu/RadFM) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/chaoyi-wu/RadFM_data_csv) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2308.02463) | Radiopaedia non-commercial use with approval (open) |
+| [CheXpert Plus](https://aimi.stanford.edu/datasets/chexpert-plus) | 2024 | multi-view, longitudinal-sequence | description, diagnosis | 187.7K studies | report, image-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Stanford-AIMI/chexpert-plus) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x?v=next) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2405.19538) | Stanford CheXpert Plus Data Use Agreement (registration) |
 | [CT-RATE](https://stanfordmlgroup.github.io/projects/ct-rate/) | 2024 | 3d-volume | description, diagnosis | 25.7K studies | report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ibrahimethemhamci/CT-RATE) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/ibrahimhamamci/CT-RATE) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2403.17834) | CC BY-NC-SA 4.0 (registration) |
 
 #### Pathology
@@ -138,18 +142,45 @@ No included records yet.
 | [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | 2023 | 2d-single | recognition, reasoning | 227.0K qa-pairs | figure, caption, article-context | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/xiaoman-zhang/PMC-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/xmcmic/PMC-VQA) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2305.10415) | Check source terms (open) |
 <!-- END GENERATED:RESOURCE_TYPE_TABLES -->
 
+## Longitudinal Resources
+
+This cross-cutting view includes datasets with an explicit longitudinal sequence or longitudinal-comparison support. Resources remain listed under their primary type above.
+
+<!-- BEGIN GENERATED:LONGITUDINAL_SUMMARY -->
+4 included datasets with explicit longitudinal sequences or longitudinal-comparison support. These records also remain listed under their primary resource type.
+<!-- END GENERATED:LONGITUDINAL_SUMMARY -->
+
+<!-- BEGIN GENERATED:LONGITUDINAL_TABLE -->
+#### Radiology
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [Medical-Diff-VQA](https://physionet.org/content/medical-diff-vqa/1.0.1/) | 2023 | longitudinal-sequence | diagnosis, reasoning | 700.7K question-answer-pairs | question-answer, report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Holipori/MIMIC-Diff-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/medical-diff-vqa/1.0.1/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2406.06347) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [CheXpert Plus](https://aimi.stanford.edu/datasets/chexpert-plus) | 2024 | multi-view, longitudinal-sequence | description, diagnosis | 187.7K studies | report, image-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Stanford-AIMI/chexpert-plus) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x?v=next) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2405.19538) | Stanford CheXpert Plus Data Use Agreement (registration) |
+
+#### Ophthalmology
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [OLIVES](https://github.com/olivesgatech/OLIVES_Dataset) | 2022 | 2d-single, 3d-volume, longitudinal-sequence | recognition, diagnosis | 1.3K fundus-image visits | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/olivesgatech/OLIVES_Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://doi.org/10.5281/zenodo.7105232) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2209.11195) | MIT (open) |
+| [Harvard Glaucoma Detection and Progression](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) | 2023 | 2d-single | recognition, diagnosis | 1.0K patients | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/harvardairobotics/Harvard-GDP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2308.13411) | CC BY-NC-ND 4.0 (open) |
+<!-- END GENERATED:LONGITUDINAL_TABLE -->
+
 ## Benchmarks
 
 Benchmarks are rendered separately because one benchmark may combine multiple public datasets. A benchmark record links to its companion dataset payload and constituent dataset records without duplicating their provenance or license metadata.
 
 <!-- BEGIN GENERATED:BENCHMARK_SUMMARY -->
-1 included benchmark, maintained separately from its companion and source datasets.
+4 included benchmarks, maintained separately from their companion and source datasets.
 <!-- END GENERATED:BENCHMARK_SUMMARY -->
 
 <!-- BEGIN GENERATED:BENCHMARK_TABLE -->
 | Benchmark | Year | Domain | Capability | Scale | Source datasets | Protocol | Links | License / access |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
+| [MS-CXR-T](https://physionet.org/content/ms-cxr-t/1.0.0/) | 2023 | radiology | reasoning, longitudinal-comparison | 1.7K annotations | MIMIC-CXR | zero-shot, linear-probe | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/microsoft/hi-ml-multimodal) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/ms-cxr-t/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2301.04558) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed; inherited sources) |
+| [TemMed-Bench](https://temmedbench.github.io/) | 2025 | radiology | description, reasoning, longitudinal-comparison | 21.0K instances | CheXpert Plus | closed-book, retrieval-augmented generation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Levi-ZJY/TemMed-Bench) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/uclanlp/TemMed-Bench) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2509.25143) | CC BY 4.0 (open; mixed sources) |
 | [LMOD+](https://kfzyqin.github.io/lmod_plus/) | 2026 | ophthalmology | recognition, diagnosis, localization | 32.6K instances | Cataract-1K, IDRiD, OIMHS, REFUGE2, Harvard FairSeg, CAU001, Cataract Detection 2, ORIGA, G1020, BRSET | zero-shot | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1145/3801746) [![Leaderboard](https://img.shields.io/badge/Leaderboard-2E7D32?style=flat-square&logo=bar-chart&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) | Unknown (access unknown; mixed sources) |
+| [LUNGUAGE](https://physionet.org/content/lunguage/1.0.0/) | 2026 | radiology | description, report-generation, longitudinal-comparison | 1.5K expert-annotated reports | MIMIC-CXR | structured-report evaluation, patient-level temporal evaluation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SuperSupermoon/Lunguage) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/lunguage/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2505.21190) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed; inherited sources) |
 <!-- END GENERATED:BENCHMARK_TABLE -->
 
 ## Capability Coverage
@@ -157,12 +188,14 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 <!-- BEGIN GENERATED:CAPABILITY_TABLE -->
 | Capability | Datasets |
 | --- | ---: |
-| description | 10 |
-| diagnosis | 18 |
+| description | 11 |
+| diagnosis | 22 |
 | localization | 7 |
-| reasoning | 6 |
-| recognition | 17 |
-| report-generation | 3 |
+| longitudinal-comparison | 4 |
+| measurement | 1 |
+| reasoning | 7 |
+| recognition | 19 |
+| report-generation | 4 |
 | segmentation | 7 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
