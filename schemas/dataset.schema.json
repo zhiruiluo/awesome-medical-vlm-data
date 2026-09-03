@@ -22,7 +22,7 @@
     "capabilities": {"type": "array", "minItems": 1, "items": {"$ref": "../taxonomies/capabilities.json"}},
     "usage": {"enum": ["training", "evaluation", "training-evaluation"]},
     "catalog_status": {"enum": ["included", "candidate", "excluded"]},
-    "language_supervision": {"type": "array", "items": {"enum": ["caption", "report", "question-answer", "grounded-text", "instruction-dialogue", "reasoning-trace", "preference-pair", "none"]}},
+    "language_supervision": {"type": "array", "items": {"enum": ["caption", "report", "question-answer", "grounded-text", "instruction-dialogue", "reasoning-trace", "preference-pair", "structured-ehr", "none"]}},
     "derived_from": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
     "annotation": {"type": "object", "required": ["source", "expert_review", "grounding"]},
     "scale": {"type": "object", "required": ["primary_count", "primary_unit"]},

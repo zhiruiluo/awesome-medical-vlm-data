@@ -1,0 +1,67 @@
+{
+  "id": "mimic-iv",
+  "name": "MIMIC-IV",
+  "year": 2024,
+  "resource_type": "text-only",
+  "homepage": "https://physionet.org/content/mimiciv/3.1/",
+  "paper": "https://doi.org/10.1038/s41597-022-01899-x",
+  "repository": "https://github.com/MIT-LCP/mimic-code",
+  "download": "https://physionet.org/content/mimiciv/3.1/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "domains": [
+    "general-biomedical"
+  ],
+  "modalities": [],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
+  "image_structure": [],
+  "tasks": [
+    "clinical-prediction",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "clinical-prediction",
+    "diagnosis",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "structured-ehr"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "deidentified hospital and intensive-care electronic health record events",
+    "expert_review": "clinical-care documentation",
+    "grounding": [
+      "clinical-events",
+      "diagnosis-codes"
+    ]
+  },
+  "scale": {
+    "primary_count": 364627,
+    "primary_unit": "patients",
+    "patients": 364627,
+    "hospitalizations": 546028,
+    "icu_stays": 94458
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "Data are from a single academic medical center and reflect routine clinical practice.",
+      "Dates are shifted independently for each patient, and ages above 89 are grouped."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}

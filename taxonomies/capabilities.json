@@ -1,4 +1,4 @@
 {
   "type": "string",
-  "enum": ["recognition", "description", "diagnosis", "localization", "segmentation", "measurement", "counting", "spatial-reasoning", "report-generation", "longitudinal-comparison", "reasoning", "hallucination-detection", "tool-use"]
+  "enum": ["recognition", "description", "diagnosis", "clinical-prediction", "localization", "segmentation", "measurement", "counting", "spatial-reasoning", "report-generation", "longitudinal-comparison", "reasoning", "hallucination-detection", "tool-use"]
 }

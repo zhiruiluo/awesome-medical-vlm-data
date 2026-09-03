@@ -20,7 +20,7 @@ STATUS = {"included", "candidate", "excluded"}
 RESOURCE_TYPES = {"text-only", "image-only", "text-image-pairs"}
 ACCESS_VALUES = {"yes", "no", "unknown"}
 IMAGE_STRUCTURES = {"2d-single", "multi-view", "3d-volume", "whole-slide-image", "video", "longitudinal-sequence"}
-LANGUAGE_SUPERVISION = {"caption", "report", "question-answer", "grounded-text", "instruction-dialogue", "reasoning-trace", "preference-pair", "none"}
+LANGUAGE_SUPERVISION = {"caption", "report", "question-answer", "grounded-text", "instruction-dialogue", "reasoning-trace", "preference-pair", "structured-ehr", "none"}
 BENCHMARK_REQUIRED = {
     "id", "name", "year", "homepage", "paper", "repository", "download", "leaderboard",
     "catalog_status", "domains", "modalities", "tasks", "capabilities", "companion_dataset_id",

@@ -16,7 +16,7 @@
 ---
 
 <!-- BEGIN GENERATED:LAST_UPDATED -->
-**Last updated:** 2026-09-02
+**Last updated:** 2026-09-03
 <!-- END GENERATED:LAST_UPDATED -->
 
 A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
@@ -43,7 +43,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-33 included datasets: 0 text-only, 16 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+36 included datasets: 3 text-only, 16 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -57,7 +57,19 @@ python3 scripts/check_links.py --timeout 15
 <!-- BEGIN GENERATED:RESOURCE_TYPE_TABLES -->
 ### Text Only
 
-No included records yet.
+#### Radiology
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [MIMIC-IV-Note](https://physionet.org/content/mimic-iv-note/2.2/) | 2023 | - | clinical-prediction, description | 2.7M notes | clinical-note, radiology-report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/mimic-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimic-iv-note/2.2/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.13026/1n74-ne17) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+
+#### General Biomedical
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [eICU Collaborative Research Database](https://physionet.org/content/eicu-crd/2.0/) | 2019 | - | clinical-prediction, diagnosis | 200.0K icu-admissions | clinical-events, diagnosis-codes | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/eicu-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/eicu-crd/2.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/sdata.2018.178) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [MIMIC-IV-Note](https://physionet.org/content/mimic-iv-note/2.2/) | 2023 | - | clinical-prediction, description | 2.7M notes | clinical-note, radiology-report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/mimic-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimic-iv-note/2.2/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.13026/1n74-ne17) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [MIMIC-IV](https://physionet.org/content/mimiciv/3.1/) | 2024 | - | clinical-prediction, diagnosis | 364.6K patients | clinical-events, diagnosis-codes | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/mimic-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimiciv/3.1/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01899-x) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 
 ### Image Only
 
@@ -148,7 +160,7 @@ No included records yet.
 This cross-cutting view includes datasets with an explicit longitudinal sequence or longitudinal-comparison support. Resources remain listed under their primary type above.
 
 <!-- BEGIN GENERATED:LONGITUDINAL_SUMMARY -->
-4 included datasets with explicit longitudinal sequences or longitudinal-comparison support. These records also remain listed under their primary resource type.
+6 included datasets with explicit longitudinal sequences or longitudinal-comparison support. These records also remain listed under their primary resource type.
 <!-- END GENERATED:LONGITUDINAL_SUMMARY -->
 
 <!-- BEGIN GENERATED:LONGITUDINAL_TABLE -->
@@ -165,6 +177,13 @@ This cross-cutting view includes datasets with an explicit longitudinal sequence
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
 | [OLIVES](https://github.com/olivesgatech/OLIVES_Dataset) | 2022 | 2d-single, 3d-volume, longitudinal-sequence | recognition, diagnosis | 1.3K fundus-image visits | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/olivesgatech/OLIVES_Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://doi.org/10.5281/zenodo.7105232) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2209.11195) | MIT (open) |
 | [Harvard Glaucoma Detection and Progression](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) | 2023 | 2d-single | recognition, diagnosis | 1.0K patients | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/harvardairobotics/Harvard-GDP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2308.13411) | CC BY-NC-ND 4.0 (open) |
+
+#### General Biomedical
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [eICU Collaborative Research Database](https://physionet.org/content/eicu-crd/2.0/) | 2019 | - | clinical-prediction, diagnosis | 200.0K icu-admissions | clinical-events, diagnosis-codes | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/eicu-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/eicu-crd/2.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/sdata.2018.178) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+| [MIMIC-IV](https://physionet.org/content/mimiciv/3.1/) | 2024 | - | clinical-prediction, diagnosis | 364.6K patients | clinical-events, diagnosis-codes | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/MIT-LCP/mimic-code) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimiciv/3.1/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01899-x) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 <!-- END GENERATED:LONGITUDINAL_TABLE -->
 
 ## Benchmarks
@@ -189,12 +208,13 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 <!-- BEGIN GENERATED:CAPABILITY_TABLE -->
 | Capability | Datasets |
 | --- | ---: |
-| description | 11 |
-| diagnosis | 23 |
+| clinical-prediction | 3 |
+| description | 12 |
+| diagnosis | 26 |
 | localization | 8 |
-| longitudinal-comparison | 4 |
+| longitudinal-comparison | 6 |
 | measurement | 1 |
-| reasoning | 7 |
+| reasoning | 8 |
 | recognition | 20 |
 | report-generation | 4 |
 | segmentation | 8 |

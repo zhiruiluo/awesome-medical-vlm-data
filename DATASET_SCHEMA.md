@@ -14,7 +14,7 @@ Evaluation suites that define protocols, metrics, or leaderboards belong in `ben
 | `resource_type` | Released resource composition: `text-only`, `image-only`, or `text-image-pairs`. It controls the primary README section and is distinct from annotation supervision. |
 | `domains`, `modalities`, `anatomical_targets`, `image_structure` | Controlled taxonomy lists for the data. `anatomical_targets` identifies the principal imaged or annotated body region or organ. Use `multi-anatomy` only when the resource is genuinely heterogeneous. Text-only records use empty `modalities` and `image_structure`; image-bearing records must provide both. |
 | `tasks`, `capabilities`, `usage` | VLM tasks, supported capabilities, and `training`, `evaluation`, or `training-evaluation`. |
-| `catalog_status`, `language_supervision`, `derived_from` | Publication eligibility, language signal types, and parent dataset IDs for derived releases. Only `included` records appear in generated public tables. |
+| `catalog_status`, `language_supervision`, `derived_from` | Publication eligibility, language signal types, and parent dataset IDs for derived releases. Use `structured-ehr` for coded or tabular EHR events; use `report` for free-text clinical notes. Only `included` records appear in generated public tables. |
 | `annotation` | Annotation source, grounding types, and review status. |
 | `scale` | `primary_count` and `primary_unit` drive generated tables; retain counts such as `images`, `qa_pairs`, `studies`, or `patients` as supporting detail. |
 | `quality` | Auditing, split, validation, and known-issue signals. |

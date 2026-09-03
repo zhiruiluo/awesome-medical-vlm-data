@@ -1,0 +1,72 @@
+{
+  "id": "mimic-iv-note",
+  "name": "MIMIC-IV-Note",
+  "year": 2023,
+  "resource_type": "text-only",
+  "homepage": "https://physionet.org/content/mimic-iv-note/2.2/",
+  "paper": "https://doi.org/10.13026/1n74-ne17",
+  "repository": "https://github.com/MIT-LCP/mimic-code",
+  "download": "https://physionet.org/content/mimic-iv-note/2.2/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "domains": [
+    "general-biomedical",
+    "radiology"
+  ],
+  "modalities": [],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
+  "image_structure": [],
+  "tasks": [
+    "clinical-prediction",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "clinical-prediction",
+    "description",
+    "diagnosis",
+    "reasoning"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "report"
+  ],
+  "derived_from": [
+    "mimic-iv"
+  ],
+  "annotation": {
+    "source": "deidentified discharge summaries and radiology reports linked to MIMIC-IV",
+    "expert_review": "clinical-care documentation; deidentification manual review reported for discharge summaries",
+    "grounding": [
+      "clinical-note",
+      "radiology-report"
+    ]
+  },
+  "scale": {
+    "primary_count": 2653149,
+    "primary_unit": "notes",
+    "notes": 2653149,
+    "discharge_summaries": 331794,
+    "radiology_reports": 2321355,
+    "patients": 237427
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "All protected health information is removed or replaced during deidentification.",
+      "The source population is from a single academic medical center."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}

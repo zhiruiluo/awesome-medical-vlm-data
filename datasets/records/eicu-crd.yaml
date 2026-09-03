@@ -1,0 +1,65 @@
+{
+  "id": "eicu-crd",
+  "name": "eICU Collaborative Research Database",
+  "year": 2019,
+  "resource_type": "text-only",
+  "homepage": "https://physionet.org/content/eicu-crd/2.0/",
+  "paper": "https://doi.org/10.1038/sdata.2018.178",
+  "repository": "https://github.com/MIT-LCP/eicu-code",
+  "download": "https://physionet.org/content/eicu-crd/2.0/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "domains": [
+    "general-biomedical"
+  ],
+  "modalities": [],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
+  "image_structure": [],
+  "tasks": [
+    "clinical-prediction",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "clinical-prediction",
+    "diagnosis",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "structured-ehr"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "deidentified multi-center intensive-care electronic health record events",
+    "expert_review": "clinical-care documentation",
+    "grounding": [
+      "clinical-events",
+      "diagnosis-codes"
+    ]
+  },
+  "scale": {
+    "primary_count": 200000,
+    "primary_unit": "icu-admissions",
+    "icu_admissions": 200000
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "Data availability varies across hospitals because interfaces differ by ICU.",
+      "The release is limited to ICU admissions monitored by the eICU program during 2014-2015."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}
