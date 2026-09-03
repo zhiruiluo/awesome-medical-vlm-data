@@ -16,6 +16,9 @@
     "dermoscopy",
     "pathology-image"
   ],
+  "anatomical_targets": [
+    "skin"
+  ],
   "image_structure": [
     "2d-single"
   ],

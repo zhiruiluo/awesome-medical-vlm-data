@@ -18,6 +18,9 @@
   "modalities": [
     "fundus"
   ],
+  "anatomical_targets": [
+    "eye"
+  ],
   "image_structure": [
     "2d-single"
   ],

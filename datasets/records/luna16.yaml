@@ -15,6 +15,9 @@
   "modalities": [
     "ct"
   ],
+  "anatomical_targets": [
+    "lung"
+  ],
   "image_structure": [
     "3d-volume"
   ],

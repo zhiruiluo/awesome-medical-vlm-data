@@ -16,6 +16,9 @@
   "modalities": [
     "surgical-video"
   ],
+  "anatomical_targets": [
+    "eye"
+  ],
   "image_structure": [
     "video"
   ],

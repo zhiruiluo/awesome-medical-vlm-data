@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RECORDS = ROOT / "datasets" / "records"
 BENCHMARKS = ROOT / "benchmarks" / "records"
 TAXONOMIES = ROOT / "taxonomies"
-REQUIRED = {"id", "name", "year", "license", "commercial_use", "resource_type", "domains", "modalities", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"}
-LIST_FIELDS = {"domains", "modalities", "image_structure", "tasks", "capabilities", "language_supervision", "derived_from"}
+REQUIRED = {"id", "name", "year", "license", "commercial_use", "resource_type", "domains", "modalities", "anatomical_targets", "image_structure", "tasks", "capabilities", "usage", "catalog_status", "language_supervision", "derived_from", "annotation", "scale", "quality", "access", "last_verified"}
+LIST_FIELDS = {"domains", "modalities", "anatomical_targets", "image_structure", "tasks", "capabilities", "language_supervision", "derived_from"}
 URL_FIELDS = ("homepage", "paper", "repository", "download")
 STATUS = {"included", "candidate", "excluded"}
 RESOURCE_TYPES = {"text-only", "image-only", "text-image-pairs"}
@@ -36,7 +36,7 @@ def taxonomy(name: str) -> set[str]:
     return set(json.loads((TAXONOMIES / f"{name}.json").read_text())["enum"])
 
 
-ALLOWED = {name: taxonomy(name) for name in ("domains", "modalities", "tasks", "capabilities")}
+ALLOWED = {name: taxonomy(name) for name in ("domains", "modalities", "anatomical_targets", "tasks", "capabilities")}
 
 
 def load_records() -> list[tuple[Path, dict]]:
@@ -79,12 +79,15 @@ def validate(path: Path, record: dict) -> list[str]:
     for field in LIST_FIELDS:
         if not isinstance(record.get(field), list) or not all(isinstance(item, str) and item for item in record[field]):
             errors.append(f"{label}: {field} must be a list of strings")
+    anatomical_targets = record.get("anatomical_targets")
+    if isinstance(anatomical_targets, list) and len(anatomical_targets) != len(set(anatomical_targets)):
+        errors.append(f"{label}: anatomical_targets must not contain duplicates")
     for field, allowed in ALLOWED.items():
         if isinstance(record.get(field), list):
             unknown = sorted(set(record[field]) - allowed)
             if unknown:
                 errors.append(f"{label}: unknown {field}: {', '.join(unknown)}")
-    for field in ("domains", "tasks", "capabilities"):
+    for field in ("domains", "anatomical_targets", "tasks", "capabilities"):
         if not record.get(field):
             errors.append(f"{label}: {field} must not be empty")
     if record.get("resource_type") not in RESOURCE_TYPES:

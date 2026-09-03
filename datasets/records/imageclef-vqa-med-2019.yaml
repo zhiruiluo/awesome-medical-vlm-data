@@ -15,6 +15,9 @@
   "modalities": [
     "mixed-medical-figures"
   ],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
   "image_structure": [
     "2d-single"
   ],

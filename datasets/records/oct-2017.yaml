@@ -15,6 +15,9 @@
   "modalities": [
     "oct"
   ],
+  "anatomical_targets": [
+    "eye"
+  ],
   "image_structure": [
     "2d-single"
   ],

@@ -16,7 +16,7 @@
 ---
 
 <!-- BEGIN GENERATED:LAST_UPDATED -->
-**Last updated:** 2026-09-01
+**Last updated:** 2026-09-02
 <!-- END GENERATED:LAST_UPDATED -->
 
 A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
@@ -43,7 +43,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-32 included datasets: 0 text-only, 15 image-only, and 17 text-image pairs. 47 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+33 included datasets: 0 text-only, 16 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -73,6 +73,7 @@ No included records yet.
 | [COVID-19-AR](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70226443) | 2020 | 2d-single, 3d-volume | recognition, diagnosis | 105 patients | image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/covid-19-ar/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/tcia.2020.py71-5978) | TCIA collection terms; check source (open) |
 | [VinDr-CXR](https://github.com/vinbigdata-medical/vindr-cxr) | 2021 | 2d-single | recognition, diagnosis | 18.0K images | image-label, bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vinbigdata-medical/vindr-cxr) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/vindr-cxr/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2012.15029) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 | [CheXlocalize](https://github.com/rajpurkarlab/cheXlocalize) | 2022 | 2d-single | recognition, localization | 902 images | segmentation-mask, point | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rajpurkarlab/cheXlocalize) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://aimi.stanford.edu/datasets/chexlocalize) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s42256-022-00536-x) | MIT license (registration) |
+| [PI-CAI](https://pi-cai.grand-challenge.org/DATA/) | 2022 | 3d-volume | recognition, diagnosis | 1.5K biparametric MRI examinations | segmentation-mask, patient-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/picai_labels) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/record/6624726) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/S1470-2045(24)00220-1) | CC BY-NC 4.0 (open) |
 
 #### Ophthalmology
 
@@ -189,14 +190,14 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 | Capability | Datasets |
 | --- | ---: |
 | description | 11 |
-| diagnosis | 22 |
-| localization | 7 |
+| diagnosis | 23 |
+| localization | 8 |
 | longitudinal-comparison | 4 |
 | measurement | 1 |
 | reasoning | 7 |
-| recognition | 19 |
+| recognition | 20 |
 | report-generation | 4 |
-| segmentation | 7 |
+| segmentation | 8 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

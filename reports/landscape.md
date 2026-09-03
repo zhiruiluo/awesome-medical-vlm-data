@@ -5,7 +5,7 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 ## Resource Types
 
 - text-only: 0
-- image-only: 15
+- image-only: 16
 - text-image-pairs: 17
 
 ## Longitudinal Resources
@@ -20,20 +20,20 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 - general-biomedical: 4
 - ophthalmology: 8
 - pathology: 2
-- radiology: 16
+- radiology: 17
 - surgery: 1
 
 ## Capabilities
 
 - description: 11
-- diagnosis: 22
-- localization: 7
+- diagnosis: 23
+- localization: 8
 - longitudinal-comparison: 4
 - measurement: 1
 - reasoning: 7
-- recognition: 19
+- recognition: 20
 - report-generation: 4
-- segmentation: 7
+- segmentation: 8
 - spatial-reasoning: 1
 
 ## Benchmarks

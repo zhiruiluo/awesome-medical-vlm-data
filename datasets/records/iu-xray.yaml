@@ -15,6 +15,9 @@
   "modalities": [
     "chest-xray"
   ],
+  "anatomical_targets": [
+    "chest"
+  ],
   "image_structure": [
     "multi-view"
   ],

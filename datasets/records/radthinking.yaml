@@ -15,6 +15,9 @@
   "modalities": [
     "ct"
   ],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
   "image_structure": [
     "longitudinal-sequence"
   ],

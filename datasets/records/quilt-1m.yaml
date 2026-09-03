@@ -15,6 +15,9 @@
   "modalities": [
     "pathology-image"
   ],
+  "anatomical_targets": [
+    "multi-anatomy"
+  ],
   "image_structure": [
     "2d-single"
   ],

@@ -16,6 +16,9 @@
     "chest-xray",
     "ct"
   ],
+  "anatomical_targets": [
+    "chest"
+  ],
   "image_structure": [
     "2d-single",
     "3d-volume"

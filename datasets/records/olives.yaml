@@ -16,6 +16,9 @@
     "fundus",
     "oct"
   ],
+  "anatomical_targets": [
+    "eye"
+  ],
   "image_structure": [
     "2d-single",
     "3d-volume",

@@ -1,0 +1,72 @@
+{
+  "id": "trace-pca-active-surveillance-cohort",
+  "name": "TRACE-PCa Active Surveillance Cohort",
+  "year": 2026,
+  "resource_type": "image-only",
+  "homepage": "https://arxiv.org/abs/2607.13506",
+  "paper": "https://arxiv.org/abs/2607.13506",
+  "repository": null,
+  "download": null,
+  "license": "Not publicly released (single-institution cohort)",
+  "commercial_use": "unknown",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "prostate"
+  ],
+  "image_structure": [
+    "3d-volume",
+    "longitudinal-sequence"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "candidate",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "serial biparametric MRI, clinical variables, and repeat-biopsy pathology outcomes",
+    "expert_review": "fellowship-trained genitourinary pathologists",
+    "grounding": [
+      "pathology-outcome",
+      "clinical-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 424,
+    "primary_unit": "patients",
+    "images": null,
+    "scans": 1221,
+    "patients": 424,
+    "progression_cases": 82,
+    "qa_pairs": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "no",
+    "known_issues": [
+      "The cohort is single-institutional and not publicly released.",
+      "The paper reports five-fold cross-validation but no independent external validation."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "unknown",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-02"
+}

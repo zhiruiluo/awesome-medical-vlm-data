@@ -12,7 +12,7 @@ Evaluation suites that define protocols, metrics, or leaderboards belong in `ben
 | `homepage`, `paper`, `repository`, `download` | Source URLs. At least one must be present. Use `null` when unavailable. |
 | `license`, `commercial_use` | License name/status and `yes`, `no`, or `unknown`. |
 | `resource_type` | Released resource composition: `text-only`, `image-only`, or `text-image-pairs`. It controls the primary README section and is distinct from annotation supervision. |
-| `domains`, `modalities`, `image_structure` | Taxonomy lists for the data. Text-only records use empty `modalities` and `image_structure`; image-bearing records must provide both. |
+| `domains`, `modalities`, `anatomical_targets`, `image_structure` | Controlled taxonomy lists for the data. `anatomical_targets` identifies the principal imaged or annotated body region or organ. Use `multi-anatomy` only when the resource is genuinely heterogeneous. Text-only records use empty `modalities` and `image_structure`; image-bearing records must provide both. |
 | `tasks`, `capabilities`, `usage` | VLM tasks, supported capabilities, and `training`, `evaluation`, or `training-evaluation`. |
 | `catalog_status`, `language_supervision`, `derived_from` | Publication eligibility, language signal types, and parent dataset IDs for derived releases. Only `included` records appear in generated public tables. |
 | `annotation` | Annotation source, grounding types, and review status. |
@@ -32,7 +32,7 @@ The README table renders a clickable Shields.io `GitHub` badge when `repository`
   "id": "example-vqa", "name": "Example VQA", "year": 2025,
   "homepage": "https://example.org", "paper": null, "repository": null, "download": null,
   "license": "unknown", "commercial_use": "unknown", "resource_type": "text-image-pairs",
-  "domains": ["radiology"], "modalities": ["xray"], "image_structure": ["2d-single"],
+  "domains": ["radiology"], "modalities": ["xray"], "anatomical_targets": ["chest"], "image_structure": ["2d-single"],
   "tasks": ["visual-question-answering"], "capabilities": ["recognition"], "usage": "evaluation",
   "catalog_status": "included", "language_supervision": ["question-answer"], "derived_from": [],
   "annotation": {"source": "human-authored", "expert_review": "yes", "grounding": ["image"]},

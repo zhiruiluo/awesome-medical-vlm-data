@@ -1,0 +1,78 @@
+{
+  "id": "pi-cai",
+  "name": "PI-CAI",
+  "year": 2022,
+  "resource_type": "image-only",
+  "homepage": "https://pi-cai.grand-challenge.org/DATA/",
+  "paper": "https://doi.org/10.1016/S1470-2045(24)00220-1",
+  "repository": "https://github.com/DIAGNijmegen/picai_labels",
+  "download": "https://zenodo.org/record/6624726",
+  "license": "CC BY-NC 4.0",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "prostate"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "object-detection",
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "recognition",
+    "diagnosis",
+    "localization",
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [
+    "prostatex"
+  ],
+  "annotation": {
+    "source": "histopathology- and MRI-derived clinically significant prostate cancer reference standard",
+    "expert_review": "trained investigators and radiology resident under expert-radiologist supervision",
+    "grounding": [
+      "segmentation-mask",
+      "patient-label",
+      "clinical-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 1500,
+    "primary_unit": "biparametric MRI examinations",
+    "images": null,
+    "studies": 1500,
+    "patients": 1476,
+    "positive_cases": 425,
+    "qa_pairs": null
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "yes",
+    "known_issues": [
+      "The public training and development cohort is convenience-sampled and not representative of routine care at participating sites.",
+      "The public data are single-examination studies, not longitudinal MRI sequences."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-02"
+}

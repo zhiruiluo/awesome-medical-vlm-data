@@ -15,6 +15,9 @@
   "modalities": [
     "endoscopy-image"
   ],
+  "anatomical_targets": [
+    "gastrointestinal"
+  ],
   "image_structure": [
     "2d-single"
   ],

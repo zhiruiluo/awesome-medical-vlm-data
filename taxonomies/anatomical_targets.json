@@ -1,0 +1,24 @@
+{
+  "type": "string",
+  "enum": [
+    "brain",
+    "head-neck",
+    "eye",
+    "chest",
+    "lung",
+    "breast",
+    "heart",
+    "abdomen",
+    "liver",
+    "kidney",
+    "pancreas",
+    "pelvis",
+    "prostate",
+    "spine",
+    "musculoskeletal",
+    "skin",
+    "gastrointestinal",
+    "whole-body",
+    "multi-anatomy"
+  ]
+}
