@@ -1,0 +1,71 @@
+{
+  "id": "paip-2019",
+  "name": "PAIP 2019 Liver Cancer Segmentation",
+  "year": 2019,
+  "resource_type": "image-only",
+  "homepage": "https://paip2019.grand-challenge.org/Dataset/",
+  "paper": "https://doi.org/10.1016/j.media.2020.101854",
+  "repository": null,
+  "download": "https://paip2019.grand-challenge.org/",
+  "license": "Research-use data-use and confidentiality agreement",
+  "commercial_use": "unknown",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "liver"
+  ],
+  "image_structure": [
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "measurement",
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "H&E liver whole-slide images with pathologist XML annotations and binary masks for whole and viable tumor areas",
+    "expert_review": "expert pathologists annotated the training slides",
+    "grounding": [
+      "segmentation-mask",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 100,
+    "primary_unit": "whole-slide-images",
+    "whole_slide_images": 100,
+    "training_slides": 50,
+    "validation_slides": 10,
+    "test_slides": 40
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "no",
+    "known_issues": [
+      "Only the 50 training slides include public tumor masks and viable tumor burden labels.",
+      "Access requires a signed data-use and confidentiality agreement."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}

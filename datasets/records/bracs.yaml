@@ -1,0 +1,70 @@
+{
+  "id": "bracs",
+  "name": "BRACS",
+  "year": 2022,
+  "resource_type": "image-only",
+  "homepage": "https://www.bracs.icar.cnr.it/",
+  "paper": "https://doi.org/10.1093/database/baac093",
+  "repository": null,
+  "download": "https://www.bracs.icar.cnr.it/",
+  "license": "CC0 1.0",
+  "commercial_use": "yes",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "breast"
+  ],
+  "image_structure": [
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "localization",
+    "recognition"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "H&E breast whole-slide images and regions of interest with seven lesion classes",
+    "expert_review": "whole-slide images and regions of interest annotated by consensus of three board-certified pathologists",
+    "grounding": [
+      "clinical-label",
+      "region-of-interest"
+    ]
+  },
+  "scale": {
+    "primary_count": 547,
+    "primary_unit": "whole-slide-images",
+    "whole_slide_images": 547,
+    "patients": 189,
+    "regions_of_interest": 4539
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The cohort comes from a single cancer institute.",
+      "Regions of interest are available for a subset of whole-slide images."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}

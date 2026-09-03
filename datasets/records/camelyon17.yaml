@@ -1,0 +1,71 @@
+{
+  "id": "camelyon17",
+  "name": "CAMELYON17",
+  "year": 2018,
+  "resource_type": "image-only",
+  "homepage": "https://camelyon17.grand-challenge.org/Data/",
+  "paper": "https://doi.org/10.1109/TMI.2018.2867350",
+  "repository": null,
+  "download": "https://camelyon17.grand-challenge.org/Download/",
+  "license": "CC BY-NC-ND 4.0",
+  "commercial_use": "no",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "lymph-node"
+  ],
+  "image_structure": [
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "localization",
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "H&E-stained sentinel lymph-node whole-slide images with metastasis labels and XML lesion contours",
+    "expert_review": "slide labels and lesion annotations prepared under expert pathologist supervision",
+    "grounding": [
+      "clinical-label",
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 1000,
+    "primary_unit": "whole-slide-images",
+    "whole_slide_images": 1000,
+    "patients": 200,
+    "annotated_slides": 50
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Only the 500 training slides have public patient-level labels; the 500 test slides are unlabeled.",
+      "The official data and download pages state different licenses; this record uses the download page's CC BY-NC-ND 4.0 notice."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}

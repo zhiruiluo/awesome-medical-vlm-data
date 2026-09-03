@@ -43,7 +43,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-36 included datasets: 3 text-only, 16 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+40 included datasets: 3 text-only, 20 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -86,6 +86,15 @@ python3 scripts/check_links.py --timeout 15
 | [VinDr-CXR](https://github.com/vinbigdata-medical/vindr-cxr) | 2021 | 2d-single | recognition, diagnosis | 18.0K images | image-label, bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vinbigdata-medical/vindr-cxr) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/vindr-cxr/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2012.15029) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 | [CheXlocalize](https://github.com/rajpurkarlab/cheXlocalize) | 2022 | 2d-single | recognition, localization | 902 images | segmentation-mask, point | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rajpurkarlab/cheXlocalize) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://aimi.stanford.edu/datasets/chexlocalize) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s42256-022-00536-x) | MIT license (registration) |
 | [PI-CAI](https://pi-cai.grand-challenge.org/DATA/) | 2022 | 3d-volume | recognition, diagnosis | 1.5K biparametric MRI examinations | segmentation-mask, patient-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/picai_labels) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/record/6624726) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/S1470-2045(24)00220-1) | CC BY-NC 4.0 (open) |
+
+#### Pathology
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [CAMELYON17](https://camelyon17.grand-challenge.org/Data/) | 2018 | whole-slide-image | diagnosis, localization | 1.0K whole-slide-images | clinical-label, segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://camelyon17.grand-challenge.org/Download/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TMI.2018.2867350) | CC BY-NC-ND 4.0 (open) |
+| [PAIP 2019 Liver Cancer Segmentation](https://paip2019.grand-challenge.org/Dataset/) | 2019 | whole-slide-image | diagnosis, measurement | 100 whole-slide-images | segmentation-mask, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://paip2019.grand-challenge.org/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/j.media.2020.101854) | Research-use data-use and confidentiality agreement (registration) |
+| [BRACS](https://www.bracs.icar.cnr.it/) | 2022 | whole-slide-image | diagnosis, localization | 547 whole-slide-images | clinical-label, region-of-interest | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.bracs.icar.cnr.it/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1093/database/baac093) | CC0 1.0 (registration) |
+| [PANDA](https://panda.grand-challenge.org/data/) | 2022 | whole-slide-image | diagnosis, localization | 10.6K whole-slide-images | clinical-label, segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/panda-challenge) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/c/prostate-cancer-grade-assessment/data) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41591-021-01620-2) | CC BY-NC-SA 4.0 (registration) |
 
 #### Ophthalmology
 
@@ -210,14 +219,14 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 | --- | ---: |
 | clinical-prediction | 3 |
 | description | 12 |
-| diagnosis | 26 |
-| localization | 8 |
+| diagnosis | 30 |
+| localization | 11 |
 | longitudinal-comparison | 6 |
-| measurement | 1 |
+| measurement | 2 |
 | reasoning | 8 |
-| recognition | 20 |
+| recognition | 21 |
 | report-generation | 4 |
-| segmentation | 8 |
+| segmentation | 11 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

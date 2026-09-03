@@ -1,0 +1,70 @@
+{
+  "id": "panda",
+  "name": "PANDA",
+  "year": 2022,
+  "resource_type": "image-only",
+  "homepage": "https://panda.grand-challenge.org/data/",
+  "paper": "https://doi.org/10.1038/s41591-021-01620-2",
+  "repository": "https://github.com/DIAGNijmegen/panda-challenge",
+  "download": "https://www.kaggle.com/c/prostate-cancer-grade-assessment/data",
+  "license": "CC BY-NC-SA 4.0",
+  "commercial_use": "no",
+  "domains": [
+    "pathology"
+  ],
+  "modalities": [
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "prostate"
+  ],
+  "image_structure": [
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "localization",
+    "segmentation"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "digitized H&E prostate biopsy whole-slide images with ISUP and Gleason grades; masks are available for a subset",
+    "expert_review": "grading and validation involved pathologists from contributing institutions",
+    "grounding": [
+      "clinical-label",
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 10616,
+    "primary_unit": "whole-slide-images",
+    "whole_slide_images": 10616
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Inter-pathologist disagreement affects grading labels.",
+      "Some training slides contain pen marks, while the test slides do not.",
+      "Not every training slide has a label mask."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-03"
+}
