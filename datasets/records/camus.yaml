@@ -1,0 +1,69 @@
+{
+  "id": "camus",
+  "name": "CAMUS",
+  "year": 2019,
+  "resource_type": "image-only",
+  "homepage": "https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html",
+  "paper": "https://arxiv.org/abs/1908.06948",
+  "repository": null,
+  "download": "https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html",
+  "license": "CAMUS challenge terms",
+  "commercial_use": "unknown",
+  "domains": [
+    "ultrasound"
+  ],
+  "modalities": [
+    "ultrasound"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "multi-view",
+    "video"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual end-diastolic and end-systolic contours for cardiac structures",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 500,
+    "primary_unit": "patients",
+    "patients": 500,
+    "views": 2
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Annotations are provided at end-diastole and end-systole rather than for every video frame.",
+      "The challenge website reports an unavailable online evaluation platform."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "m-and-ms",
+  "name": "M&Ms Cardiac Segmentation Challenge",
+  "year": 2020,
+  "resource_type": "image-only",
+  "homepage": "https://www.ub.edu/mnms/",
+  "paper": "https://doi.org/10.1109/TMI.2021.3090082",
+  "repository": null,
+  "download": "https://www.ub.edu/mnms/",
+  "license": "M&Ms Challenge Data Use Agreement",
+  "commercial_use": "no",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual left-ventricle, myocardium, and right-ventricle segmentations on cine CMR",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 375,
+    "primary_unit": "cardiac MRI examinations",
+    "patients": 350,
+    "examinations": 375,
+    "clinical_centers": 6,
+    "scanner_vendors": 4
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "yes",
+    "known_issues": [
+      "The released challenge labels and disease metadata are not uniformly available across every vendor and split.",
+      "The dataset focuses on end-diastolic and end-systolic cine CMR segmentation."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

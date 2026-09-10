@@ -5,8 +5,8 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 ## Resource Types
 
 - text-only: 3
-- image-only: 20
-- text-image-pairs: 17
+- image-only: 26
+- text-image-pairs: 18
 
 ## Longitudinal Resources
 
@@ -17,24 +17,25 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 
 - dermatology: 1
 - endoscopy: 1
-- general-biomedical: 7
+- general-biomedical: 8
 - ophthalmology: 8
 - pathology: 6
-- radiology: 18
+- radiology: 22
 - surgery: 1
+- ultrasound: 3
 
 ## Capabilities
 
-- clinical-prediction: 3
+- clinical-prediction: 4
 - description: 12
-- diagnosis: 30
-- localization: 11
+- diagnosis: 35
+- localization: 12
 - longitudinal-comparison: 6
-- measurement: 2
+- measurement: 5
 - reasoning: 8
 - recognition: 21
 - report-generation: 4
-- segmentation: 11
+- segmentation: 17
 - spatial-reasoning: 1
 
 ## Benchmarks

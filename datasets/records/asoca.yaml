@@ -1,0 +1,70 @@
+{
+  "id": "asoca",
+  "name": "ASOCA",
+  "year": 2020,
+  "resource_type": "image-only",
+  "homepage": "https://asoca.grand-challenge.org/",
+  "paper": "https://doi.org/10.1016/j.compbiomed.2022.105718",
+  "repository": "https://github.com/Ramtingh/ASOCADataDescription",
+  "download": "https://asoca.grand-challenge.org/access/",
+  "license": "ASOCA data access terms",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct",
+    "angiography"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "coronary CT angiography with coronary-lumen segmentations from three expert annotators",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 60,
+    "primary_unit": "CCTA studies",
+    "studies": 60,
+    "healthy_cases": 30,
+    "coronary_artery_disease_cases": 30
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Only 40 cases have released training annotations; 20 cases were held out for challenge evaluation.",
+      "The target is coronary lumen, excluding calcification and other disease outside the lumen."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

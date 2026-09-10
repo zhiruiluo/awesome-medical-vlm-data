@@ -1,0 +1,78 @@
+{
+  "id": "mimic-iv-echo",
+  "name": "MIMIC-IV-ECHO",
+  "year": 2026,
+  "resource_type": "text-image-pairs",
+  "homepage": "https://physionet.org/content/mimic-iv-echo/1.0/",
+  "paper": null,
+  "repository": null,
+  "download": "https://physionet.org/content/mimic-iv-echo/1.0/",
+  "license": "PhysioNet Credentialed Health Data License 1.5.0",
+  "commercial_use": "no",
+  "domains": [
+    "ultrasound",
+    "general-biomedical"
+  ],
+  "modalities": [
+    "ultrasound"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "multi-view",
+    "video"
+  ],
+  "tasks": [
+    "clinical-prediction",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "clinical-prediction",
+    "diagnosis",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "structured-ehr"
+  ],
+  "derived_from": [
+    "mimic-iv"
+  ],
+  "annotation": {
+    "source": "clinician-verified structured echocardiographic measurements linked to deidentified DICOM studies and MIMIC-IV clinical data",
+    "expert_review": "clinician-verified measurements",
+    "grounding": [
+      "clinical-events",
+      "scalar",
+      "image"
+    ]
+  },
+  "scale": {
+    "primary_count": 7243,
+    "primary_unit": "transthoracic echocardiogram studies with DICOMs",
+    "dicoms": 525000,
+    "dicom_studies": 7243,
+    "dicom_patients": 4579,
+    "structured_measurement_studies": 206488,
+    "structured_measurement_patients": 91372
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "no",
+    "known_issues": [
+      "DICOMs cover only a subset of the structured-measurement cohort and come from one academic medical center.",
+      "Cardiologist narrative reports are linked where available but are described as a separate MIMIC-IV-Note release; this record does not treat them as released supervision."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": true,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

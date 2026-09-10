@@ -1,0 +1,68 @@
+{
+  "id": "mm-whs",
+  "name": "MM-WHS",
+  "year": 2017,
+  "resource_type": "image-only",
+  "homepage": "https://zmiclab.github.io/zxh/0/mmwhs/",
+  "paper": "https://doi.org/10.1016/j.media.2019.101537",
+  "repository": null,
+  "download": "https://zmiclab.github.io/zxh/0/mmwhs/",
+  "license": "MM-WHS data-use agreement",
+  "commercial_use": "unknown",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct",
+    "mri"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual delineations of seven whole-heart substructures",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask"
+    ]
+  },
+  "scale": {
+    "primary_count": 120,
+    "primary_unit": "cardiac volumes",
+    "cardiac_ct_volumes": 60,
+    "cardiac_mri_volumes": 60
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "CT and MRI cases are separate modality cohorts, not paired scans from the same participants.",
+      "Only 20 cases per modality were released with training labels in the original challenge."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

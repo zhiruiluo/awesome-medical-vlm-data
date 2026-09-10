@@ -1,0 +1,71 @@
+{
+  "id": "echonet-dynamic",
+  "name": "EchoNet-Dynamic",
+  "year": 2020,
+  "resource_type": "image-only",
+  "homepage": "https://echonet.github.io/dynamic/",
+  "paper": "https://doi.org/10.1038/s41586-020-2145-8",
+  "repository": "https://github.com/echonet/dynamic",
+  "download": "https://echonet.github.io/dynamic/",
+  "license": "Stanford EchoNet-Dynamic Research Use Agreement",
+  "commercial_use": "no",
+  "domains": [
+    "ultrasound"
+  ],
+  "modalities": [
+    "ultrasound"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "video"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "segmentation",
+    "measurement",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "advanced cardiac-sonographer measurements and left-ventricle tracings reviewed by an imaging cardiologist",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "scalar",
+      "image-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 10030,
+    "primary_unit": "echocardiography videos",
+    "videos": 10030,
+    "patients": 10030
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "yes",
+    "known_issues": [
+      "Only apical four-chamber views are released.",
+      "The release is subject to a non-commercial research-use agreement."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "yes",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}

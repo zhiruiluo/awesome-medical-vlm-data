@@ -16,7 +16,7 @@
 ---
 
 <!-- BEGIN GENERATED:LAST_UPDATED -->
-**Last updated:** 2026-09-03
+**Last updated:** 2026-09-10
 <!-- END GENERATED:LAST_UPDATED -->
 
 A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
@@ -43,7 +43,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-40 included datasets: 3 text-only, 20 image-only, and 17 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+47 included datasets: 3 text-only, 26 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -78,11 +78,15 @@ python3 scripts/check_links.py --timeout 15
 | Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
 | [LUNA16](https://luna16.grand-challenge.org/) | 2016 | 3d-volume | localization, diagnosis | 888 studies | coordinates, diameter | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://luna16.grand-challenge.org/Download/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/j.media.2017.06.015) | CC BY 4.0 (open) |
+| [Automated Cardiac Diagnosis Challenge](https://www.creatis.insa-lyon.fr/Challenge/acdc/) | 2017 | 3d-volume | segmentation, diagnosis | 150 cardiac MRI patients | segmentation-mask, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.creatis.insa-lyon.fr/Challenge/acdc/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TMI.2018.2837502) | ACDC challenge terms (registration) |
 | [ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC) | 2017 | 2d-single | recognition, diagnosis | 112.1K images | image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://nihcc.app.box.com/v/ChestXray-NIHCC) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/1705.02315) | NIH source terms; check source (open) |
+| [MM-WHS](https://zmiclab.github.io/zxh/0/mmwhs/) | 2017 | 3d-volume | segmentation, localization | 120 cardiac volumes | segmentation-mask | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zmiclab.github.io/zxh/0/mmwhs/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/j.media.2019.101537) | MM-WHS data-use agreement (registration) |
 | [RSNA Pneumonia Detection Challenge](https://www.rsna.org/education/ai-resources-and-training/%20%5C%20ai-image-challenge/RSNA-Pneumonia-Detection-Challenge-2018) | 2018 | 2d-single | recognition, diagnosis | 30.0K examinations | bounding-box, image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1148/ryai.2019180041) | RSNA attribution terms (registration) |
 | [SIIM-ACR Pneumothorax Segmentation](https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation) | 2019 | 2d-single | recognition, diagnosis | 12.0K images | segmentation-mask, image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/competitions/siim-acr-pneumothorax-segmentation) | Kaggle competition terms (registration) |
+| [ASOCA](https://asoca.grand-challenge.org/) | 2020 | 3d-volume | segmentation, diagnosis | 60 CCTA studies | segmentation-mask, patient-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Ramtingh/ASOCADataDescription) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://asoca.grand-challenge.org/access/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/j.compbiomed.2022.105718) | ASOCA data access terms (registration) |
 | [ChestX-Det10](https://github.com/Deepwise-AILab/ChestX-Det10-Dataset) | 2020 | 2d-single | recognition, diagnosis | 3.5K images | bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Deepwise-AILab/ChestX-Det10-Dataset) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2006.10550) | Unknown (open) |
 | [COVID-19-AR](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=70226443) | 2020 | 2d-single, 3d-volume | recognition, diagnosis | 105 patients | image-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/covid-19-ar/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/tcia.2020.py71-5978) | TCIA collection terms; check source (open) |
+| [M&Ms Cardiac Segmentation Challenge](https://www.ub.edu/mnms/) | 2020 | 3d-volume | segmentation, diagnosis | 375 cardiac MRI examinations | segmentation-mask, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.ub.edu/mnms/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1109/TMI.2021.3090082) | M&Ms Challenge Data Use Agreement (registration) |
 | [VinDr-CXR](https://github.com/vinbigdata-medical/vindr-cxr) | 2021 | 2d-single | recognition, diagnosis | 18.0K images | image-label, bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vinbigdata-medical/vindr-cxr) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/vindr-cxr/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2012.15029) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 | [CheXlocalize](https://github.com/rajpurkarlab/cheXlocalize) | 2022 | 2d-single | recognition, localization | 902 images | segmentation-mask, point | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rajpurkarlab/cheXlocalize) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://aimi.stanford.edu/datasets/chexlocalize) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s42256-022-00536-x) | MIT license (registration) |
 | [PI-CAI](https://pi-cai.grand-challenge.org/DATA/) | 2022 | 3d-volume | recognition, diagnosis | 1.5K biparametric MRI examinations | segmentation-mask, patient-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/picai_labels) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/record/6624726) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/S1470-2045(24)00220-1) | CC BY-NC 4.0 (open) |
@@ -107,6 +111,13 @@ python3 scripts/check_links.py --timeout 15
 | [OLIVES](https://github.com/olivesgatech/OLIVES_Dataset) | 2022 | 2d-single, 3d-volume, longitudinal-sequence | recognition, diagnosis | 1.3K fundus-image visits | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/olivesgatech/OLIVES_Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://doi.org/10.5281/zenodo.7105232) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2209.11195) | MIT (open) |
 | [Harvard Glaucoma Detection and Progression](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) | 2023 | 2d-single | recognition, diagnosis | 1.0K patients | image-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/harvardairobotics/Harvard-GDP) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2308.13411) | CC BY-NC-ND 4.0 (open) |
 | [Cataract-1K](https://github.com/Negin-Ghamsarian/Cataract-1K) | 2024 | video | segmentation | 1.0K videos | segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://github.com/Negin-Ghamsarian/Cataract-1K) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2312.06295) | CC BY 4.0 (open) |
+
+#### Ultrasound
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [CAMUS](https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html) | 2019 | multi-view, video | segmentation, measurement | 500 patients | segmentation-mask, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/1908.06948) | CAMUS challenge terms (registration) |
+| [EchoNet-Dynamic](https://echonet.github.io/dynamic/) | 2020 | video | segmentation, measurement | 10.0K echocardiography videos | segmentation-mask, scalar, image-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/echonet/dynamic) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://echonet.github.io/dynamic/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41586-020-2145-8) | Stanford EchoNet-Dynamic Research Use Agreement (registration) |
 
 #### Surgery
 
@@ -154,6 +165,12 @@ python3 scripts/check_links.py --timeout 15
 | --- | ---: | --- | --- | ---: | --- | --- | --- |
 | [Derm1M](https://github.com/SiyuanYan1/Derm1M) | 2025 | 2d-single | recognition, description | 1.0M image-text-pairs | image-caption | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SiyuanYan1/Derm1M) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/redlessone/Derm1M) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2503.14911) | CC BY-NC-4.0 (open) |
 
+#### Ultrasound
+
+| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
+| --- | ---: | --- | --- | ---: | --- | --- | --- |
+| [MIMIC-IV-ECHO](https://physionet.org/content/mimic-iv-echo/1.0/) | 2026 | multi-view, video | clinical-prediction, diagnosis | 7.2K transthoracic echocardiogram studies with DICOMs | clinical-events, scalar, image | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimic-iv-echo/1.0/) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
+
 #### General Biomedical
 
 | Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |
@@ -162,6 +179,7 @@ python3 scripts/check_links.py --timeout 15
 | [MedICaT](https://github.com/allenai/medicat) | 2020 | 2d-single | description, localization | 217.1K figures | caption, subfigure, article-context | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/allenai/medicat) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://ai2-s2-medicat.s3.us-west-2.amazonaws.com/2020-10-05/medicat_release.tar.gz) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2010.06000) | Per-document open-access license; research use only (open) |
 | [SLAKE](https://www.med-vqa.com/slake/) | 2021 | 2d-single | recognition, diagnosis | 14.0K qa-pairs | image, knowledge-graph | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/haifangong/SLAKE) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.med-vqa.com/slake/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2102.09542) | Research use; check source terms (open) |
 | [PMC-VQA](https://xiaoman-zhang.github.io/PMC-VQA/) | 2023 | 2d-single | recognition, reasoning | 227.0K qa-pairs | figure, caption, article-context | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/xiaoman-zhang/PMC-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/xmcmic/PMC-VQA) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2305.10415) | Check source terms (open) |
+| [MIMIC-IV-ECHO](https://physionet.org/content/mimic-iv-echo/1.0/) | 2026 | multi-view, video | clinical-prediction, diagnosis | 7.2K transthoracic echocardiogram studies with DICOMs | clinical-events, scalar, image | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/mimic-iv-echo/1.0/) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed) |
 <!-- END GENERATED:RESOURCE_TYPE_TABLES -->
 
 ## Longitudinal Resources
@@ -217,16 +235,16 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 <!-- BEGIN GENERATED:CAPABILITY_TABLE -->
 | Capability | Datasets |
 | --- | ---: |
-| clinical-prediction | 3 |
+| clinical-prediction | 4 |
 | description | 12 |
-| diagnosis | 30 |
-| localization | 11 |
+| diagnosis | 35 |
+| localization | 12 |
 | longitudinal-comparison | 6 |
-| measurement | 2 |
+| measurement | 5 |
 | reasoning | 8 |
 | recognition | 21 |
 | report-generation | 4 |
-| segmentation | 11 |
+| segmentation | 17 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

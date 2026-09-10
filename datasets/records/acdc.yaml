@@ -1,0 +1,70 @@
+{
+  "id": "acdc",
+  "name": "Automated Cardiac Diagnosis Challenge",
+  "year": 2017,
+  "resource_type": "image-only",
+  "homepage": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+  "paper": "https://doi.org/10.1109/TMI.2018.2837502",
+  "repository": null,
+  "download": "https://www.creatis.insa-lyon.fr/Challenge/acdc/",
+  "license": "ACDC challenge terms",
+  "commercial_use": "unknown",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "manual left-ventricle, myocardium, and right-ventricle masks with patient disease classes",
+    "expert_review": "yes",
+    "grounding": [
+      "segmentation-mask",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 150,
+    "primary_unit": "cardiac MRI patients",
+    "patients": 150,
+    "training_patients": 100,
+    "test_patients": 50
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The public training cohort contains 100 patients; reference labels for the 50-patient test cohort were withheld for challenge evaluation.",
+      "Each pathology category has a small sample size."
+    ]
+  },
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-10"
+}
