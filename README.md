@@ -45,7 +45,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-47 included datasets: 3 text-only, 26 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 4 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+47 included datasets: 3 text-only, 26 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 5 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -220,7 +220,7 @@ This cross-cutting view includes datasets with an explicit longitudinal sequence
 Benchmarks are rendered separately because one benchmark may combine multiple public datasets. A benchmark record links to its companion dataset payload and constituent dataset records without duplicating their provenance or license metadata.
 
 <!-- BEGIN GENERATED:BENCHMARK_SUMMARY -->
-4 included benchmarks, maintained separately from their companion and source datasets.
+5 included benchmarks, maintained separately from their companion and source datasets.
 <!-- END GENERATED:BENCHMARK_SUMMARY -->
 
 <!-- BEGIN GENERATED:BENCHMARK_TABLE -->
@@ -230,6 +230,7 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 | [TemMed-Bench](https://temmedbench.github.io/) | 2025 | radiology · chest-xray | visual-question-answering, report-generation | 21.0K instances | CheXpert Plus | closed-book, retrieval-augmented generation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Levi-ZJY/TemMed-Bench) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/uclanlp/TemMed-Bench) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2509.25143) | CC BY 4.0 (open; commercial: yes); mixed sources |
 | [LMOD+](https://kfzyqin.github.io/lmod_plus/) | 2026 | ophthalmology · fundus, oct, slo, lens-photography, surgical-video | visual-question-answering, multi-label-classification, object-detection, image-segmentation | 32.6K instances | Cataract-1K, IDRiD, OIMHS, REFUGE2, Harvard FairSeg, CAU001, Cataract Detection 2, ORIGA, G1020, BRSET | zero-shot | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1145/3801746) [![Leaderboard](https://img.shields.io/badge/Leaderboard-2E7D32?style=flat-square&logo=bar-chart&logoColor=white)](https://kfzyqin.github.io/lmod_plus/) | Unknown (access unknown; commercial: unknown); mixed sources |
 | [LUNGUAGE](https://physionet.org/content/lunguage/1.0.0/) | 2026 | radiology · chest-xray | report-generation | 1.5K expert-annotated reports | MIMIC-CXR | structured-report evaluation, patient-level temporal evaluation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/SuperSupermoon/Lunguage) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/lunguage/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2505.21190) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed; DUA; commercial: no); inherited sources |
+| [VLM3D 2026](https://research.forithmus.com/collections/vlm3d-challenge) | 2026 | radiology · ct, mri | report-generation, multi-label-classification | 6 active challenge tracks | CT-RATE, MR-RATE, Boston University external test set | containerized blind evaluation, track-specific leaderboard evaluation, external validation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/forithmus/VLM3D-Dockers) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/records/19847782) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.5281/zenodo.19847782) [![Leaderboard](https://img.shields.io/badge/Leaderboard-2E7D32?style=flat-square&logo=bar-chart&logoColor=white)](https://research.forithmus.com/collections/vlm3d-challenge) | CC BY-NC-SA 4.0 (registration; commercial: no); unknown sources |
 <!-- END GENERATED:BENCHMARK_TABLE -->
 
 ## Capability Coverage

@@ -1,0 +1,97 @@
+{
+  "id": "vlm3d-2026",
+  "name": "VLM3D 2026",
+  "year": 2026,
+  "homepage": "https://research.forithmus.com/collections/vlm3d-challenge",
+  "paper": "https://doi.org/10.5281/zenodo.19847782",
+  "repository": "https://github.com/forithmus/VLM3D-Dockers",
+  "download": "https://zenodo.org/records/19847782",
+  "leaderboard": "https://research.forithmus.com/collections/vlm3d-challenge",
+  "catalog_status": "included",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "ct",
+    "mri"
+  ],
+  "tasks": [
+    "report-generation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "description",
+    "diagnosis",
+    "report-generation"
+  ],
+  "companion_dataset_id": null,
+  "source_datasets": [
+    {
+      "dataset_id": "ct-rate",
+      "role": "training",
+      "subset": "Chest CT training and validation data for report generation and 18-label abnormality classification"
+    }
+  ],
+  "external_sources": [
+    {
+      "name": "MR-RATE",
+      "homepage": "https://huggingface.co/datasets/Forithmus/MR-RATE",
+      "role": "training",
+      "subset": "Brain MRI volumes and reports for the MRI tracks"
+    },
+    {
+      "name": "Boston University external test set",
+      "homepage": null,
+      "role": "evaluation",
+      "subset": "Closed external-validation cohort"
+    }
+  ],
+  "evaluation": {
+    "protocols": [
+      "containerized blind evaluation",
+      "track-specific leaderboard evaluation",
+      "external validation"
+    ],
+    "metrics": [
+      "CRG",
+      "macro AUROC",
+      "macro F1",
+      "BLEU",
+      "ROUGE-L",
+      "METEOR",
+      "CIDEr",
+      "FVD_CTNet"
+    ],
+    "outputs": [
+      "free-text",
+      "class-label"
+    ],
+    "models_evaluated": null
+  },
+  "scale": {
+    "primary_count": 6,
+    "primary_unit": "active challenge tracks"
+  },
+  "reproducibility": {
+    "prompts_available": "yes",
+    "evaluation_code_available": "yes",
+    "fixed_splits": "yes",
+    "contamination_audited": "unknown"
+  },
+  "license": "CC BY-NC-SA 4.0",
+  "commercial_use": "no",
+  "source_license_policy": "unknown",
+  "access": {
+    "registration_required": true,
+    "credentialing_required": false,
+    "gated": "yes",
+    "data_use_agreement_required": "unknown",
+    "citation_required": "yes"
+  },
+  "known_issues": [
+    "The public implementation documents active CT and brain-MRI report-generation, classification, and text-to-volume-generation tracks, while CT localization is deprecated; broader task descriptions should not be treated as active tracks.",
+    "The task taxonomy and benchmark-output schema do not represent text-to-3D-volume generation, so that active track is documented through the record provenance rather than a task or output value.",
+    "MR-RATE and the closed Boston University external test set are not yet cataloged as dataset records."
+  ],
+  "last_verified": "2026-09-10"
+}

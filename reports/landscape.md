@@ -41,4 +41,4 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 ## Benchmarks
 
 - ophthalmology: 1
-- radiology: 3
+- radiology: 4
