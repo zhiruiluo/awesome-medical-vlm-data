@@ -48,6 +48,11 @@ def cells(values: list[str]) -> str:
     return ", ".join(values) or "-"
 
 
+def profile(*groups: list[str]) -> str:
+    """Render compact, ordered metadata groups for a catalog table cell."""
+    return " · ".join(cells(group) for group in groups if group) or "-"
+
+
 def domain_title(domain: str) -> str:
     return domain.replace("-", " ").title()
 
@@ -103,12 +108,30 @@ def links(record: dict) -> str:
     return " ".join(badges) or "-"
 
 
+def access_summary(record: dict) -> str:
+    access = record["access"]
+    if access["credentialing_required"]:
+        level = "credentialed"
+    elif access["registration_required"]:
+        level = "registration"
+    elif access["gated"] == "yes":
+        level = "gated"
+    elif access["gated"] == "no":
+        level = "open"
+    else:
+        level = "access unknown"
+    requirements = [level]
+    if access["data_use_agreement_required"] == "yes":
+        requirements.append("DUA")
+    return f"{record['license']} ({'; '.join(requirements)}; commercial: {record['commercial_use']})"
+
+
 def table(items: list[dict]) -> str:
-    lines = ["| Dataset | Year | Structure | Capability | Scale | Grounding | Links | License / access |", "| --- | ---: | --- | --- | ---: | --- | --- | --- |"]
+    lines = ["| Dataset | Data profile | Tasks | Scale | Annotations | Links | License / access |", "| --- | --- | --- | ---: | --- | --- | --- |"]
     for item in items:
         source = item["homepage"] or item["paper"] or item["repository"] or item["download"]
-        access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "open"
-        lines.append(f"| [{item['name']}]({source}) | {item['year']} | {cells(item['image_structure'])} | {cells(item['capabilities'][:2])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {item['license']} ({access}) |")
+        data_profile = profile(item["modalities"], item["anatomical_targets"], item["image_structure"])
+        lines.append(f"| [{item['name']}]({source}) | {data_profile} | {cells(item['tasks'])} | {scale(item)} | {cells(item['annotation']['grounding'])} | {links(item)} | {access_summary(item)} |")
     return "\n".join(lines)
 
 
@@ -120,16 +143,15 @@ def benchmark_sources(record: dict, datasets: dict[str, dict]) -> str:
 
 def benchmark_table(items: list[dict], datasets: dict[str, dict]) -> str:
     lines = [
-        "| Benchmark | Year | Domain | Capability | Scale | Source datasets | Protocol | Links | License / access |",
+        "| Benchmark | Year | Scope | Tasks | Scale | Source datasets | Protocol | Links | License / access |",
         "| --- | ---: | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for item in items:
         source = item["homepage"] or item["paper"] or item["repository"] or item["download"] or item["leaderboard"]
-        access = "credentialed" if item["access"]["credentialing_required"] else "registration" if item["access"]["registration_required"] else "restricted" if item["access"]["gated"] == "yes" else "open" if item["access"]["gated"] == "no" else "access unknown"
         lines.append(
-            f"| [{item['name']}]({source}) | {item['year']} | {cells(item['domains'])} | "
-            f"{cells(item['capabilities'][:3])} | {scale(item)} | {benchmark_sources(item, datasets)} | "
-            f"{cells(item['evaluation']['protocols'])} | {links(item)} | {item['license']} ({access}; {item['source_license_policy']} sources) |"
+            f"| [{item['name']}]({source}) | {item['year']} | {profile(item['domains'], item['modalities'])} | "
+            f"{cells(item['tasks'])} | {scale(item)} | {benchmark_sources(item, datasets)} | "
+            f"{cells(item['evaluation']['protocols'])} | {links(item)} | {access_summary(item)}; {item['source_license_policy']} sources |"
         )
     return "\n".join(lines)
 

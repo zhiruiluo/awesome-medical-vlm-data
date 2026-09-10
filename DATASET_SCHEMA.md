@@ -21,6 +21,10 @@ Evaluation suites that define protocols, metrics, or leaderboards belong in `ben
 | `access` | Registration, credentialing, gating, data-use agreement, and citation requirements. |
 | `last_verified` | ISO date for the latest source review. |
 
+## Generated Catalog Columns
+
+README dataset tables render `modalities`, `anatomical_targets`, and `image_structure` as an ordered `Data profile` cell; `tasks` as `Tasks`; and `annotation.grounding` as `Annotations`. `language_supervision` remains machine-readable catalog metadata. `capabilities` remains catalog metadata used for the capability-coverage summary. License/access cells also render access requirements and `commercial_use`.
+
 ## Generated Link Badges
 
 The README table renders a clickable Shields.io `GitHub` badge when `repository` is set and a `Download` badge when `download` is set. Keep both fields pointed at the official source whenever they are available; generated badges are omitted only when the relevant field is `null`.
