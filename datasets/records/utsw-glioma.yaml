@@ -1,0 +1,72 @@
+{
+  "id": "utsw-glioma",
+  "name": "UTSW-Glioma",
+  "year": 2026,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/utsw-glioma/",
+  "paper": "https://doi.org/10.7937/DFAE-1B86",
+  "repository": null,
+  "download": "https://www.cancerimagingarchive.net/collection/utsw-glioma/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification",
+    "clinical-prediction"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis",
+    "clinical-prediction"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "preoperative multi-contrast MRI, multi-label tumor segmentations, and demographic, clinical, and molecular variables",
+    "expert_review": "neuropathologist reviewed glioma diagnoses; tumor-segmentation review process not specified",
+    "grounding": [
+      "segmentation-mask",
+      "clinical-label",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 625,
+    "primary_unit": "patients",
+    "patients": 625,
+    "mri_images": 6349
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "Single-institution retrospective cohort from UTSW.",
+      "Only adults with available molecular-marker testing and acceptable preoperative MRI were included."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

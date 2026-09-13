@@ -1,0 +1,72 @@
+{
+  "id": "ucsf-pdgm",
+  "name": "UCSF-PDGM",
+  "year": 2022,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/ucsf-pdgm/",
+  "paper": "https://doi.org/10.7937/tcia.bdgf-8v37",
+  "repository": "https://github.com/ecalabr/brain_mask/",
+  "download": "https://www.cancerimagingarchive.net/collection/ucsf-pdgm/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "multi-label-classification",
+    "clinical-prediction"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "clinical-prediction",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "standardized preoperative diffuse-glioma MRI with molecular, diagnostic, follow-up, and measurement metadata",
+    "expert_review": "histopathologically proven diffuse gliomas; review process for released clinical labels not specified",
+    "grounding": [
+      "clinical-label",
+      "patient-label",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 495,
+    "primary_unit": "patients",
+    "patients": 495,
+    "studies": 501,
+    "mri_images": 12030
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "Two initially distinct identifiers were identified as follow-up imaging of other patients; TCIA reports 495 true patients but 501 studies.",
+      "No tumor masks are listed in the primary data-access table."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

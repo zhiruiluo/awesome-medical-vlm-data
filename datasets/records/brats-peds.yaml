@@ -1,0 +1,71 @@
+{
+  "id": "brats-peds",
+  "name": "BraTS-PEDs",
+  "year": 2025,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/brats-peds/",
+  "paper": "https://doi.org/10.7937/DX5C-TJ86",
+  "repository": null,
+  "download": "https://www.cancerimagingarchive.net/collection/brats-peds/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "four-sequence baseline MRI with expert-refined whole-tumor and tumor-subregion masks and challenge metadata",
+    "expert_review": "expert-refined tumor segmentations",
+    "grounding": [
+      "segmentation-mask",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 348,
+    "primary_unit": "training and validation subjects with images",
+    "patients": 457,
+    "image_patients": 348,
+    "mri_images": 1649
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "unknown",
+    "known_issues": [
+      "Images are public for training and validation, while test imaging is not released in the TCIA package.",
+      "The cohort is restricted to treatment-naive pediatric high-grade gliomas with all four required structural sequences."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

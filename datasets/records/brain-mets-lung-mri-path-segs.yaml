@@ -1,0 +1,79 @@
+{
+  "id": "brain-mets-lung-mri-path-segs",
+  "name": "Brain-Mets-Lung-MRI-Path-Segs",
+  "year": 2025,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/",
+  "paper": "https://doi.org/10.1038/s41597-025-06353-2",
+  "repository": "https://github.com/Aneja-Lab-Yale/BM-Pathology-Dataset",
+  "download": "https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology",
+    "pathology"
+  ],
+  "modalities": [
+    "mri",
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume",
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification",
+    "clinical-prediction"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis",
+    "clinical-prediction",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "preoperative T1CE and FLAIR MRI with segmentation, matched brain-metastasis biopsy whole-slide images, radiomics, and clinical and molecular data",
+    "expert_review": "brain-metastasis biopsy provenance and segmentation-review process are described by the collection; exact mask reviewer role is not specified in the access summary",
+    "grounding": [
+      "segmentation-mask",
+      "clinical-label",
+      "patient-label",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 103,
+    "primary_unit": "patients",
+    "patients": 103,
+    "mri_studies": 111,
+    "mri_images": 422,
+    "whole_slide_images": 111
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "The cohort includes only brain metastases from primary lung cancer.",
+      "MRI\u2013histopathology matching is available for 111 cases from 103 patients."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

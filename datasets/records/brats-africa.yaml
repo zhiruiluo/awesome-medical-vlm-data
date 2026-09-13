@@ -1,0 +1,70 @@
+{
+  "id": "brats-africa",
+  "name": "BraTS-Africa",
+  "year": 2024,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/brats-africa/",
+  "paper": "https://doi.org/10.7937/v8h6-8x67",
+  "repository": null,
+  "download": "https://www.cancerimagingarchive.net/collection/brats-africa/",
+  "license": "CC BY 4.0 (processed MR and segmentations)",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis",
+    "localization"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "preoperative multiparametric MRI with tumor segmentations and scanner and diagnosis metadata",
+    "expert_review": "segmentations supplied as BraTS 2023 challenge data; reviewer details not specified on the collection page",
+    "grounding": [
+      "segmentation-mask",
+      "clinical-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 146,
+    "primary_unit": "patients",
+    "patients": 146,
+    "mri_images": 730
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "unknown",
+    "known_issues": [
+      "The public processed NIfTI package is CC BY 4.0, but unprocessed NIfTI data are limited-access under NIH controlled-access policy.",
+      "Retrospective cohort from six diagnostic centers in Nigeria."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

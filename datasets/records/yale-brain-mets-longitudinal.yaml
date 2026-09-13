@@ -1,0 +1,72 @@
+{
+  "id": "yale-brain-mets-longitudinal",
+  "name": "Yale-Brain-Mets-Longitudinal",
+  "year": 2025,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/",
+  "paper": "https://doi.org/10.7937/3YAT-E768",
+  "repository": null,
+  "download": "https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology"
+  ],
+  "modalities": [
+    "mri"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume",
+    "longitudinal-sequence"
+  ],
+  "tasks": [
+    "clinical-prediction",
+    "multi-label-classification"
+  ],
+  "capabilities": [
+    "diagnosis",
+    "clinical-prediction",
+    "longitudinal-comparison"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "longitudinal MRI examinations for confirmed brain metastases with demographic and scanner-acquisition data",
+    "expert_review": "electronic-record cases were manually reviewed to confirm radiologic or pathologic brain metastasis",
+    "grounding": [
+      "clinical-label",
+      "patient-label"
+    ]
+  },
+  "scale": {
+    "primary_count": 1430,
+    "primary_unit": "patients",
+    "patients": 1430,
+    "studies": 11892,
+    "mri_images": 33811
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "Single-institution retrospective cohort spanning 2004\u20132023.",
+      "The release provides demographic and acquisition metadata, not tumor segmentation masks or reports."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}

@@ -16,7 +16,7 @@
 ---
 
 <!-- BEGIN GENERATED:LAST_UPDATED -->
-**Last updated:** 2026-09-10
+**Last updated:** 2026-09-11
 <!-- END GENERATED:LAST_UPDATED -->
 
 A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
@@ -45,7 +45,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-47 included datasets: 3 text-only, 26 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 5 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+55 included datasets: 3 text-only, 34 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 5 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -92,6 +92,14 @@ python3 scripts/check_links.py --timeout 15
 | [VinDr-CXR](https://github.com/vinbigdata-medical/vindr-cxr) | chest-xray · chest · 2d-single | multi-label-classification, object-detection | 18.0K images | image-label, bounding-box | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vinbigdata-medical/vindr-cxr) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/vindr-cxr/1.0.0/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2012.15029) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed; DUA; commercial: no) |
 | [CheXlocalize](https://github.com/rajpurkarlab/cheXlocalize) | chest-xray · chest · 2d-single | image-segmentation, object-detection | 902 images | segmentation-mask, point | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rajpurkarlab/cheXlocalize) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://aimi.stanford.edu/datasets/chexlocalize) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s42256-022-00536-x) | MIT license (registration; commercial: yes) |
 | [PI-CAI](https://pi-cai.grand-challenge.org/DATA/) | mri · prostate · 3d-volume | multi-label-classification, object-detection, image-segmentation | 1.5K biparametric MRI examinations | segmentation-mask, patient-label, clinical-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/picai_labels) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://zenodo.org/record/6624726) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/S1470-2045(24)00220-1) | CC BY-NC 4.0 (open; commercial: no) |
+| [UCSF-PDGM](https://www.cancerimagingarchive.net/collection/ucsf-pdgm/) | mri · brain · 3d-volume | multi-label-classification, clinical-prediction | 495 patients | clinical-label, patient-label, scalar | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ecalabr/brain_mask/) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/ucsf-pdgm/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/tcia.bdgf-8v37) | CC BY 4.0 (open; commercial: yes) |
+| [UPENN-GBM](https://www.cancerimagingarchive.net/collection/upenn-gbm/) | mri, whole-slide-image · brain · 3d-volume, whole-slide-image | image-segmentation, multi-label-classification, clinical-prediction | 630 patients | segmentation-mask, clinical-label, patient-label, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/upenn-gbm/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01560-7) | CC BY 4.0 (open; commercial: yes) |
+| [Pretreat-MetsToBrain-Masks](https://www.cancerimagingarchive.net/collection/pretreat-metstobrain-masks/) | mri · brain · 3d-volume | image-segmentation, clinical-prediction, multi-label-classification | 200 patients | segmentation-mask, clinical-label, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/pretreat-metstobrain-masks/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-024-03021-9) | CC BY 4.0 (open; commercial: yes) |
+| [BraTS-Africa](https://www.cancerimagingarchive.net/collection/brats-africa/) | mri · brain · 3d-volume | image-segmentation, multi-label-classification | 146 patients | segmentation-mask, clinical-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/brats-africa/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/v8h6-8x67) | CC BY 4.0 (processed MR and segmentations) (open; commercial: yes) |
+| [Brain-Mets-Lung-MRI-Path-Segs](https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/) | mri, whole-slide-image · brain · 3d-volume, whole-slide-image | image-segmentation, multi-label-classification, clinical-prediction | 103 patients | segmentation-mask, clinical-label, patient-label, scalar | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Aneja-Lab-Yale/BM-Pathology-Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-025-06353-2) | CC BY 4.0 (open; commercial: yes) |
+| [BraTS-PEDs](https://www.cancerimagingarchive.net/collection/brats-peds/) | mri · brain · 3d-volume | image-segmentation, multi-label-classification | 348 training and validation subjects with images | segmentation-mask, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/brats-peds/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/DX5C-TJ86) | CC BY 4.0 (open; commercial: yes) |
+| [Yale-Brain-Mets-Longitudinal](https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/) | mri · brain · 3d-volume, longitudinal-sequence | clinical-prediction, multi-label-classification | 1.4K patients | clinical-label, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/3YAT-E768) | CC BY 4.0 (open; commercial: yes) |
+| [UTSW-Glioma](https://www.cancerimagingarchive.net/collection/utsw-glioma/) | mri · brain · 3d-volume | image-segmentation, multi-label-classification, clinical-prediction | 625 patients | segmentation-mask, clinical-label, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/utsw-glioma/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/DFAE-1B86) | CC BY 4.0 (open; commercial: yes) |
 
 #### Pathology
 
@@ -101,6 +109,8 @@ python3 scripts/check_links.py --timeout 15
 | [PAIP 2019 Liver Cancer Segmentation](https://paip2019.grand-challenge.org/Dataset/) | whole-slide-image · liver · whole-slide-image | image-segmentation | 100 whole-slide-images | segmentation-mask, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://paip2019.grand-challenge.org/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1016/j.media.2020.101854) | Research-use data-use and confidentiality agreement (registration; DUA; commercial: unknown) |
 | [BRACS](https://www.bracs.icar.cnr.it/) | whole-slide-image · breast · whole-slide-image | multi-label-classification | 547 whole-slide-images | clinical-label, region-of-interest | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.bracs.icar.cnr.it/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1093/database/baac093) | CC0 1.0 (registration; DUA; commercial: yes) |
 | [PANDA](https://panda.grand-challenge.org/data/) | whole-slide-image · prostate · whole-slide-image | multi-label-classification, image-segmentation | 10.6K whole-slide-images | clinical-label, segmentation-mask | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DIAGNijmegen/panda-challenge) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.kaggle.com/c/prostate-cancer-grade-assessment/data) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41591-021-01620-2) | CC BY-NC-SA 4.0 (registration; commercial: no) |
+| [UPENN-GBM](https://www.cancerimagingarchive.net/collection/upenn-gbm/) | mri, whole-slide-image · brain · 3d-volume, whole-slide-image | image-segmentation, multi-label-classification, clinical-prediction | 630 patients | segmentation-mask, clinical-label, patient-label, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/upenn-gbm/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-022-01560-7) | CC BY 4.0 (open; commercial: yes) |
+| [Brain-Mets-Lung-MRI-Path-Segs](https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/) | mri, whole-slide-image · brain · 3d-volume, whole-slide-image | image-segmentation, multi-label-classification, clinical-prediction | 103 patients | segmentation-mask, clinical-label, patient-label, scalar | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Aneja-Lab-Yale/BM-Pathology-Dataset) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/brain-mets-lung-mri-path-segs/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41597-025-06353-2) | CC BY 4.0 (open; commercial: yes) |
 
 #### Ophthalmology
 
@@ -189,7 +199,7 @@ python3 scripts/check_links.py --timeout 15
 This cross-cutting view includes datasets with an explicit longitudinal sequence or longitudinal-comparison support. Resources remain listed under their primary type above.
 
 <!-- BEGIN GENERATED:LONGITUDINAL_SUMMARY -->
-6 included datasets with explicit longitudinal sequences or longitudinal-comparison support. These records also remain listed under their primary resource type.
+7 included datasets with explicit longitudinal sequences or longitudinal-comparison support. These records also remain listed under their primary resource type.
 <!-- END GENERATED:LONGITUDINAL_SUMMARY -->
 
 <!-- BEGIN GENERATED:LONGITUDINAL_TABLE -->
@@ -199,6 +209,7 @@ This cross-cutting view includes datasets with an explicit longitudinal sequence
 | --- | --- | --- | ---: | --- | --- | --- |
 | [Medical-Diff-VQA](https://physionet.org/content/medical-diff-vqa/1.0.1/) | chest-xray · chest · longitudinal-sequence | visual-question-answering | 700.7K question-answer-pairs | question-answer, report | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Holipori/MIMIC-Diff-VQA) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://physionet.org/content/medical-diff-vqa/1.0.1/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2406.06347) | PhysioNet Credentialed Health Data License 1.5.0 (credentialed; DUA; commercial: no) |
 | [CheXpert Plus](https://aimi.stanford.edu/datasets/chexpert-plus) | chest-xray · chest · multi-view, longitudinal-sequence | report-generation, image-report-retrieval, multi-label-classification | 187.7K studies | report, image-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Stanford-AIMI/chexpert-plus) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://stanford.redivis.com/datasets/5yyj-1a9f6ap0x?v=next) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2405.19538) | Stanford CheXpert Plus Data Use Agreement (registration; DUA; commercial: no) |
+| [Yale-Brain-Mets-Longitudinal](https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/) | mri · brain · 3d-volume, longitudinal-sequence | clinical-prediction, multi-label-classification | 1.4K patients | clinical-label, patient-label | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.cancerimagingarchive.net/collection/yale-brain-mets-longitudinal/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.7937/3YAT-E768) | CC BY 4.0 (open; commercial: yes) |
 
 #### Ophthalmology
 
@@ -238,16 +249,16 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 <!-- BEGIN GENERATED:CAPABILITY_TABLE -->
 | Capability | Datasets |
 | --- | ---: |
-| clinical-prediction | 4 |
+| clinical-prediction | 10 |
 | description | 12 |
-| diagnosis | 35 |
-| localization | 12 |
-| longitudinal-comparison | 6 |
-| measurement | 5 |
+| diagnosis | 43 |
+| localization | 14 |
+| longitudinal-comparison | 7 |
+| measurement | 9 |
 | reasoning | 8 |
 | recognition | 21 |
 | report-generation | 4 |
-| segmentation | 17 |
+| segmentation | 23 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 

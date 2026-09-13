@@ -1,0 +1,79 @@
+{
+  "id": "upenn-gbm",
+  "name": "UPENN-GBM",
+  "year": 2022,
+  "resource_type": "image-only",
+  "homepage": "https://www.cancerimagingarchive.net/collection/upenn-gbm/",
+  "paper": "https://doi.org/10.1038/s41597-022-01560-7",
+  "repository": null,
+  "download": "https://www.cancerimagingarchive.net/collection/upenn-gbm/",
+  "license": "CC BY 4.0",
+  "commercial_use": "yes",
+  "domains": [
+    "radiology",
+    "pathology"
+  ],
+  "modalities": [
+    "mri",
+    "whole-slide-image"
+  ],
+  "anatomical_targets": [
+    "brain"
+  ],
+  "image_structure": [
+    "3d-volume",
+    "whole-slide-image"
+  ],
+  "tasks": [
+    "image-segmentation",
+    "multi-label-classification",
+    "clinical-prediction"
+  ],
+  "capabilities": [
+    "segmentation",
+    "diagnosis",
+    "clinical-prediction",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "mpMRI volumes with expert-corrected tumor-subregion and whole-brain masks, clinical outcomes, genomics, radiomics, and matched histopathology for a subset",
+    "expert_review": "automated tumor labels manually corrected and approved by board-certified neuroradiologists",
+    "grounding": [
+      "segmentation-mask",
+      "clinical-label",
+      "patient-label",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 630,
+    "primary_unit": "patients",
+    "patients": 630,
+    "mri_studies": 3301,
+    "mri_images": 828234,
+    "histopathology_patients": 34
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "unknown",
+    "external_validation": "no",
+    "known_issues": [
+      "The NIfTI volumes are registered to a common atlas and intentionally do not align with the supplied DICOM images.",
+      "Matched histopathology is available for only a subset of patients."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-09-11"
+}
