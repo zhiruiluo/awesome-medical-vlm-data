@@ -1,6 +1,6 @@
 # Contributing
 
-This repository is a data-intelligence catalog, not an unverified link list. New dataset entries must pair medical images with language-related supervision or evaluation. Physiological signals, structured measurements, contours, and class labels do not count as language-related supervision.
+This repository is a data-intelligence catalog, not an unverified link list. New entries may be image-only resources annotated or evaluated for a medical visual task, image-and-language resources with language-related supervision or evaluation, or text-only medical-language resources. Physiological signals and structured annotations can accompany image-only resources, but do not count as language-related supervision.
 
 ## Add A Dataset Or Benchmark
 
@@ -15,8 +15,8 @@ python3 scripts/check_links.py --timeout 15
 
 ## Acceptance Criteria
 
-- The resource pairs medical imagery with reports, captions, questions, grounding, or another language task.
-- `language_supervision: ["none"]` records the absence of language supervision for an image-only dataset; it is not an alternative inclusion criterion. Existing image-only entries do not expand the scope for new contributions.
+- The resource provides medical images with language-related supervision or evaluation, or image-only annotations/evaluation for a medical visual task.
+- `language_supervision: ["none"]` records the absence of language supervision for an image-only dataset; it does not disqualify an otherwise in-scope image-only resource.
 - Scale uses an explicit unit, and the annotation process is summarized.
 - Access and licensing fields are filled, even when the answer is uncertain.
 - The record includes at least one official source URL.
