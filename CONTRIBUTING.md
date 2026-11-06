@@ -15,7 +15,7 @@ python3 scripts/check_links.py --timeout 15
 
 ## Acceptance Criteria
 
-- The resource provides medical images with language-related supervision or evaluation, or image-only annotations/evaluation for a medical visual task.
+- The resource provides medical images with language-related supervision or evaluation, image-only annotations/evaluation for a medical visual task, or text-only data for a medical-language task.
 - `language_supervision: ["none"]` records the absence of language supervision for an image-only dataset; it does not disqualify an otherwise in-scope image-only resource.
 - Scale uses an explicit unit, and the annotation process is summarized.
 - Access and licensing fields are filled, even when the answer is uncertain.
