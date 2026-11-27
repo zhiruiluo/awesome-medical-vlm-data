@@ -1,0 +1,75 @@
+{
+  "id": "echoxflow",
+  "name": "EchoXFlow",
+  "year": 2026,
+  "resource_type": "image-only",
+  "homepage": "https://huggingface.co/datasets/Ahus-AIM/EchoXFlow",
+  "paper": "https://arxiv.org/abs/2605.05447",
+  "repository": "https://github.com/Ahus-AIM/EchoXFlow",
+  "download": "https://huggingface.co/datasets/Ahus-AIM/EchoXFlow",
+  "license": "CC BY-NC-SA 4.0",
+  "commercial_use": "no",
+  "domains": [
+    "ultrasound"
+  ],
+  "modalities": [
+    "ultrasound"
+  ],
+  "anatomical_targets": [
+    "heart"
+  ],
+  "image_structure": [
+    "multi-view",
+    "3d-volume",
+    "video"
+  ],
+  "tasks": [
+    "image-segmentation"
+  ],
+  "capabilities": [
+    "segmentation",
+    "measurement"
+  ],
+  "usage": "training-evaluation",
+  "catalog_status": "included",
+  "language_supervision": [
+    "none"
+  ],
+  "derived_from": [],
+  "annotation": {
+    "source": "routine-care clinical annotations: 2D speckle-tracking myocardial contours, 3D left-ventricular endocardial meshes, and sparse measurement points, spectral Doppler traces, and sample volumes; every recording has a synchronized ECG",
+    "expert_review": "clinical-care",
+    "grounding": [
+      "contour",
+      "mesh",
+      "point",
+      "scalar"
+    ]
+  },
+  "scale": {
+    "primary_count": 35377,
+    "primary_unit": "recordings",
+    "recordings": 35377,
+    "examinations": 666,
+    "patients": 622
+  },
+  "quality": {
+    "contamination_audited": "unknown",
+    "patient_level_split": "yes",
+    "external_validation": "no",
+    "known_issues": [
+      "Single-centre, single-vendor acquisition from a selected routine-care population.",
+      "Annotations come from clinical routine, cover a subset of recordings, and are described by the release as not research-grade.",
+      "Recordings are stored in the scanner's beamspace (polar) grid as Zarr stores and need scan conversion, for example with the EchoXFlow readers, before use as conventional images.",
+      "No reports, captions, or question-answer pairs are released; the paired signals are ECG and Doppler."
+    ]
+  },
+  "access": {
+    "registration_required": false,
+    "credentialing_required": false,
+    "gated": "no",
+    "data_use_agreement_required": "no",
+    "citation_required": "yes"
+  },
+  "last_verified": "2026-11-27"
+}

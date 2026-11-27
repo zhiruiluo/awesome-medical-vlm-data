@@ -16,7 +16,7 @@
 ---
 
 <!-- BEGIN GENERATED:LAST_UPDATED -->
-**Last updated:** 2026-09-11
+**Last updated:** 2026-11-27
 <!-- END GENERATED:LAST_UPDATED -->
 
 A maintained, machine-readable catalog of medical AI datasets and benchmarks for training and evaluation. Datasets describe released data; benchmarks separately describe evaluation protocols, metrics, and their constituent datasets.
@@ -45,7 +45,7 @@ python3 scripts/check_links.py --timeout 15
 ## Catalog Status
 
 <!-- BEGIN GENERATED:CATALOG_SUMMARY -->
-55 included datasets: 3 text-only, 34 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 5 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
+56 included datasets: 3 text-only, 35 image-only, and 18 text-image pairs. 48 candidate and 1 excluded dataset records are retained for auditability. 5 included benchmarks; 0 candidate and 0 excluded benchmark records are omitted from public tables.
 <!-- END GENERATED:CATALOG_SUMMARY -->
 
 ## Catalog Navigation
@@ -130,6 +130,7 @@ python3 scripts/check_links.py --timeout 15
 | --- | --- | --- | ---: | --- | --- | --- |
 | [CAMUS](https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html) | ultrasound · heart · multi-view, video | image-segmentation | 500 patients | segmentation-mask, scalar | [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://www.creatis.insa-lyon.fr/Challenge/camus/onlinePlatform.html) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/1908.06948) | CAMUS challenge terms (registration; commercial: unknown) |
 | [EchoNet-Dynamic](https://echonet.github.io/dynamic/) | ultrasound · heart · video | image-segmentation, multi-label-classification | 10.0K echocardiography videos | segmentation-mask, scalar, image-label | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/echonet/dynamic) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://echonet.github.io/dynamic/) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://doi.org/10.1038/s41586-020-2145-8) | Stanford EchoNet-Dynamic Research Use Agreement (registration; DUA; commercial: no) |
+| [EchoXFlow](https://huggingface.co/datasets/Ahus-AIM/EchoXFlow) | ultrasound · heart · multi-view, 3d-volume, video | image-segmentation | 35.4K recordings | contour, mesh, point, scalar | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Ahus-AIM/EchoXFlow) [![Download](https://img.shields.io/badge/Download-0969DA?style=flat-square&logo=download&logoColor=white)](https://huggingface.co/datasets/Ahus-AIM/EchoXFlow) [![Paper](https://img.shields.io/badge/Paper-000000?style=flat-square&logo=paper&logoColor=white)](https://arxiv.org/abs/2605.05447) | CC BY-NC-SA 4.0 (open; commercial: no) |
 
 #### Surgery
 
@@ -254,11 +255,11 @@ Benchmarks are rendered separately because one benchmark may combine multiple pu
 | diagnosis | 43 |
 | localization | 14 |
 | longitudinal-comparison | 7 |
-| measurement | 9 |
+| measurement | 10 |
 | reasoning | 8 |
 | recognition | 21 |
 | report-generation | 4 |
-| segmentation | 23 |
+| segmentation | 24 |
 | spatial-reasoning | 1 |
 <!-- END GENERATED:CAPABILITY_TABLE -->
 
