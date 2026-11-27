@@ -5,7 +5,7 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 ## Resource Types
 
 - text-only: 3
-- image-only: 34
+- image-only: 35
 - text-image-pairs: 18
 
 ## Longitudinal Resources
@@ -22,7 +22,7 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 - pathology: 8
 - radiology: 30
 - surgery: 1
-- ultrasound: 3
+- ultrasound: 4
 
 ## Capabilities
 
@@ -31,11 +31,11 @@ Generated from `datasets/` and `benchmarks/` by `scripts/generate_tables.py`.
 - diagnosis: 43
 - localization: 14
 - longitudinal-comparison: 7
-- measurement: 9
+- measurement: 10
 - reasoning: 8
 - recognition: 21
 - report-generation: 4
-- segmentation: 23
+- segmentation: 24
 - spatial-reasoning: 1
 
 ## Benchmarks
